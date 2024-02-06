@@ -185,7 +185,7 @@ const HeaderSection = () => {
               <div className="">
               {/* <h1 className="text-sm md:text-xl font-semibold md:font-bold">America</h1> */}
 
-               <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar">
+               <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar"> 
                    <div className="min-w-[120px] w-[120px] h-[150px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
                        <img src={img2} alt="" className="w-full h-full object-cover" />
                        <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[13px]  pb-3 px-3 pl-4 w-full hover:text-[16px] transition-all md:text-xl md:hover:text-2xl">Abu Dhabi</h2></div>

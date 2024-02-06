@@ -27,9 +27,14 @@
     font-family: "geist-variable";
     src: url("./assets/fonts/GeistVariableVF.ttf");
   }
-  
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
   *{
-    font-family: geist-regular !important;
+    font-family: San Francisco !important;
+    /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
     margin: 0;
     padding: 0;
   }
