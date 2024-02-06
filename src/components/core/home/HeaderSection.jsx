@@ -183,7 +183,7 @@ const HeaderSection = () => {
                </div>
               
               <div className="">
-              <h1 className="text-sm md:text-xl font-semibold md:font-bold">America</h1>
+              {/* <h1 className="text-sm md:text-xl font-semibold md:font-bold">America</h1> */}
 
                <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar">
                    <div className="min-w-[120px] w-[120px] h-[150px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
