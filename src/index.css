@@ -1,0 +1,38 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "geist-regular";
+    src: url("./assets/fonts/Geist-Regular.otf");
+  }
+  @font-face {
+    font-family: "geist-medium";
+    src: url("./assets/fonts/Geist-Medium.otf");
+  }
+  @font-face {
+    font-family: "geist-semibold";
+    src: url("./assets/fonts/Geist-SemiBold.otf");
+  }
+  @font-face {
+    font-family: "geist-bold";
+    src: url("./assets/fonts/Geist-Bold.otf");
+  }
+  @font-face {
+    font-family: "geist-black";
+    src: url("./assets/fonts/Geist-Black.otf");
+  }
+  @font-face {
+    font-family: "geist-variable";
+    src: url("./assets/fonts/GeistVariableVF.ttf");
+  }
+  
+  *{
+    font-family: geist-regular !important;
+    margin: 0;
+    padding: 0;
+  }
+  h1{
+    font-family: geist-variable !important;
+  }
