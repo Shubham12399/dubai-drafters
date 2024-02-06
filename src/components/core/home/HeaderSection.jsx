@@ -157,7 +157,7 @@ const HeaderSection = () => {
 
      {/* our destination  */}
      <div className="md:mt-12 max-w-[970px] mx-auto my-0 pl-3 md:px-6">
-               <h1 className="text-sm md:text-xl font-semibold md:font-bold">Choose Destination</h1>
+               <h1 className="text-sm md:text-xl font-semibold md:font-bold">Choose Destination </h1>
                <div className="flex overflow-auto gap-2 my-2 hide-scrollbar">
                     <div className="min-w-fit w-fit px-3 py-2  text-[10px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] bg-[#ff621c] text-white rounded-md cursor-pointer transition-all">
                         All
@@ -183,7 +183,7 @@ const HeaderSection = () => {
                </div>
               
               <div className="">
-              {/* <h1 className="text-sm md:text-xl font-semibold md:font-bold">America</h1> */}
+              <h1 className="text-sm md:text-xl font-semibold md:font-bold">America</h1>
 
                <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar">
                    <div className="min-w-[120px] w-[120px] h-[150px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
