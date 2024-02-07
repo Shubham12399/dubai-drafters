@@ -1,7 +1,9 @@
 import { Button, IconButton } from "@material-tailwind/react";
 import { FaCity, FaFile, FaFileAlt, FaHome, FaUser } from "react-icons/fa";
 import { GrHomeRounded } from "react-icons/gr";
-import { LuFile } from "react-icons/lu";
+import { PiAirplaneTilt } from "react-icons/pi";
+
+
 const BottomNav = () => {
   return (
     <div className="md:hidden flex gap-x-0 items-center border bg-white fixed bottom-0 z-[99999] shadow-md rounded-tl-md rounded-tr justify-center w-full ">
@@ -10,7 +12,7 @@ const BottomNav = () => {
         <span className="text-xs">Home</span>
       </div>
       <div className="normal-case text-[10px] bg-white text-richblack-400 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group">
-        <LuFile className="text-[16px] my-1 group-hover:text-[#ff612c]"></LuFile>
+        <PiAirplaneTilt className="text-[16px] my-1 group-hover:text-[#ff612c] -rotate-90"></PiAirplaneTilt>
         <span className="text-xs">Services</span>
       </div>
       <div className="normal-case text-[10px] bg-white text-richblack-400 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group">
