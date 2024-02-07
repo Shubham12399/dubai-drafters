@@ -120,7 +120,7 @@ const HeaderSection = () => {
                       </div>  
                       
                       <div className="flex md:ml-4 w-full md:w-fit md:col-span-1 md:px-0 items-center ml-3">
-                          <Button size="sm" className="normal-case w-[80%] bg-[#ff621c] text-white text-xs rounded-full md:rounded-full font-bold !px-0 md:px-4 ">Find Trip</Button>
+                          <Button size="sm" className="normal-case w-[80%] bg-[#ff621c] text-white text-xs rounded-full md:rounded-full font-medium !px-0 md:px-4 ">Find Trip</Button>
                           </div>  
                   </div>  
       
