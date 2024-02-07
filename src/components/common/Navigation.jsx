@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { IoCartOutline, IoSearch } from "react-icons/io5";
+import { GoSearch } from "react-icons/go";
 const Navigation = () => {
   return (
     <div className="w-full bg-white shadow-sm relative z-[9999] md:sticky md:top-0">
@@ -11,7 +12,7 @@ const Navigation = () => {
            <div className="flex gap-x-3 items-center">
 
            <div className="block text-richblack-600 cursor-pointer ">
-                <IoSearch className="text-lg"></IoSearch>
+                <GoSearch className="text-lg"></GoSearch>
            </div>
            <div className="block text-richblack-700 cursor-pointer ">
                 <IoCartOutline className="text-xl"></IoCartOutline>

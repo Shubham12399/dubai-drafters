@@ -213,7 +213,8 @@ const HeaderSection = () => {
      {/* our destination  */}
      <div className="md:mt-12 max-w-[970px] mx-auto pl-3 md:px-6">
                <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">Adventure
-               <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
+              <Button className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case">See All</Button>
+               
                </h1>
                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Experience the thrill of discovering off-the-beaten-path gems and famous landmarks in top destinations worldwide - your wanderlust awaits!</p>
                <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
@@ -343,7 +344,7 @@ const HeaderSection = () => {
       {/* our Experiances */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto mt-2 pl-3 md:px-6">
                 <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Most Popular Experiences
-                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
+               <Button className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case">See All</Button>
                 </h1>
                 <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all her!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
@@ -473,7 +474,7 @@ const HeaderSection = () => {
       {/* Attraction Visit */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
                 <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Attraction Visit
-                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
+               <Button className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case">See All</Button>
                 </h1>
                 <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all her!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
@@ -603,7 +604,7 @@ const HeaderSection = () => {
       {/* Water Activities */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
                 <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Water Activities
-                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
+               <Button className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case">See All</Button>
                 </h1>
                 <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all her!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
@@ -733,7 +734,7 @@ const HeaderSection = () => {
       {/* Luxury Toors */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
                 <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Luxury Tours
-                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
+               <Button className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case">See All</Button>
                 </h1>
                 <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all her!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
