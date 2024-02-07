@@ -89,12 +89,12 @@ const HeaderSection = () => {
           </div>
         </div>
       </Carousel>
-      <div className="bg-white shadow-sm mb-3">
+      <div className=" shadow-sm mb-3">
             <h1 className="text-center text-lg md:text-2xl font-medium pt-4 md:pt-10 hidden md:block ">Enjoy the, Dream Place Now!</h1>
             <p className="max-w-maxContentTab text-[10px] px-4 md:px-0 md:text-sm text-richblack-300 text-center mx-auto hidden md:block ">Let&apos;s checkout the latest Tourism Places. To book a ticket fill some boxes </p>
-            <div className="pt-5 !pb-1">
+            <div className=" mt-2">
 
-            <div className="relative py-6 mb-4 px-2 md:px-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border border-[#08aca0] rounded-lg ">
+            <div className="relative py-6 mb-4 px-2 pl-3 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border border-[#08aca0] rounded-lg bg-white ">
                   <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))140px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 " >
                       <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1 ">
                           <div className="w-full md:w-fit md:bg-transparent md:shadow-none">
@@ -213,7 +213,7 @@ const HeaderSection = () => {
      {/* our destination  */}
      <div className="md:mt-12 max-w-[970px] mx-auto pl-3 md:px-6">
                <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">Adventure
-               <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
+               <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
                </h1>
                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Experience the thrill of discovering off-the-beaten-path gems and famous landmarks in top destinations worldwide - your wanderlust awaits!</p>
                <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
@@ -237,8 +237,8 @@ const HeaderSection = () => {
                                 </div>
                                 <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
 
                             </div>
@@ -251,7 +251,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
+                                   {/* <p className="text-[8px] text-richblack-200 fex items-center mt-1">277 Reviews</p> */}
                                    <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -262,8 +262,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -275,8 +275,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -286,8 +285,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -299,8 +298,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -310,8 +308,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -323,8 +321,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -334,8 +331,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -346,9 +343,9 @@ const HeaderSection = () => {
       {/* our Experiances */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto mt-2 pl-3 md:px-6">
                 <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Most Popular Experiences
-                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
+                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
                 </h1>
-                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all her!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -370,8 +367,8 @@ const HeaderSection = () => {
                                 </div>
                                 <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
 
                             </div>
@@ -384,7 +381,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
+                                   {/* <p className="text-[8px] text-richblack-200 fex items-center mt-1">277 Reviews</p> */}
                                    <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -395,8 +392,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -408,8 +405,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -419,8 +415,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -432,8 +428,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -443,8 +438,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -456,8 +451,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -467,8 +461,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -479,9 +473,9 @@ const HeaderSection = () => {
       {/* Attraction Visit */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
                 <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Attraction Visit
-                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
+                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
                 </h1>
-                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all her!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -503,8 +497,8 @@ const HeaderSection = () => {
                                 </div>
                                 <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
 
                             </div>
@@ -517,7 +511,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
+                                   {/* <p className="text-[8px] text-richblack-200 fex items-center mt-1">277 Reviews</p> */}
                                    <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -528,8 +522,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -541,8 +535,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -552,8 +545,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -565,8 +558,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -576,8 +568,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -589,8 +581,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -600,8 +591,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -612,9 +603,9 @@ const HeaderSection = () => {
       {/* Water Activities */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
                 <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Water Activities
-                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
+                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
                 </h1>
-                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all her!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -636,8 +627,8 @@ const HeaderSection = () => {
                                 </div>
                                 <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
 
                             </div>
@@ -650,7 +641,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
+                                   {/* <p className="text-[8px] text-richblack-200 fex items-center mt-1">277 Reviews</p> */}
                                    <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -661,8 +652,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -674,8 +665,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -685,8 +675,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -698,8 +688,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -709,8 +698,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -722,8 +711,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -733,8 +721,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -745,9 +733,9 @@ const HeaderSection = () => {
       {/* Luxury Toors */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
                 <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Luxury Tours
-                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
+                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer py-0 px-2 text-[#ff621c] border border-[#ff621c]">See All</span>
                 </h1>
-                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all her!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -769,8 +757,8 @@ const HeaderSection = () => {
                                 </div>
                                 <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
 
                             </div>
@@ -783,7 +771,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
+                                   {/* <p className="text-[8px] text-richblack-200 fex items-center mt-1">277 Reviews</p> */}
                                    <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -794,8 +782,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -807,8 +795,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -818,8 +805,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -831,8 +818,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -842,8 +828,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -855,8 +841,7 @@ const HeaderSection = () => {
                                 <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">Evening Desert S... </h3>
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                                   {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -866,8 +851,8 @@ const HeaderSection = () => {
                                 </div>
                                  <div className="flex !items-strech gap-1 mt-3">
 
-                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
-                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
                                 </div>
                             </div>
                     </div>
@@ -897,7 +882,6 @@ const HeaderSection = () => {
                </div>
             </OwlCarousel></div>
     </div>
-  );
-};
+  );};
 
 export default HeaderSection;
