@@ -96,14 +96,14 @@ const HeaderSection = () => {
                   <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))140px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 " >
                       <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1 ">
                           <div className="w-full md:w-fit md:bg-transparent md:shadow-none">
-                              <h3 className="text-[10px] sm:text-xs md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%]  ">Destination</h3>
-                              <span className="text-[10px] md:text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 items-center w-full max-w-[120px]">Search Location  <GoChevronRight className="rotate-90 text-[10px] ml-0 md:ml-12"></GoChevronRight></span>
+                              <h3 className="text-xs md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%]  ">Destination</h3>
+                              <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 items-center w-full max-w-[120px]">Search Location  <GoChevronRight className="rotate-90  ml-0 md:ml-12"></GoChevronRight></span>
                           </div>  
                       </div>  
                       <div className="flex md:pl-7 md:border-r md:border-[#08aca0]  pl-1">
                           <div className="w-full rounded-lg bg-white md:pl-0 md:bg-transparent md:shadow-none ">
-                          <h3 className="text-[10px] sm:text-xs md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Type</h3>
-                          <span className="text-[10px] md:text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] ">Advanture  <GoChevronRight className="rotate-90 text-[10px]"></GoChevronRight></span>
+                          <h3 className="text-xs md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Type</h3>
+                          <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] ">Advanture  <GoChevronRight className="rotate-90"></GoChevronRight></span>
                           </div>
                       </div>
                       <div className="hidden md:flex md:pl-7 md:border-r border-[#08aca0]  ">
