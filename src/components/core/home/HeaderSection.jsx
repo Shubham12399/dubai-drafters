@@ -55,21 +55,21 @@ const HeaderSection = () => {
             </IconButton>
           )}
       >
-        <div className="w-full h-[120px] md:h-[500px] overflow-hidden">
+        <div className="w-full h-[155px] md:h-[500px] overflow-hidden">
           <img
             src={collaborationBanner1}
             alt="image 1"
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="w-full h-[120px] md:h-[500px]">
+        <div className="w-full h-[155px] md:h-[500px]">
           <img
             src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
             alt="image 2"
             className="h-full w-full object-cover"
           />{" "}
         </div>
-        <div className="w-full h-[120px] md:h-[500px] relative">
+        <div className="w-full h-[155px] md:h-[500px] relative">
           <img
             src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
             alt="image 3"
@@ -89,20 +89,20 @@ const HeaderSection = () => {
           </div>
         </div>
       </Carousel>
-      <div className="bg-white">
+      <div className="bg-white shadow-sm">
             <h1 className="text-center text-lg md:text-2xl font-bold pt-4 md:pt-10 hidden md:block ">Enjoy the, Dream Place Now!</h1>
             <p className="max-w-maxContentTab text-[10px] px-4 md:px-0 md:text-sm text-richblack-300 text-center mx-auto hidden md:block ">Let&apos;s checkout the latest Tourism Places. To book a ticket fill some boxes </p>
             <div className="relative py-6 mb-4 px-1 md:px-2 max-w-maxContent mx-2 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none ">
                   <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))140px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 " >
                       <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1 ">
                           <div className="w-full md:w-fit md:bg-transparent md:shadow-none">
-                              <h3 className="text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%]  ">Destination</h3>
+                              <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%]  ">Destination</h3>
                               <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 items-center w-full max-w-[120px]">Search Location  <GoChevronRight className="rotate-90  ml-0 md:ml-12"></GoChevronRight></span>
                           </div>  
                       </div>  
                       <div className="flex md:pl-7 md:border-r md:border-[#08aca0]  pl-1">
                           <div className="w-full rounded-lg bg-white md:pl-0 md:bg-transparent md:shadow-none ">
-                          <h3 className="text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Type</h3>
+                          <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Type</h3>
                           <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] ">Advanture  <GoChevronRight className="rotate-90"></GoChevronRight></span>
                           </div>
                       </div>
@@ -157,7 +157,7 @@ const HeaderSection = () => {
 
      {/* our destination  */}
      <div className="md:mt-12 max-w-[970px] mx-auto my-0 pl-3 md:px-6">
-               <h1 className="text-lg md:text-xl font-medium md:font-bold">Choose Destination </h1>
+               <h1 className="text-lg md:text-2xl font-medium">Choose Destination </h1>
                <div className="flex overflow-auto gap-2 my-2 hide-scrollbar">
                     <div className="min-w-fit w-fit px-3 py-2 text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] bg-[#ff621c] text-white rounded-md cursor-pointer transition-all">
                         All
@@ -183,7 +183,7 @@ const HeaderSection = () => {
                </div>
               
               <div className="">
-              {/* <h1 className="text-lg md:text-xl font-medium md:font-bold">America</h1> */}
+              {/* <h1 className="text-lg md:text-2xl font-medium">America</h1> */}
 
                <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar"> 
                    <div className="min-w-[140px] w-[140px] h-[170px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
@@ -209,10 +209,10 @@ const HeaderSection = () => {
 
      {/* our destination  */}
      <div className="md:mt-12 max-w-[970px] mx-auto pl-3 md:px-6">
-               <h1 className="text-lg md:text-xl font-medium md:font-bold mt-6 md:top-0 flex justify-between items-baseline pr-2">Adventure
+               <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">Adventure
                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                </h1>
-               <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Experience the thrill of discovering off-the-beaten-path gems and famous landmarks in top destinations worldwide - your wanderlust awaits!</p>
+               <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Experience the thrill of discovering off-the-beaten-path gems and famous landmarks in top destinations worldwide - your wanderlust awaits!</p>
                <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -224,7 +224,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -249,7 +249,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -273,7 +273,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -297,7 +297,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -321,7 +321,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -342,10 +342,10 @@ const HeaderSection = () => {
      </div>
       {/* our Experiances */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto mt-2 pl-3 md:px-6">
-                <h1 className="text-lg md:text-xl font-medium md:font-bold flex justify-between items-baseline pr-2">Most Popular Experiences {window.innerWidth < 600 && <br /> } in Dubai
+                <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Most Popular Experiences {window.innerWidth < 600 && <br /> } in Dubai
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
-                <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -357,7 +357,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -382,7 +382,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -406,7 +406,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -430,7 +430,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -454,7 +454,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -475,10 +475,10 @@ const HeaderSection = () => {
       </div>
       {/* Attraction Visit */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
-                <h1 className="text-lg md:text-xl font-medium md:font-bold flex justify-between items-baseline pr-2">Attraction Visit
+                <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Attraction Visit
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
-                <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -490,7 +490,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -515,7 +515,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -539,7 +539,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -563,7 +563,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -587,7 +587,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -608,10 +608,10 @@ const HeaderSection = () => {
       </div>
       {/* Water Activities */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
-                <h1 className="text-lg md:text-xl font-medium md:font-bold flex justify-between items-baseline pr-2">Water Activities
+                <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Water Activities
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
-                <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -623,7 +623,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -648,7 +648,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -672,7 +672,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -696,7 +696,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -720,7 +720,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -741,10 +741,10 @@ const HeaderSection = () => {
       </div>
       {/* Luxury Toors */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
-                <h1 className="text-lg md:text-xl font-medium md:font-bold flex justify-between items-baseline pr-2">Luxury Tours
+                <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Luxury Tours
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
-                <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
                 <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
 
                     <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
@@ -756,7 +756,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -781,7 +781,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -805,7 +805,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -829,7 +829,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -853,7 +853,7 @@ const HeaderSection = () => {
                                 <h3 className="text-xs font-medium text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
                                    {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                   <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
