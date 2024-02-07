@@ -15,8 +15,11 @@ import TitleSkl from "../../skelaton/common/TitleSkl";
 import PostSkl from "../../skelaton/home/PostSkl";
 import Modal from "../../Modal";
 import { useState } from "react";
+import { IoEarth } from "react-icons/io5";
 
 const HeaderSection = () => {
+    const [selectDestination ,setSelectDestination] = useState(false);
+    const [selectAdvanture ,setSelectAdvanture] = useState(false);
     const [openModal ,setOpenModal] = useState(false);
     const { isPending, error, data } = useQuery({
         queryKey: ['repoData'],
@@ -131,14 +134,16 @@ const HeaderSection = () => {
                   <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))140px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 " >
                       <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1 ">
                           <div className="w-full md:w-fit md:bg-transparent md:shadow-none">
-                              <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%] ">Destination</h3>
-                              <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 items-center w-full max-w-[120px]" onClick={() => setOpenModal(true) }>Search Location  <GoChevronRight className="rotate-90  ml-0 md:ml-12"></GoChevronRight></span>
+                              <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%] ">
+                               
+                                Destination</h3>
+                              <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 items-center w-full max-w-[120px]" onClick={() => setSelectDestination(true) }>Search Location  <GoChevronRight className="rotate-90  ml-0 md:ml-12"></GoChevronRight></span>
                           </div>  
                       </div>  
                       <div className="flex md:pl-7 md:border-r md:border-[#08aca0]  pl-1">
                           <div className="w-full rounded-lg bg-white md:pl-0 md:bg-transparent md:shadow-none ">
                           <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Type</h3>
-                          <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] ">Advanture  <GoChevronRight className="rotate-90"></GoChevronRight></span>
+                          <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] " onClick={() => setSelectAdvanture(true)}>Advanture  <GoChevronRight className="rotate-90"></GoChevronRight></span>
                           </div>
                       </div>
                       <div className="hidden md:flex md:pl-7 md:border-r border-[#08aca0]  ">
@@ -894,7 +899,7 @@ const HeaderSection = () => {
                 </div>
       </div>
       {
-        openModal && <Modal title={"Select Destination"} setModal = {setOpenModal}>
+        selectDestination && <Modal title={ <div className="flex items-center gap-x-2"> Select Destination  <IoEarth className="text-richblack-500"></IoEarth> </div>} setModal = {setOpenModal}>
         <div className="flex gap-x-2 flex-wrap px-2 gap-y-1 my-4">
             <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
                 <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
@@ -916,6 +921,30 @@ const HeaderSection = () => {
                 <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Kuvait</h3>
             </div>
+           
+        </div>
+    </Modal>
+      }
+      {
+        selectAdvanture && <Modal title={ <div className="flex items-center gap-x-2"> Choose Category</div>} setModal = {setSelectAdvanture}>
+        <div className="flex gap-x-2 flex-wrap px-2 gap-y-1 my-4">
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">Adventure</h3>
+            </div>
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img2} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">City Tours</h3>
+            </div>
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img3} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">Water activities</h3>
+            </div>
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img4} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">Attractions visit </h3>
+            </div>
+        
            
         </div>
     </Modal>
