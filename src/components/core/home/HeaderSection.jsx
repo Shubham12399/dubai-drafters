@@ -156,7 +156,6 @@ const HeaderSection = () => {
                   </div>   */}
             </div> 
             </div>
-
       </div>
 
      {/* our destination  */}
@@ -346,7 +345,7 @@ const HeaderSection = () => {
      </div>
       {/* our Experiances */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto mt-2 pl-3 md:px-6">
-                <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Most Popular Experiences {window.innerWidth < 600 && <br /> } in Dubai
+                <h1 className="text-lg md:text-2xl font-medium flex justify-between items-baseline pr-2">Most Popular Experiences
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
                 <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
