@@ -6,7 +6,6 @@ const HomePage = () => {
   return (
     <>
       <Navigation></Navigation>
-      
       <div className="w-full">
             <HeaderSection></HeaderSection>
       </div>

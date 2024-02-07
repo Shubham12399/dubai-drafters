@@ -1,19 +1,51 @@
 import { Button, ButtonGroup, Carousel, IconButton, Tooltip } from "@material-tailwind/react";
 import { FaAngleLeft, FaAngleRight, FaArrowLeft, FaStar } from "react-icons/fa";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
-import { IoCartOutline, IoCartSharp, IoLocationOutline } from "react-icons/io5";
 import collaborationBanner1 from "../../../assets/images/WhatsApp Image 2024-02-05 at 14.34.43_ed310961.jpg";
-import img from "../../../assets/images/WhatsApp Image 2024-02-05 at 13.14.15_d7c212e5.jpg";
 import img1 from "../../../assets/images/IMG-20240205-WA0063.jpg";
 import img2 from "../../../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../../../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../../../assets/images/IMG-20240205-WA0070.jpg";
 import OwlCarousel from 'react-owl-carousel';
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { useQuery } from "@tanstack/react-query";
+import HeaderSkl from "../../skelaton/HeaderSkl";
+import TagsSkl from "../../skelaton/home/TagsSkl";
+import TitleSkl from "../../skelaton/common/TitleSkl";
+import PostSkl from "../../skelaton/home/PostSkl";
+import Modal from "../../Modal";
+import { useState } from "react";
+
 const HeaderSection = () => {
+    const [openModal ,setOpenModal] = useState(false);
+    const { isPending, error, data } = useQuery({
+        queryKey: ['repoData'],
+        queryFn: () =>
+          fetch('https://api.github.com/repos/TanStack/query').then((res) =>
+            res.json(),
+          ),
+      });
+      if (isPending){ 
+        return (<div className="pb-12 max-w-maxContent mx-auto">
+      <HeaderSkl></HeaderSkl>
+      <div className="max-w-[900px] mx-auto">
+      <TitleSkl></TitleSkl>
+      <TagsSkl></TagsSkl>
+      <PostSkl></PostSkl>
+      <TitleSkl></TitleSkl>
+      <PostSkl></PostSkl>
+      </div>
+     
+      </div>)}
+    
+      if (error) return 'An error has occurred: ' + error.message
+    
+      console.log(data); 
+
 
   return (
     <div className="w-full bg-[rgba(0,0,0,0.03)] pb-8">
+{
       <Carousel
         className="rounded-none relative"
         autoplay={true}
@@ -89,17 +121,18 @@ const HeaderSection = () => {
           </div>
         </div>
       </Carousel>
+      }
       <div className=" shadow-sm mb-3">
             <h1 className="text-center text-lg md:text-2xl font-medium pt-4 md:pt-10 hidden md:block ">Enjoy the, Dream Place Now!</h1>
             <p className="max-w-maxContentTab text-[10px] px-4 md:px-0 md:text-sm text-richblack-300 text-center mx-auto hidden md:block ">Let&apos;s checkout the latest Tourism Places. To book a ticket fill some boxes </p>
             <div className=" mt-2">
 
-            <div className="relative py-4 md:py-6 mb-4 px-2 pl-4 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border border-[#ff621c] rounded-xl bg-white ">
+            <div className="relative py-4 md:py-6 mb-4 px-2 pl-4 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border border-[#ff621c] md:border-none rounded-xl bg-white md:bg-transparent ">
                   <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))140px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 " >
                       <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1 ">
                           <div className="w-full md:w-fit md:bg-transparent md:shadow-none">
-                              <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%]  ">Destination</h3>
-                              <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 items-center w-full max-w-[120px]">Search Location  <GoChevronRight className="rotate-90  ml-0 md:ml-12"></GoChevronRight></span>
+                              <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%] ">Destination</h3>
+                              <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 items-center w-full max-w-[120px]" onClick={() => setOpenModal(true) }>Search Location  <GoChevronRight className="rotate-90  ml-0 md:ml-12"></GoChevronRight></span>
                           </div>  
                       </div>  
                       <div className="flex md:pl-7 md:border-r md:border-[#08aca0]  pl-1">
@@ -126,7 +159,6 @@ const HeaderSection = () => {
                           </div>  
                   </div>  
       
-                 
                   {/* <img src={img} alt="" /> */}
                   {/* <div className="max-w-maxContentTab mx-auto py-4 px-3 my-2 border border-[#08aca0] rounded-full flex flex-wrap justify-around items-center  gap-3" >
                       <div className="flex justify-center flex-grow min-w-[80px] sm:border-r border-caribbeangreen-50 max-w-[150px]">
@@ -861,9 +893,33 @@ const HeaderSection = () => {
                    
                 </div>
       </div>
-
-
-
+      {
+        openModal && <Modal title={"Select Destination"} setModal = {setOpenModal}>
+        <div className="flex gap-x-2 flex-wrap px-2 gap-y-1 my-4">
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">Abu Dhabi</h3>
+            </div>
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img2} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">Desert Safari</h3>
+            </div>
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img3} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">Rajsthan</h3>
+            </div>
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img4} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">Mumbai</h3>
+            </div>
+            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+                <h3 className="font-light text-xs mt-1 text-center GTE_light ">Kuvait</h3>
+            </div>
+           
+        </div>
+    </Modal>
+      }
 <div>
 
 

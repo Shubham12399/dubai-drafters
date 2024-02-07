@@ -12,6 +12,7 @@ export default withMT({
       inter: ["Inter", "sans-serif"],
       "edu-sa": ["Edu SA Beginner", "cursive"],
       mono: ["Roboto Mono", "monospace"],
+      
     },
     colors: {
       white: "#fff",

@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: "geist-light";
+    src: url("./assets/fonts/GTEestiProDisplay-Light.woff");
+  }
+@font-face {
     font-family: "geist-regular";
     src: url("./assets/fonts/GTEestiProDisplay-Regular.ttf");
   }
@@ -40,4 +44,7 @@
   }
   h1{
     font-family: geist-medium !important;
+  }
+  .GTE_light{
+    font-family: geist-light !important;
   }
