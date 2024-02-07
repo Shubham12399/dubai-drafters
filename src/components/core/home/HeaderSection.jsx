@@ -80,7 +80,7 @@ const HeaderSection = () => {
           <p className="text-[10px] md:text-lg text-white mb-2 md:mb-4 font-medium">a travel agent or freelancer</p>
 
           </h1>
-            <h1 className="text-white text-sm md:text-4xl font-black leading-tight ">Work With us and Get <br /> Guranted Commission </h1>
+            <h1 className="text-white text-[16px] md:text-4xl font-black leading-tigh8 ">Work With us and Get <br /> Guranted Commission </h1>
             <p className="max-w-maxContentTab mt-3 text-richblack-5 font-normal hidden md:block md:text-sm pr-4 pl-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro error sequi cupiditate impedit, sapiente velit in, et ad optio sit ut dolores alias voluptate ex explicabo? Atque magni aut obcaecati! Iure aperiam accusamus hic Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum aliquam alias, illo adipisci impedit illum ad enim omnis vero exercitationem.!</p>
             <ButtonGroup className="mt-6 hidden md:block">
                 <Button className="bg-[#ff612c] text-white normal-case">Join Now </Button>
@@ -96,31 +96,31 @@ const HeaderSection = () => {
                   <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))140px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 " >
                       <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1 ">
                           <div className="w-full md:w-fit md:bg-transparent md:shadow-none">
-                              <h3 className="text-xs md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%]  ">Destination</h3>
+                              <h3 className="text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%]  ">Destination</h3>
                               <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 items-center w-full max-w-[120px]">Search Location  <GoChevronRight className="rotate-90  ml-0 md:ml-12"></GoChevronRight></span>
                           </div>  
                       </div>  
                       <div className="flex md:pl-7 md:border-r md:border-[#08aca0]  pl-1">
                           <div className="w-full rounded-lg bg-white md:pl-0 md:bg-transparent md:shadow-none ">
-                          <h3 className="text-xs md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Type</h3>
+                          <h3 className="text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Type</h3>
                           <span className="text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] ">Advanture  <GoChevronRight className="rotate-90"></GoChevronRight></span>
                           </div>
                       </div>
                       <div className="hidden md:flex md:pl-7 md:border-r border-[#08aca0]  ">
                           <div className="w-full md:w-fit p-2 rounded-lg bg-white md:p-0 md:bg-transparent md:shadow-none pl-3">
-                          <h3 className="text-[10px] sm:text-xs md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-full after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Date</h3>
+                          <h3 className="text-[10px] sm:text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-full after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Date</h3>
                           <span className="text-[10px] md:text-xs text-richblack-200 select-none cursor-pointer font-medium block mt-1">Type Date</span>
                           </div>
                       </div>  
                       <div className=" hidden md:flex md:pl-7  ">
                           <div className="w-full md:w-fit p-2 rounded-lg bg-white md:p-0 md:bg-transparent md:shadow-none pl-3">
-                          <h3 className="text-[10px] sm:text-xs md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-full after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Guest</h3>
+                          <h3 className="text-[10px] sm:text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-full after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Guest</h3>
                           <span className="text-[10px] md:text-xs text-richblack-200 select-none cursor-pointer font-medium flex justify-between pr-1 mt-1 w-fit items-center ">1 Guest <GoChevronRight className="rotate-90 text-[10px] ml-12"></GoChevronRight></span>
                           </div>
                       </div>  
                       
                       <div className="flex md:ml-4 w-full md:w-fit md:col-span-1 md:px-0 items-center ml-3">
-                          <Button size="sm" className="normal-case w-[80%] bg-[#ff621c] text-white text-[10px] md:text-xs rounded-full md:rounded-full font-bold !px-0 md:px-4 ">Find Trip</Button>
+                          <Button size="sm" className="normal-case w-[80%] bg-[#ff621c] text-white text-xs rounded-full md:rounded-full font-bold !px-0 md:px-4 ">Find Trip</Button>
                           </div>  
                   </div>  
       
@@ -159,25 +159,25 @@ const HeaderSection = () => {
      <div className="md:mt-12 max-w-[970px] mx-auto my-0 pl-3 md:px-6">
                <h1 className="text-sm md:text-xl font-semibold md:font-bold">Choose Destination </h1>
                <div className="flex overflow-auto gap-2 my-2 hide-scrollbar">
-                    <div className="min-w-fit w-fit px-3 py-2  text-[10px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] bg-[#ff621c] text-white rounded-md cursor-pointer transition-all">
+                    <div className="min-w-fit w-fit px-3 py-2 text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] bg-[#ff621c] text-white rounded-md cursor-pointer transition-all">
                         All
                     </div>
-                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[10px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
+                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
                         USA
                     </div>
-                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[10px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
+                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
                         England
                     </div>
-                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[10px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
+                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
                         Egypt
                     </div>
-                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[10px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
+                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
                         India
                     </div>
-                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[10px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
+                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
                         Europe
                     </div>
-                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[10px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
+                    <div className="min-w-fit w-fit px-3 py-2 bg-white text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] rounded-md cursor-pointer transition-all">
                         America
                     </div>
                </div>
@@ -188,19 +188,19 @@ const HeaderSection = () => {
                <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar"> 
                    <div className="min-w-[120px] w-[120px] h-[150px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
                        <img src={img2} alt="" className="w-full h-full object-cover" />
-                       <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[13px]  pb-3 px-3 pl-4 w-full hover:text-[16px] transition-all md:text-xl md:hover:text-2xl">Abu Dhabi</h2></div>
+                       <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[16px] pb-3 px-3 pl-4 w-full hover:text-[18px] transition-all md:text-xl md:hover:text-2xl">Abu Dhabi</h2></div>
                    </div>
                    <div className="min-w-[120px] w-[120px] h-[150px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
                        <img src={img3} alt="" className="w-full h-full object-cover" />
-                       <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[13px]  pb-3 px-3 pl-4 w-full hover:text-[16px] transition-all md:text-xl md:hover:text-2xl">Dubai</h2></div>
+                       <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[16px] pb-3 px-3 pl-4 w-full hover:text-[18px] transition-all md:text-xl md:hover:text-2xl">Dubai</h2></div>
                    </div>
                    <div className="min-w-[120px] w-[120px] h-[150px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
                        <img src={img1} alt="" className="w-full h-full object-cover" />
-                       <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[13px]  pb-3 px-3 pl-4 w-full hover:text-[16px] transition-all md:text-xl md:hover:text-2xl">Raj Sthan</h2></div>
+                       <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[16px] pb-3 px-3 pl-4 w-full hover:text-[18px] transition-all md:text-xl md:hover:text-2xl">Raj Sthan</h2></div>
                    </div>
                    <div className="min-w-[120px] w-[120px] h-[150px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
                        <img src={img1} alt="" className="w-full h-full object-cover" />
-                       <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[13px]  pb-3 px-3 pl-4 w-full hover:text-[16px] transition-all md:text-xl md:hover:text-2xl">Raj Sthan</h2></div>
+                       <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[16px] pb-3 px-3 pl-4 w-full hover:text-[18px] transition-all md:text-xl md:hover:text-2xl">Raj Sthan</h2></div>
                    </div>
                </div>
               </div>
@@ -220,10 +220,10 @@ const HeaderSection = () => {
                                 <img src={img4} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}><h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3></Tooltip>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}><h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3></Tooltip>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -245,10 +245,10 @@ const HeaderSection = () => {
                                 <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -269,10 +269,10 @@ const HeaderSection = () => {
                                 <img src={img3} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -293,10 +293,10 @@ const HeaderSection = () => {
                                 <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -317,10 +317,10 @@ const HeaderSection = () => {
                                 <img src={img1} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -353,10 +353,10 @@ const HeaderSection = () => {
                                 <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}><h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3></Tooltip>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}><h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3></Tooltip>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -378,10 +378,10 @@ const HeaderSection = () => {
                                 <img src={img1} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -402,10 +402,10 @@ const HeaderSection = () => {
                                 <img src={img3} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -426,10 +426,10 @@ const HeaderSection = () => {
                                 <img src={img4} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
@@ -450,10 +450,10 @@ const HeaderSection = () => {
                                 <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
                             </div>
                             <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                                <h3 className="text-[12px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
-                                <h3 className="text-[10px] sm:text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
                                 <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                                   <p className="text-[8px] text-richblack-200 flex items-center">277 Reviews</p>
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
                                    <div className="flex sm:mt-0 gap-x-1 items-center">
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
                                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
