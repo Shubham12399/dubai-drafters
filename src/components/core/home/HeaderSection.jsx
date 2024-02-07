@@ -94,7 +94,7 @@ const HeaderSection = () => {
             <p className="max-w-maxContentTab text-[10px] px-4 md:px-0 md:text-sm text-richblack-300 text-center mx-auto hidden md:block ">Let&apos;s checkout the latest Tourism Places. To book a ticket fill some boxes </p>
             <div className=" mt-2">
 
-            <div className="relative py-6 mb-4 px-2 pl-3 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border border-[#08aca0] rounded-lg bg-white ">
+            <div className="relative py-4 md:py-6 mb-4 px-2 pl-3 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border border-[#08aca0] rounded-lg bg-white ">
                   <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))140px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 " >
                       <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1 ">
                           <div className="w-full md:w-fit md:bg-transparent md:shadow-none">
