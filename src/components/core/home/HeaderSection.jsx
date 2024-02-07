@@ -157,7 +157,7 @@ const HeaderSection = () => {
 
      {/* our destination  */}
      <div className="md:mt-12 max-w-[970px] mx-auto my-0 pl-3 md:px-6">
-               <h1 className="text-lg md:text-xl font-semibold md:font-bold">Choose Destination </h1>
+               <h1 className="text-lg md:text-xl font-medium md:font-bold">Choose Destination </h1>
                <div className="flex overflow-auto gap-2 my-2 hide-scrollbar">
                     <div className="min-w-fit w-fit px-3 py-2 text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] bg-[#ff621c] text-white rounded-md cursor-pointer transition-all">
                         All
@@ -183,7 +183,7 @@ const HeaderSection = () => {
                </div>
               
               <div className="">
-              {/* <h1 className="text-lg md:text-xl font-semibold md:font-bold">America</h1> */}
+              {/* <h1 className="text-lg md:text-xl font-medium md:font-bold">America</h1> */}
 
                <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar"> 
                    <div className="min-w-[140px] w-[140px] h-[170px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
@@ -209,7 +209,7 @@ const HeaderSection = () => {
 
      {/* our destination  */}
      <div className="md:mt-12 max-w-[970px] mx-auto pl-3 md:px-6">
-               <h1 className="text-lg md:text-xl font-semibold md:font-bold mt-6 md:top-0 flex justify-between items-baseline pr-2">Adventure
+               <h1 className="text-lg md:text-xl font-medium md:font-bold mt-6 md:top-0 flex justify-between items-baseline pr-2">Adventure
                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                </h1>
                <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Experience the thrill of discovering off-the-beaten-path gems and famous landmarks in top destinations worldwide - your wanderlust awaits!</p>
@@ -342,7 +342,7 @@ const HeaderSection = () => {
      </div>
       {/* our Experiances */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto mt-2 pl-3 md:px-6">
-                <h1 className="text-lg md:text-xl font-semibold md:font-bold flex justify-between items-baseline pr-2">Most Popular Experiences {window.innerWidth < 600 && <br /> } in Dubai
+                <h1 className="text-lg md:text-xl font-medium md:font-bold flex justify-between items-baseline pr-2">Most Popular Experiences {window.innerWidth < 600 && <br /> } in Dubai
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
                 <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
@@ -475,7 +475,7 @@ const HeaderSection = () => {
       </div>
       {/* Attraction Visit */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
-                <h1 className="text-lg md:text-xl font-semibold md:font-bold flex justify-between items-baseline pr-2">Attraction Visit
+                <h1 className="text-lg md:text-xl font-medium md:font-bold flex justify-between items-baseline pr-2">Attraction Visit
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
                 <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
@@ -608,7 +608,7 @@ const HeaderSection = () => {
       </div>
       {/* Water Activities */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
-                <h1 className="text-lg md:text-xl font-semibold md:font-bold flex justify-between items-baseline pr-2">Water Activities
+                <h1 className="text-lg md:text-xl font-medium md:font-bold flex justify-between items-baseline pr-2">Water Activities
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
                 <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
@@ -741,7 +741,7 @@ const HeaderSection = () => {
       </div>
       {/* Luxury Toors */}
       <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
-                <h1 className="text-lg md:text-xl font-semibold md:font-bold flex justify-between items-baseline pr-2">Luxury Tours
+                <h1 className="text-lg md:text-xl font-medium md:font-bold flex justify-between items-baseline pr-2">Luxury Tours
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
                 <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
