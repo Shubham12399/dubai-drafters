@@ -13,7 +13,7 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 const HeaderSection = () => {
 
   return (
-    <div className="w-full bg-[rgba(0,0,0,0.03)]">
+    <div className="w-full bg-[rgba(0,0,0,0.03)] pb-8">
       <Carousel
         className="rounded-none relative"
         autoplay={true}
@@ -341,8 +341,407 @@ const HeaderSection = () => {
                 </div>
      </div>
       {/* our Experiances */}
-      <div className="md:mt-12 mb-10 md:my-0 max-w-[970px] mx-auto mt-2 pl-3 md:px-6">
+      <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto mt-2 pl-3 md:px-6">
                 <h1 className="text-sm md:text-xl font-semibold md:font-bold flex justify-between items-baseline pr-2">Most Popular Experiences {window.innerWidth < 600 && <br /> } in Dubai
+                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
+                </h1>
+                <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
+
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}><h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3></Tooltip>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img1} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img3} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img4} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                  
+                   
+                </div>
+      </div>
+      {/* Attraction Visit */}
+      <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
+                <h1 className="text-sm md:text-xl font-semibold md:font-bold flex justify-between items-baseline pr-2">Attraction Visit
+                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
+                </h1>
+                <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
+
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}><h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3></Tooltip>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img1} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img3} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img4} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                  
+                   
+                </div>
+      </div>
+      {/* Water Activities */}
+      <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
+                <h1 className="text-sm md:text-xl font-semibold md:font-bold flex justify-between items-baseline pr-2">Water Activities
+                <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
+                </h1>
+                <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
+                <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
+
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}><h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3></Tooltip>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img1} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img3} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img4} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                    <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+                            <div className="w-full">
+                                <img src={img2} alt="" className="w-full h-[110px] sm:h-[110px] object-cover" />
+                            </div>
+                            <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                                <h3 className="text-[13px] sm:text-sm font-semibold line-clamp-2">Evening Desert S... </h3>
+                                <h3 className="text-xs font-bold text-richblack-900 mt-1">AED 135.00</h3>
+                                <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                                   <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p>
+                                   <div className="flex sm:mt-0 gap-x-1 items-center">
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                       <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                                   </div>
+                                </div>
+                                 <div className="flex !items-strech gap-1 mt-3">
+
+                                  <Button size="sm" variant="outlined" className="normal-case py-[.4rem] rounded-md px-4 w-full text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal">Book Now</Button>
+                                  <button className="bg-none relative z-20 px-1 pl-2 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0"><MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart></button>
+                                </div>
+                            </div>
+                    </div>
+                  
+                   
+                </div>
+      </div>
+      {/* Luxury Toors */}
+      <div className="md:mt-12 mb-4 md:my-0 max-w-[970px] mx-auto pl-3 md:px-6">
+                <h1 className="text-sm md:text-xl font-semibold md:font-bold flex justify-between items-baseline pr-2">Luxury Tours
                 <span className="text-[10px] md:text-xs font-normal rounded-lg hover:underline cursor-pointer">See All</span>
                 </h1>
                 <p className="text-xs mt-1 text-richblack-500 hidden md:block ">Culture, nature, thrills, and record-breaking experiences—Dubai is the place to seek out everything you imagine and beyond. Find it all here!</p>
