@@ -899,7 +899,7 @@ const HeaderSection = () => {
                 </div>
       </div>
       {
-        selectDestination && <Modal title={ <div className="flex items-center gap-x-2"> Select Destination  <IoEarth className="text-richblack-500"></IoEarth> </div>} setModal = {setOpenModal}>
+        selectDestination && <Modal title={ <div className="flex items-center gap-x-2"> Select Destination  <IoEarth className="text-richblack-500"></IoEarth> </div>} setModal = {setSelectDestination}>
         <div className="flex gap-x-2 flex-wrap px-2 gap-y-1 my-4">
             <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
                 <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
