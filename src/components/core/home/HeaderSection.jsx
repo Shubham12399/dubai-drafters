@@ -196,7 +196,7 @@ const HeaderSection = () => {
       </div>
 
      {/* our destination  */}
-     <div className="md:mt-12 max-w-[970px] mx-auto my-0 pl-3 md:px-6">
+     <div className="mt-6 md:mt-12 max-w-[970px] mx-auto my-0 pl-3 md:px-6">
                <h1 className="text-lg md:text-2xl font-medium">Choose Destination </h1>
                <div className="flex overflow-auto gap-2 my-2 hide-scrollbar">
                     <div className="min-w-fit w-fit px-3 py-2 text-[13px] md:text-sm text-richblack-800 hover:text-white hover:bg-[#ff621c] bg-[#ff621c] text-white rounded-md cursor-pointer transition-all">
@@ -225,7 +225,7 @@ const HeaderSection = () => {
               <div className="">
               {/* <h1 className="text-lg md:text-2xl font-medium">America</h1> */}
 
-               <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar"> 
+               <div className="my-3 mt-6 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar"> 
                    <div className="min-w-[140px] w-[140px] h-[170px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative ">
                        <img src={img2} alt="" className="w-full h-full object-cover" />
                        <div className="absolute w-full h-full bottom-0 left-0 flex items-end bg-gradient-to-b from-transparent via-transparent to-black"><h2 className="text-white text-[16px] pb-3 px-3 pl-4 w-full hover:text-[18px] transition-all md:text-xl md:hover:text-2xl">Abu Dhabi</h2></div>
@@ -900,52 +900,57 @@ const HeaderSection = () => {
       </div>
       {
         selectDestination && <Modal title={ <div className="flex items-center gap-x-2"> Select Destination  <IoEarth className="text-richblack-500"></IoEarth> </div>} setModal = {setSelectDestination}>
-        <div className="flex gap-x-2 flex-wrap px-2 gap-y-1 my-4">
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+            <div className="w-fit mx-auto">
+            <div className="flex gap-x-1 justify-start flex-wrap px-1 gap-y-1 my-4">
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img1} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Abu Dhabi</h3>
             </div>
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img2} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img2} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Desert Safari</h3>
             </div>
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img3} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img3} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Rajsthan</h3>
             </div>
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img4} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img4} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Mumbai</h3>
             </div>
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img1} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Kuvait</h3>
             </div>
            
         </div>
+            </div>
+       
     </Modal>
       }
       {
-        selectAdvanture && <Modal title={ <div className="flex items-center gap-x-2"> Choose Category</div>} setModal = {setSelectAdvanture}>
-        <div className="flex gap-x-2 flex-wrap px-2 gap-y-1 my-4">
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img1} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+        selectAdvanture && <Modal title={ <div className="flex items-center gap-x-2"> Choose Type</div>} setModal = {setSelectAdvanture}>
+        <div className="w-fit mx-auto">
+            <div className="flex gap-x-1 justify-start flex-wrap px-1 gap-y-1 my-4">
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img1} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Adventure</h3>
             </div>
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img2} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img2} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">City Tours</h3>
             </div>
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img3} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img3} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Water activities</h3>
             </div>
-            <div className="min-w-[60px] w-[90px]  overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img src={img4} alt="" className="w-full object-cover h-[50px] rounded-lg select-none" />
+            <div className="min-w-[30%] w-[32.4%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+                <img src={img4} alt="" className="w-full object-cover h-[54px] rounded-lg select-none" />
                 <h3 className="font-light text-xs mt-1 text-center GTE_light ">Attractions visit </h3>
             </div>
         
            
+        </div>
         </div>
     </Modal>
       }

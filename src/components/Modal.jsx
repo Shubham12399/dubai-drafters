@@ -12,13 +12,13 @@ const Modal = ({title,setModal,children}) => {
             <div className='select-none text-sm'>
                 {title}
             </div>
-            <div className='hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 cursor-pointer' onClick={() =>{
+            <div className='relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer' onClick={() =>{
                 setModalBottom(true);
                 setTimeout(() => {
                     setModal(false);
                 }, 100);
                  }}>
-                <GoX className='text-lg text-richblack-900 '></GoX>
+                <GoX className='text-lg text-richblack-900'></GoX>
             </div>
          </div>
          <div>
