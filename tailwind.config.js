@@ -135,6 +135,7 @@ export default withMT({
       maxWidth: {
         maxContent: "1260px",
         maxContentTab: "650px",
+        maxWidthContent:"970px"
       },
     },
   },
