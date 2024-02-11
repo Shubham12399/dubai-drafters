@@ -13,13 +13,20 @@ import img2 from "../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../assets/images/IMG-20240205-WA0070.jpg";
 import Navigation from "../components/common/Navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "../components/Modal";
 import BottomNav from "../components/common/BottomNav";
+import { Link } from "react-router-dom";
+
+
 const Tours = () => {
   const [mostPopularModal, setMostPopularModal] = useState(false);
   const [priceModal, setPriceModal] = useState(false);
   const [allToursModal, setAllToursModal] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  } , []);
   return (
     <div className="pb-8">
       <Navigation></Navigation>
@@ -145,12 +152,13 @@ const Tours = () => {
             <FaPlane className="group-hover:text-[#ff612c]"></FaPlane>
             Top Tours in Cities
           </h3>
-          <button
-            className="text-xs px-3 py-1 rounded-full border border-richblack-900 text-richblack-900 mt-4"
+          <Link
+            to={"/all-tours"}
+            className="text-xs block w-fit px-3 py-1 rounded-full border border-richblack-900 text-richblack-900 mt-4"
             onClick={() => setAllToursModal(true)}
           >
             View All Tours
-          </button>
+          </Link>
         </div>
         <div>
 
