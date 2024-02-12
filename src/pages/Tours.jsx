@@ -113,7 +113,7 @@ const Tours = () => {
       </div>
       <div className="bg-deep-orange-50 py-5">
         <div className="max-w-maxWidthContent mx-auto">
-          <h3 className="text-[16px] md:text-xl text-center GTE_Bold">
+          <h3 className="text-lg md:text-xl text-center GTE_Bold">
             Top Tours & Activities
           </h3>
           {/* <p className="GTE_light text-xs md:text-sm leading-tight px-4 py-2 text-center">
