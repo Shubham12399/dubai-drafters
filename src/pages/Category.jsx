@@ -89,7 +89,7 @@ const Category = () => {
     </div>
 
 
-    <div className="mb-4 max-w-[970px] mx-auto px-3 ">
+    <div className="mb-4 max-w-[970px] mx-auto px-3 pb-6">
     <div className="flex justify-between items-center pb-2 px-2">
            
   
