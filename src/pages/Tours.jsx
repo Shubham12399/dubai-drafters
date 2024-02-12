@@ -122,10 +122,10 @@ const Tours = () => {
             doloremque vitae.
           </p> */}
           <div className="ml-4 md:ml-0 flex md:justify-center gap-x-2 md:gap-x-4 items-center mt-3 overflow-auto hide-scrollbar">
-            <div>
-              <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white"></div>
-              <p className="text-xs md:text-sm text-center mt-1">lorem 20</p>
-            </div>
+            <Link to={"/category/Adventure"}>
+              <img src={img1} className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white"/>
+              <p className="text-xs md:text-sm text-center mt-1">Adventure</p>
+            </Link>
             <div>
               <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white"></div>
               <p className="text-xs md:text-sm text-center mt-1">lorem 20</p>
