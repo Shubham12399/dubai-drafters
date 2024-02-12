@@ -7,7 +7,7 @@ import {
   FaSearchLocation,
   FaStar,
 } from "react-icons/fa";
-import img1 from "../assets/images/IMG-20240205-WA0063.jpg";
+import img1 from "../assets/images/travel 1920x450 banner.png";
 import img2 from "../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../assets/images/IMG-20240205-WA0070.jpg";
@@ -31,7 +31,7 @@ const AllTours = () => {
         <img
           src={img1}
           alt=""
-          className="w-full h-[140px] md:h-[300px] object-cover"
+          className="w-full h-[140px] md:h-[300px] object-cover object-right"
         />
       </div>
 
@@ -42,7 +42,7 @@ const AllTours = () => {
         >
           <div className="flex items-center gap-x-2">
             <FaSearchLocation className="text-richblack-400"></FaSearchLocation>
-            <span className="text-richblack-200">Select Destination</span>
+            <span className="text-richblack-200 GTE_light text-xs md:text-sm">Select Destination</span>
           </div>
           <FaChevronDown className="text-richblack-400"></FaChevronDown>
         </div>
@@ -53,11 +53,11 @@ const AllTours = () => {
         >
           <div className="flex items-center gap-x-2">
             <FaSearchLocation className="text-richblack-400"></FaSearchLocation>
-            <span className="text-richblack-200">Select Type</span>
+            <span className="text-richblack-200 GTE_light text-xs md:text-sm">Select Type</span>
           </div>
           <FaChevronDown className="text-richblack-400"></FaChevronDown>
         </div>
-        <Button variant="outlined" className="px-4 py-2 mt-1 md:mt-0 rounded-xl text-sm w-[80%] text-[#ff612c] border-[#ff612c] hover:bg-[#ff612c] hover:text-white shadow-none hover:shadow-lg flex gap-x-2 items-center justify-center font-normal normal-case" onClick={() => navigate("/searched")}>
+        <Button variant="outlined" className="px-4 py-2 mt-1 md:mt-0 rounded-xl text-sm w-[80%] border-[#ff612c] bg-[#ff612c] text-white shadow-none hover:shadow-lg flex gap-x-2 items-center justify-center font-normal normal-case" onClick={() => navigate("/searched")}>
           Find Tour
         </Button>
       </div>

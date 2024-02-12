@@ -48,6 +48,9 @@
   .GTE_light{
     font-family: geist-light !important;
   }
+  .GTE_medium{
+    font-family: geist-medium !important;
+  }
   .GTE_Bold{
     font-family: geist-semibold !important;
   }
