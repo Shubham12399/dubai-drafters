@@ -7,7 +7,7 @@ const Modal = ({title,setModal,children}) => {
     <div className='w-full h-screen backdrop-blur-md fixed left-0 top-0 z-[999999] bg-[rgba(0,0,0,0.06)]' onClick={(e) => {
         e.stopPropagation(); setModal(false)}
          }>
-        <div className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] transition-all drop-shadow-lg ${modalBottom ? " -bottom-[600px] " : " !bottom-0 "} `} onClick={(e)=> e.stopPropagation()}>
+        <div className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] transition-all drop-shadow-lg ${modalBottom ? " -bottom-[600px] " : " !bottom-0 "} pb-10 `} onClick={(e)=> e.stopPropagation()}>
             <div className=' max-w-maxContentTab mx-auto'>
 
          <div className='flex justify-between px-2 items-center' >

@@ -59,13 +59,13 @@ const Category = () => {
 
     <div className="w-full max-w-maxWidthContent mx-auto py-4 px-4 mt-0">
         <div>
-            <h1 className="GTE_medium md:mt-4 text-richblack-900 text-sm md:text-[16px] flex gap-x-2 items-center">
+            <h1 className="GTE_medium md:mt-4 text-richblack-900 text-[16px] flex gap-x-2 items-center">
               Best Tour and Activities in Adventure 
             </h1>
-            <p className="GTE_light text-xs md:text-sm text-richblack-500 leading-tight mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam?
+            <p className="GTE_light text-[13px] md:text-sm text-richblack-500 leading-tight mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam?
             <span className="text-[#ff621c] block mt-1"> ...More </span>
             </p>
-            <div className="mt-3 text-[13px] GTE_medium text-richblack-900 text-sm md:text-lg flex gap-x-2 items-center flex-wrap">
+            <div className="mt-3 text-[16px] GTE_medium text-richblack-900 md:text-lg flex gap-x-2 items-center flex-wrap">
             <FaPlane className="text-sm text-[#ff621c]"></FaPlane> 44 Activities founded in Adventure Tour
 
             <div className="flex items-center gap-x-2 mt-2 md:mt-0 md:ml-4">
