@@ -31,13 +31,13 @@ const AllTours = () => {
         <img
           src={img1}
           alt=""
-          className="w-full h-[140px] md:h-[300px] object-cover object-right"
+          className="w-full h-[160px] md:h-[300px] object-cover object-right"
         />
       </div>
 
       <div className="relative z-[99] -mt-5 w-full max-w-maxContentTab mx-auto grid grid-cols-[400px] place-items-center align-middle md:flex flex-col md:flex-row gap-y-2 md:gap-x-3 justify-center md:items-center ">
         <div
-          className="px-4 py-3 rounded-xl text-xs text-richblack-700 w-[80%] bg-white shadow-lg flex gap-x-2 pl-4 items-center justify-between cursor-pointer"
+          className="px-4 py-3 rounded-xl text-xs text-richblack-700 w-[80%] bg-white shadow-md flex gap-x-2 pl-4 items-center justify-between cursor-pointer"
           onClick={() => setDestinationModal(true)}
         >
           <div className="flex items-center gap-x-2">
@@ -48,7 +48,7 @@ const AllTours = () => {
         </div>
 
         <div
-          className="px-4 py-3 rounded-xl text-xs text-richblack-700 w-[80%] bg-white shadow-lg flex gap-x-2 pl-4 items-center justify-between cursor-pointer"
+          className="px-4 py-3 rounded-xl text-xs text-richblack-700 w-[80%] bg-white shadow-md flex gap-x-2 pl-4 items-center justify-between cursor-pointer"
           onClick={() => setSelectTypeModal(true)}
         >
           <div className="flex items-center gap-x-2">

@@ -8,6 +8,7 @@ import {
 import { FaPlane, FaStar } from "react-icons/fa";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import img from "../assets/images/travel 1920x450 banner.png";
 import img1 from "../assets/images/IMG-20240205-WA0063.jpg";
 import img2 from "../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../assets/images/IMG-20240205-WA0065.jpg";
@@ -102,7 +103,7 @@ const Tours = () => {
           </div>
         </Carousel>
       } */}
-
+      <img src={img} alt="" className="h-[160px] object-cover object-left"/>
       <div className="w-full h-[155px] md:h-[500px] hidden relative ">
         <img
           src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
@@ -116,32 +117,29 @@ const Tours = () => {
             Top Tours & Activities
           </h3>
           {/* <p className="GTE_light text-xs md:text-sm leading-tight px-4 py-2 text-center">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
+            Lorem ipsum, dolor sit,mb amet consectetur adipisicing elit. Blanditiis
             ut atque, modi itaque iste nulla nesciunt alias consequuntur
             deleniti culpa soluta ducimus, facere vitae. Quo dolore culpa facere
             doloremque vitae.
           </p> */}
-          <div className="ml-4 md:ml-0 flex md:justify-center gap-x-2 md:gap-x-4 items-center mt-3 overflow-auto hide-scrollbar">
+          <div className="mx-4 md:ml-0 flex justify-center gap-x-4 md:gap-x-4 items-center mt-3 overflow-auto hide-scrollbar">
             <Link to={"/category/Adventure"}>
-              <img src={img1} className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white"/>
+              <img src={img1} className="w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-white"/>
               <p className="text-xs md:text-sm text-center mt-1">Adventure</p>
             </Link>
-            <div>
-              <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white"></div>
-              <p className="text-xs md:text-sm text-center mt-1">lorem 20</p>
-            </div>
-            <div>
-              <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white"></div>
-              <p className="text-xs md:text-sm text-center mt-1">lorem 20</p>
-            </div>
-            <div>
-              <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white"></div>
-              <p className="text-xs md:text-sm text-center mt-1">lorem 20</p>
-            </div>
-            <div>
-              <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white"></div>
-              <p className="text-xs md:text-sm text-center mt-1">lorem 20</p>
-            </div>
+            <Link to={"/category/Adventure"}>
+              <img src={img2} className="w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-white"/>
+              <p className="text-xs md:text-sm text-center mt-1">City Tour</p>
+            </Link>
+            <Link to={"/category/Adventure"}>
+              <img src={img3} className="w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-white"/>
+              <p className="text-xs md:text-sm text-center mt-1">Water Tour</p>
+            </Link>
+            <Link to={"/category/Adventure"}>
+              <img src={img4} className="w-[70px] h-[70px] md:w-[80px] md:h-[80px] rounded-full bg-white"/>
+              <p className="text-xs md:text-sm text-center mt-1">Luxury Tour</p>
+            </Link>
+           
           </div>
         </div>
       </div>
