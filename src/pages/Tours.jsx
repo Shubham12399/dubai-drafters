@@ -21,6 +21,7 @@ import TourType from "../data/TourType";
 import HeaderSkl from "../components/skelaton/HeaderSkl";
 import PostSkl from "../components/skelaton/home/PostSkl";
 import TagsSkl from "../components/skelaton/home/TagsSkl";
+import SearchInput from "../components/common/SearchInput";
 
 const Tours = () => {
   const [mostPopularModal, setMostPopularModal] = useState(false);
@@ -29,42 +30,36 @@ const Tours = () => {
   const [type, setType] = useState(TourType.types[0]);
   const [loading, setLoading] = useState(true);
 
-  console.log(type)
+  console.log(type);
   const loadingSkleton = (
     <div className="max-w-maxContent mx-auto">
-        <div className="flex flex-wrap justify-between gap-y-4 pb-4 mt-3">
-          {[...new Array(10)].map((e, i) => {
-            return (
-             
+      <div className="flex flex-wrap justify-between gap-y-4 pb-4 mt-3">
+        {[...new Array(10)].map((e, i) => {
+          return (
+            <div
+              key={i}
+              className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white "
+            >
+              <span className="absolute top-2 left-2 text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
+                {/* Adventure */}
+              </span>
+              <div className="w-full">
                 <div
-                  key={i}
-                  className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white "
-                >
-                  <span className="absolute top-2 left-2 text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
-                    {/* Adventure */}
-                  </span>
-                  <div className="w-full">
-                    <div
-                      // src={img2}
-                      alt=""
-                      className="w-full h-[100px] sm:h-[100px] object-cover bg-[var(--sklClr)]"
-                    />
-                  </div>
-                  <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                  
-                    <h3 className="h-[14px] w-full bg-[var(--sklClr)]"> </h3>
-                    <h3 className="h-[14px] w-[60%] bg-[var(--sklClr)] mt-2"> </h3>
+                  // src={img2}
+                  alt=""
+                  className="w-full h-[100px] sm:h-[100px] object-cover bg-[var(--sklClr)]"
+                />
+              </div>
+              <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                <h3 className="h-[14px] w-full bg-[var(--sklClr)]"> </h3>
+                <h3 className="h-[14px] w-[60%] bg-[var(--sklClr)] mt-2"> </h3>
 
-                   
-                      <div className="h-[20px] w-[80%] bg-[var(--sklClr)] mt-2">
-                        
-                      </div>
-                  </div>
-                </div>
-              
-            );
-          })}
-        </div>
+                <div className="h-[20px] w-[80%] bg-[var(--sklClr)] mt-2"></div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
   TourType.types.map(
@@ -72,6 +67,7 @@ const Tours = () => {
   );
   useEffect(() => {
     window.scrollTo(0, 0);
+    setTimeout(() => setLoading(false), 700);
   }, []);
 
   // handle Tour type changes
@@ -86,36 +82,30 @@ const Tours = () => {
     <div className="pb-8">
       <Navigation></Navigation>
 
+      {/* Banner IMage */}
       <img
         src={type?.image}
         alt=""
         className="w-full h-[160px] md:h-[270px] object-cover object-left"
       />
-      <div className="w-full h-[155px] md:h-[500px] hidden relative ">
-        <img
-          src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-          alt="image 3"
-          className="h-full w-full object-cover"
-        />
+
+      {/* seacrh Box  */}
+      <div className="-mt-5 relative z-[999]">
+        <SearchInput></SearchInput>
       </div>
-      <div className="bg-deep-orange-50 py-5">
+
+      {/* Hightlighted Section   */}
+      <div className="bg-deep-orange-50 py-5 -mt-8 pt-10 ">
         <div className="max-w-maxWidthContent mx-auto">
           <h3 className="text-lg md:text-2xl text-center GTE_bold">
             {type?.title} & Activities
           </h3>
-          {/* <p className="GTE_light text-xs md:text-sm leading-tight px-4 py-2 text-center">
-            Lorem ipsum, dolor sit,mb amet consectetur adipisicing elit. Blanditiis
-            ut atque, modi itaque iste nulla nesciunt alias consequuntur
-            deleniti culpa soluta ducimus, facere vitae. Quo dolore culpa facere
-            doloremque vitae.
-          </p> */}
-          <div className="mx-4 md:ml-0 flex justify-start gap-x-0 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar">
+          <div className="mx-4 md:ml-0 flex justify-start md:justify-center gap-x-0 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar">
             {TourType?.types.map((type, index) => (
               <div
                 key={index}
                 onClick={() => handleType(type)}
                 className="cursor-pointer min-w-[70px] group"
-
               >
                 <img
                   src={type?.image}
@@ -147,7 +137,9 @@ const Tours = () => {
         </div>
       </div>
 
+      {/* Heading Area  */}
       <div className="p-4 max-w-maxWidthContent mx-auto md:pt-8 pb-0">
+        {/* Tourse heading and view all btn */}
         <div>
           <h3 className="text-sm md:text-lg font-medium flex gap-x-2 items-center">
             <FaPlane className="group-hover:text-[#ff612c]"></FaPlane>
@@ -161,54 +153,58 @@ const Tours = () => {
             View All Tours
           </Link>
         </div>
+
+        {/* Result , sort by Option and All Tour Container */}
         <div>
+          {/* Result , sort by Option Container */}
           <div className="flex justify-between items-center pt-4 pb-2">
+            {/* Result Container */}
             <span className="flex gap-x-2">
               Result:{" "}
               {loading ? (
-                <div className="w-[40px] bg-richblack-5 rounded-md inline-block"></div>
+                <div className="w-[40px] bg-[var(--sklClr)] rounded-md inline-block"></div>
               ) : (
                 10
               )}
             </span>
 
-            <div className="flex gap-y-4 min-w-fit justify-between gap-x-0 items-center">
-              <div className="flex items-center">
-                <span className="min-w-max mr-3 text-xs md:text-sm hidden md:block">
-                  Sort By :
-                </span>
-                <div className="w-max flex gap-x-3 items-center md:bg-transparent md:shadow-none">
-                  {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
+            {/*Sort by Option Container */}
+            <div className="flex items-center">
+              <span className="min-w-max mr-3 text-xs md:text-sm hidden md:block">
+                Sort By :
+              </span>
+              <div className="w-max flex gap-x-3 items-center md:bg-transparent md:shadow-none">
+                {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
                   Most Popular
                 </h3> */}
-                  <span
-                    className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
-                    onClick={() => setMostPopularModal(true)}
-                  >
-                    Most Popular
-                    <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
-                  </span>
-                  {/* <div className="flex">
+                <span
+                  className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
+                  onClick={() => setMostPopularModal(true)}
+                >
+                  Most Popular
+                  <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
+                </span>
+                {/* <div className="flex">
                 <div className="w-full rounded-lg bg-white md:bg-transparent md:shadow-none ">
                   {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
                   Price
                 </h3> */}
-                  <span
-                    className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 w-full items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
-                    onClick={() => setPriceModal(true)}
-                  >
-                    Price
-                    <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
-                  </span>
-                  {/* </div>
+                <span
+                  className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 w-full items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
+                  onClick={() => setPriceModal(true)}
+                >
+                  Price
+                  <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
+                </span>
+                {/* </div>
               </div> */}
-                </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full">
-            {!loading && (
+          {/* All Tours  */}
+          {!loading && (
+            <div className="w-full">
               <div className="mt-3 flex flex-wrap justify-between gap-3 md:gap-4  md:mt-4 pb-6 ">
                 <div className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
                   <span className="absolute top-2 left-2 text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
@@ -257,9 +253,11 @@ const Tours = () => {
                   </div>
                 </div>
               </div>
-            )}
-            {loading && loadingSkleton}
-          </div>
+            </div>
+          )}
+
+          {/* Loading Skleton  */}
+          {loading && loadingSkleton}
         </div>
 
         <div className="pb-4 max-w-maxWidthContent mx-auto ">
@@ -317,7 +315,7 @@ const Tours = () => {
         </div>
       </div>
 
-      {/* our destination  -------------------------------------------------------------------------------  */}
+      {/* Types  -------------------------------------------------------------------------------  */}
       <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-3 md:px-6">
         <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">
           <div>
@@ -532,6 +530,8 @@ const Tours = () => {
           </div>
         </div>
       </div>
+
+      {/* Top Tours */}
       <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-3 md:px-6">
         <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">
           <div>
@@ -746,6 +746,8 @@ const Tours = () => {
           </div>
         </div>
       </div>
+
+      {/* Top Tour In Europe */}
       <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-3 md:px-6">
         <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">
           <div>
@@ -961,6 +963,7 @@ const Tours = () => {
         </div>
       </div>
 
+      {/* Modal section  */}
       {mostPopularModal && (
         <Modal
           title={
