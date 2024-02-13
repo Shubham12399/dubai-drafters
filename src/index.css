@@ -2,7 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root{
+  --sklClr:rgba(0,0,0,00.04);
+}
 @font-face {
     font-family: "geist-light";
     src: url("./assets/fonts/GTEestiProDisplay-Light.woff");
@@ -15,10 +17,7 @@
     font-family: "geist-medium";
     src: url("./assets/fonts/GTEestiProDisplay-Medium.ttf");
   }
-  @font-face {
-    font-family: "geist-semibold";
-    src: url("./assets/fonts/Geist-SemiBold.otf");
-  }
+ 
   @font-face {
     font-family: "geist-bold";
     src: url("./assets/fonts/GTEestiProDisplay-Bold.ttf");
@@ -51,6 +50,7 @@
   .GTE_medium{
     font-family: geist-medium !important;
   }
-  .GTE_Bold{
-    font-family: geist-semibold !important;
+
+  .GTE_bold{
+    font-family: geist-bold !important;
   }
