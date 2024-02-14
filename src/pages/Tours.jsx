@@ -84,8 +84,8 @@ const Tours = () => {
         typeSlice?.title.toLowerCase().trim()
       );
       });
-      console.log(filtred)
-    if (typeSlice?.title !== "Top Tour") {
+      console.log(typeSlice?.title.trim().toLowerCase())
+    if (typeSlice?.title.trim().toLowerCase() !== "top tour") {
       setTours([...filtred]);
     }else{
       setTours([...activities]);
@@ -246,9 +246,16 @@ const Tours = () => {
                       key={index}
                       className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white shadow-xl "
                     >
-                      <span className="absolute top-2 left-2 text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
+                      <div className="absolute flex gap-x-2 items-center top-2 left-2 text-xs text-white">
+
+                      {typeSlice.title.trim().toLowerCase() == "top tour" && <span className="text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
                         {tourType}
+                      </span>}
+                      <span className="text-xs text-white bg-[#ff612c] px-1 rounded-md">
+                        {city}
                       </span>
+                      </div>
+
                       <div className="w-full">
                         <img
                           src={image}
