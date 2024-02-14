@@ -6,7 +6,6 @@ import AllTours from "./pages/AllTours";
 import SearchedItem from "./pages/SearchedItem";
 import Search from "./components/common/Search";
 import Category from "./pages/Category";
-
 function App() {
   return (
     <Router>

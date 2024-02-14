@@ -4,6 +4,7 @@ import {
   IconButton,
   Navbar,
   Tooltip,
+  useSelect,
 } from "@material-tailwind/react";
 import { FaPlane, FaStar } from "react-icons/fa";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
@@ -22,15 +23,22 @@ import HeaderSkl from "../components/skelaton/HeaderSkl";
 import PostSkl from "../components/skelaton/home/PostSkl";
 import TagsSkl from "../components/skelaton/home/TagsSkl";
 import SearchInput from "../components/common/SearchInput";
+import activities from "../data/Activities";
+import { useDispatch, useSelector } from "react-redux";
+import { setType } from "../redux/slices/typeSlice";
 
 const Tours = () => {
   const [mostPopularModal, setMostPopularModal] = useState(false);
   const [priceModal, setPriceModal] = useState(false);
   const [allToursModal, setAllToursModal] = useState(false);
-  const [type, setType] = useState(TourType.types[0]);
+  const [changedType, setChangedType] = useState(TourType.types[0]);
   const [loading, setLoading] = useState(true);
+  const [tours, setTours] = useState([...activities]);
+  const typeSlice = useSelector((store) => store.typeSlice);
+  // tours is data of all tours
 
-  console.log(type);
+  const dispatch = useDispatch();
+  // console.log(type);
   const loadingSkleton = (
     <div className="max-w-maxContent mx-auto">
       <div className="flex flex-wrap justify-between gap-y-4 pb-4 mt-3">
@@ -66,15 +74,32 @@ const Tours = () => {
     (e, index) => (e.id = e.title.split(" ").join("_") + "_" + (index + 1))
   );
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     setTimeout(() => setLoading(false), 700);
-  }, []);
+    const filtred = activities.filter((tour) => {
+      console.log(tour.tourType.toLowerCase().trim() , typeSlice?.title.toLowerCase().trim())
+
+      return (
+        tour.tourType.toLowerCase().trim() ==
+        typeSlice?.title.toLowerCase().trim()
+      );
+      });
+      console.log(filtred)
+    if (typeSlice?.title !== "Top Tour") {
+      setTours([...filtred]);
+    }else{
+      setTours([...activities]);
+    }
+    console.log(activities);
+  }, [typeSlice]);
 
   // handle Tour type changes
   const handleType = (type) => {
     setLoading(true);
     console.log(type);
-    setType({ ...type });
+    setChangedType({ ...type });
+    dispatch(setType({ ...type }));
+
     setTimeout(() => setLoading(false), 400);
   };
 
@@ -84,7 +109,7 @@ const Tours = () => {
 
       {/* Banner IMage */}
       <img
-        src={type?.image}
+        src={changedType?.image}
         alt=""
         className="w-full h-[160px] md:h-[270px] object-cover object-left"
       />
@@ -98,7 +123,7 @@ const Tours = () => {
       <div className="bg-deep-orange-50 py-5 -mt-8 pt-10 ">
         <div className="max-w-maxWidthContent mx-auto">
           <h3 className="text-lg md:text-2xl text-center GTE_bold">
-            {type?.title} & Activities
+            {changedType?.title} & Activities
           </h3>
           <div className="mx-4 md:ml-0 flex justify-start md:justify-center gap-x-0 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar">
             {TourType?.types.map((type, index) => (
@@ -109,7 +134,7 @@ const Tours = () => {
               >
                 <img
                   src={type?.image}
-                  className="w-[65px] h-[65px] md:w-[80px] md:h-[80px] rounded-full p-[1px] border-2 border-transparent object-cover group-hover:border-[#ff621c] "
+                  className={`w-[65px] h-[65px] md:w-[80px] md:h-[80px] rounded-full p-[1px] border-2 border-transparent object-cover group-hover:border-[#ff621c] ${type.title.toLowerCase().trim() == typeSlice.title.toLowerCase().trim() && " !border-[#ff621c] " } `}
                 />
                 <p className="text-xs md:text-sm text-center mt-1">
                   {type.title}
@@ -143,7 +168,7 @@ const Tours = () => {
         <div>
           <h3 className="text-sm md:text-lg font-medium flex gap-x-2 items-center">
             <FaPlane className="group-hover:text-[#ff612c]"></FaPlane>
-            {type?.title} Tours in Cities
+            {changedType?.title} Tours in Cities
           </h3>
           <Link
             to={"/all-tours"}
@@ -205,53 +230,68 @@ const Tours = () => {
           {/* All Tours  */}
           {!loading && (
             <div className="w-full">
-              <div className="mt-3 flex flex-wrap justify-between gap-3 md:gap-4  md:mt-4 pb-6 ">
-                <div className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
-                  <span className="absolute top-2 left-2 text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
-                    Adventure
-                  </span>
-                  <div className="w-full">
-                    <img
-                      src={img2}
-                      alt=""
-                      className="w-full h-[100px] sm:h-[100px] object-cover"
-                    />
-                  </div>
-                  <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                    <Tooltip
-                      content={"Evenning Desert Saudi Arabia, late Night"}
+              <div className="mt-3 flex flex-wrap justify-start gap-3 md:gap-4  md:mt-4 pb-6 ">
+                {tours?.map((tour, index) => {
+                  console.log(tour);
+                  const {
+                    title,
+                    image,
+                    price: { aed, rupees },
+                    tourType,
+                    city,
+                    rating,
+                  } = tour;
+                  return (
+                    <div
+                      key={index}
+                      className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white shadow-xl "
                     >
-                      <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">
-                        Evening Desert S...{" "}
-                      </h3>
-                    </Tooltip>
-                    <h3 className="text-xs font-medium text-richblack-900 mt-1">
-                      AED 135.00
-                    </h3>
-                    <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
-                      {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
-                      <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
-                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
-                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
-                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
-                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
-                        <FaStar className="text-yellow-100 text-[8px]"></FaStar>
+                      <span className="absolute top-2 left-2 text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
+                        {tourType}
+                      </span>
+                      <div className="w-full">
+                        <img
+                          src={image}
+                          alt=""
+                          className="w-full h-[100px] sm:h-[100px] object-cover"
+                        />
+                      </div>
+                      <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+                        <Tooltip content={title}>
+                          <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2 truncate">
+                            {title}
+                          </h3>
+                        </Tooltip>
+                        <h3 className="text-xs font-medium text-richblack-900 mt-1">
+                          AED {aed}.00
+                        </h3>
+                        <div className="flex items-center justify-between flex-wrap sm:flex-nowrap mt-0 sm:mt-1">
+                          {/* <p className="text-[8px] text-richblack-200 flex items-center mt-1">277 Reviews</p> */}
+                          <div className="flex mt-1 sm:mt-0 gap-x-1 items-center">
+                            {[...new Array(rating)].map((e, i) => (
+                              <FaStar
+                                key={i}
+                                className="text-yellow-100 text-[8px]"
+                              ></FaStar>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="flex !items-strech gap-1 mt-3">
+                          <Button
+                            size="sm"
+                            variant="outlined"
+                            className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal"
+                          >
+                            Book Now
+                          </Button>
+                          <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0">
+                            <MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div className="flex !items-strech gap-1 mt-3">
-                      <Button
-                        size="sm"
-                        variant="outlined"
-                        className="normal-case py-[.4rem] rounded-md w-[70px] px-2 text-[10px] sm:text-[10px] hover:bg-[#ff621c] hover:text-white text-[#ff612c] border-[#ff612c] font-normal"
-                      >
-                        Book Now
-                      </Button>
-                      <button className="bg-none relative z-20 px-1 pl-2 ml-3 border-none before:w-full before:h-full before:bg-none before:hover:bg-richblack-25 before:absolute before:top-0 before:left-[1px] before:py-2 before:rounded-full before:z-0">
-                        <MdOutlineAddShoppingCart className="text-lg relative z-30 text-richblack-500"></MdOutlineAddShoppingCart>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           )}

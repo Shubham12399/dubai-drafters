@@ -11,6 +11,7 @@ import img3 from "../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../assets/images/IMG-20240205-WA0070.jpg";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+
 const SearchedItem = () => {
   const [filterAsideModal, setFilterAsideModal] = useState(false);
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ const SearchedItem = () => {
         <div className=" px-4 flex justify-between items-center pr-4 sticky top-10 z-[99] bg-white mt-2">
 
           <h4 className="text-sm md:text-sm text-richblack-900">
-            Total Results: <span> 22 </span>
+            Results: <span> 22 </span>
           </h4>
 
           {/* <h4
