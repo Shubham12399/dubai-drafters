@@ -1,17 +1,24 @@
 import { GoSearch } from "react-icons/go";
 import img1 from "../../assets/images/IMG-20240205-WA0063.jpg";
 import { useState } from "react";
-
+import activites from "../../data/Activities";
 const SearchInput = () => {
   const [isSearching, setIsSearching] = useState(false);
-  const [searchValue, setSearchValue] = useState({});
+  const [searchValue, setSearchValue] = useState([]);
+
   const handleSearchData = (e) => {
     const { value } = e.target;
+    console.log(value)
     if (!value || value == "" || value.trim() == "") {
-      return setIsSearching(false);
+       setSearchValue([])
+       setIsSearching(false);
+       return;
     }
+    setSearchValue(prev => [...activites.filter((activity,index) => activity?.title.toLowerCase().includes(value.toLowerCase()))]);
     setIsSearching(true);
   };
+
+  console.log(searchValue.length == 0, searchValue )
   return (
     <div className="relative w-[90%] mx-auto sm:max-w-[340px] md:max-w-[500px] pb-2">
       <div className="px-4 py-3 rounded-xl text-xs text-richblack-700  bg-white shadow-lg flex gap-x-2 pl-4 items-center justify-between mx-auto">
@@ -26,63 +33,39 @@ const SearchInput = () => {
           />
         </div>
       </div>
-      {isSearching && (
+
+      {isSearching && (searchValue.length !== 0) && (
         <div className="relative">
-          <div className="w-full flex flex-col rounded-xl bg-white shadow-md absolute top-0 mt-2 p-1 py-2">
-            <div className="flex gap-x-2 px-2 my-1 rounded-md w-full cursor-pointer">
+          <div className="w-full flex flex-col rounded-xl bg-white shadow-md absolute top-0 mt-2 p-1 py-2 max-h-[200px] overflow-auto hide-scrollbar">
+            
+        {searchValue?.map((item,index) => {
+          const {title,image, description} = item;
+          return (
+            <div className="flex gap-x-2 px-2 my-1 rounded-md w-full cursor-pointer" key={index}>
               <div>
                 <img
-                  src={img1}
+                  src={image}
                   alt=""
                   className="w-[44px] h-[33px] md:w-[60px] md:h-[50px] rounded-md"
                 />
               </div>
               <div className="ml-1">
                 <h3 className="text-[13px] md:text-sm font-medium">
-                  Water tour in Big Bang park
+                  {title}
                 </h3>
-                <p className="text-xs GTE_light text-richblack-700">
-                  Dubai , Big Bang city{" "}
+                <p className="text-xs GTE_light text-richblack-700 truncate pr-4">
+                  {description}...
                 </p>
               </div>
             </div>
-            <div className="flex gap-x-2 px-2 my-1 rounded-md w-full cursor-pointer">
-              <div>
-                <img
-                  src={img1}
-                  alt=""
-                  className="w-[44px] h-[33px] md:w-[60px] md:h-[50px] rounded-md"
-                />
-              </div>
-              <div className="ml-1">
-                <h3 className="text-[13px] md:text-sm font-medium">
-                  Water tour in Big Bang park
-                </h3>
-                <p className="text-xs GTE_light text-richblack-700">
-                  Dubai , Big Bang city{" "}
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-x-2 px-2 my-1 rounded-md w-full cursor-pointer">
-              <div>
-                <img
-                  src={img1}
-                  alt=""
-                  className="w-[44px] h-[33px] md:w-[60px] md:h-[50px] rounded-md"
-                />
-              </div>
-              <div className="ml-1">
-                <h3 className="text-[13px] md:text-sm font-medium">
-                  Water tour in Big Bang park
-                </h3>
-                <p className="text-xs GTE_light text-richblack-700">
-                  Dubai , Big Bang city{" "}
-                </p>
-              </div>
-            </div>
+          )
+        })    
+            
+           }
           </div>
         </div>
       )}
+      
     </div>
   );
 };

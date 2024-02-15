@@ -11,6 +11,7 @@ const activities = [
     {
         title:"Evening Desert Safari Late Night",
         image:img8,
+        description:"this is demo description",
         price:{
             aed : 130,
             rupees: 80000
@@ -22,6 +23,7 @@ const activities = [
     {
         title:"Dubai Desert Safari Adventure",
         image:img5,
+        description:"this is demo description",
         price:{
             aed : 300,
             rupees: 80000
@@ -33,6 +35,7 @@ const activities = [
     {
         title:"Greek Island Hopping Tour",
         image:img3,
+        description:"this is demo description",
         price:{
             aed : 1205,
             rupees: 80000
@@ -44,6 +47,7 @@ const activities = [
     {
         title:"Venice Canal Boat Tou",
         image:img7,
+        description:"this is demo description",
         price:{
             aed : 1000,
             rupees: 80000
@@ -55,6 +59,7 @@ const activities = [
     {
         title:"African Safari Wildlife Exploration",
         image:img6,
+        description:"this is demo description",
         price:{
             aed : 230,
             rupees: 80000
@@ -66,6 +71,7 @@ const activities = [
     {
         title:"Japanese Cherry Blossom Experience",
         image:img5,
+        description:"this is demo description",
         price:{
             aed : 175,
             rupees: 80000
@@ -77,6 +83,7 @@ const activities = [
     {
         title:"Amazon Rainforest Expedition Tour",
         image:img3,
+        description:"this is demo description",
         price:{
             aed : 800,
             rupees: 80000
@@ -88,6 +95,7 @@ const activities = [
     {
         title:"Parisian Culinary and Culture Tour",
         image:img6,
+        description:"this is demo description",
         price:{
             aed : 760,
             rupees: 80000
@@ -99,6 +107,7 @@ const activities = [
     {
         title:"Egyptian Pyramids Exploration Trip",
         image:img8,
+        description:"this is demo description",
         price:{
             aed : 540,
             rupees: 80000
@@ -110,6 +119,7 @@ const activities = [
     {
         title:"Alaskan Northern Lights Expedition",
         image:img4,
+        description:"this is demo description",
         price:{
             aed : 135,
             rupees: 80000
@@ -121,6 +131,7 @@ const activities = [
     {
         title:"Arctic Wilderness Expeditions",
         image:img2,
+        description:"this is demo description",
         price:{
             aed : 205,
             rupees: 80000

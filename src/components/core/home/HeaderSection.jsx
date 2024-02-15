@@ -6,7 +6,7 @@ import collaborationBanner1 from "../../../assets/images/WhatsApp Image 2024-02-
 import { useQuery } from "@tanstack/react-query";
 
 
-const HeaderSection = ({setSelectDestination,setSelectAdvanture}) => {
+const HeaderSection = () => {
   
     const { isPending, error, data } = useQuery({
         queryKey: ['repoData'],

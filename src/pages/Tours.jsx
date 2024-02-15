@@ -26,71 +26,49 @@ import SearchInput from "../components/common/SearchInput";
 import activities from "../data/Activities";
 import { useDispatch, useSelector } from "react-redux";
 import { setType } from "../redux/slices/typeSlice";
+import NormalFilter from "../data/NormalFilter";
+import FilterModal from "../components/common/FilterModal";
+import PostsSkl from "../components/skelaton/common/PostsSkl";
 
 const Tours = () => {
-  const [mostPopularModal, setMostPopularModal] = useState(false);
+  // filter configurations
+  const [isFilterModal, setIsFilterModal] = useState(false);
+  const [filterValue, setFilterValue] = useState({
+    checkbox_0: true,
+    name: "No Filter",
+  });
+  const [loading, setLoading] = useState(true);
+
   const [priceModal, setPriceModal] = useState(false);
   const [allToursModal, setAllToursModal] = useState(false);
-  const [changedType, setChangedType] = useState(TourType.types[0]);
-  const [loading, setLoading] = useState(true);
+  const [changedType, setChangedType] = useState(TourType);
   const [tours, setTours] = useState([...activities]);
   const typeSlice = useSelector((store) => store.typeSlice);
   // tours is data of all tours
 
   const dispatch = useDispatch();
-  // console.log(type);
-  const loadingSkleton = (
-    <div className="max-w-maxContent mx-auto">
-      <div className="flex flex-wrap justify-between gap-y-4 pb-4 mt-3">
-        {[...new Array(10)].map((e, i) => {
-          return (
-            <div
-              key={i}
-              className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white "
-            >
-              <span className="absolute top-2 left-2 text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
-                {/* Adventure */}
-              </span>
-              <div className="w-full">
-                <div
-                  // src={img2}
-                  alt=""
-                  className="w-full h-[100px] sm:h-[100px] object-cover bg-[var(--sklClr)]"
-                />
-              </div>
-              <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <h3 className="h-[14px] w-full bg-[var(--sklClr)]"> </h3>
-                <h3 className="h-[14px] w-[60%] bg-[var(--sklClr)] mt-2"> </h3>
+ 
 
-                <div className="h-[20px] w-[80%] bg-[var(--sklClr)] mt-2"></div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+  TourType.map(
+    (e, index) => (e.id = e.name.split(" ").join("_") + "_" + (index + 1))
   );
-  TourType.types.map(
-    (e, index) => (e.id = e.title.split(" ").join("_") + "_" + (index + 1))
-  );
+
+  // handle the type when click on type
   useEffect(() => {
     // window.scrollTo(0, 0);
     setTimeout(() => setLoading(false), 700);
     const filtred = activities.filter((tour) => {
-      console.log(tour.tourType.toLowerCase().trim() , typeSlice?.title.toLowerCase().trim())
-
       return (
         tour.tourType.toLowerCase().trim() ==
-        typeSlice?.title.toLowerCase().trim()
+        typeSlice?.name.toLowerCase().trim()
       );
-      });
-      console.log(typeSlice?.title.trim().toLowerCase())
-    if (typeSlice?.title.trim().toLowerCase() !== "top tour") {
+    });
+    console.log(typeSlice?.name.trim().toLowerCase());
+    if (typeSlice?.name.trim().toLowerCase() !== "top tour") {
       setTours([...filtred]);
-    }else{
+    } else {
       setTours([...activities]);
     }
-    console.log(activities);
   }, [typeSlice]);
 
   // handle Tour type changes
@@ -99,7 +77,6 @@ const Tours = () => {
     console.log(type);
     setChangedType({ ...type });
     dispatch(setType({ ...type }));
-
     setTimeout(() => setLoading(false), 400);
   };
 
@@ -111,7 +88,7 @@ const Tours = () => {
       <img
         src={changedType?.image}
         alt=""
-        className="w-full h-[160px] md:h-[270px] object-cover object-left"
+        className="w-full h-[160px] md:h-[270px] object-cover object-right"
       />
 
       {/* seacrh Box  */}
@@ -123,24 +100,31 @@ const Tours = () => {
       <div className="bg-deep-orange-50 py-5 -mt-8 pt-10 ">
         <div className="max-w-maxWidthContent mx-auto">
           <h3 className="text-lg md:text-2xl text-center GTE_bold">
-            {changedType?.title} & Activities
+            {changedType?.name} & Activities
           </h3>
           <div className="mx-4 md:ml-0 flex justify-start md:justify-center gap-x-0 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar">
-            {TourType?.types.map((type, index) => (
-              <div
-                key={index}
-                onClick={() => handleType(type)}
-                className="cursor-pointer min-w-[70px] group"
-              >
-                <img
-                  src={type?.image}
-                  className={`w-[65px] h-[65px] md:w-[80px] md:h-[80px] rounded-full p-[1px] border-2 border-transparent object-cover group-hover:border-[#ff621c] ${type.title.toLowerCase().trim() == typeSlice.title.toLowerCase().trim() && " !border-[#ff621c] " } `}
-                />
-                <p className="text-xs md:text-sm text-center mt-1">
-                  {type.title}
-                </p>
-              </div>
-            ))}
+            {TourType.map((type, index) => {
+              console.log(type);
+              return (
+                <div
+                  key={index}
+                  onClick={() => handleType(type)}
+                  className="cursor-pointer min-w-[70px] group"
+                >
+                  <img
+                    src={type?.image}
+                    className={`w-[65px] h-[65px] md:w-[80px] md:h-[80px] rounded-full p-[1px] border-2 border-transparent object-cover group-hover:border-[#ff621c] ${
+                      type.name.toLowerCase().trim() ==
+                        typeSlice.name.toLowerCase().trim() &&
+                      " !border-[#ff621c] "
+                    } `}
+                  />
+                  <p className="text-xs md:text-sm text-center mt-1">
+                    {type.name}
+                  </p>
+                </div>
+              );
+            })}
 
             {/* <Link to={"/category/Adventure"} className="">
               <img src={img1} className="w-[65px] h-[65px] md:w-[80px] md:h-[80px] rounded-full p-1 border-2 border-transparent hover:border-[#ff621c] "/>
@@ -168,7 +152,7 @@ const Tours = () => {
         <div>
           <h3 className="text-sm md:text-lg font-medium flex gap-x-2 items-center">
             <FaPlane className="group-hover:text-[#ff612c]"></FaPlane>
-            {changedType?.title} Tours in Cities
+            {changedType?.name} Tours in Cities
           </h3>
           <Link
             to={"/all-tours"}
@@ -189,7 +173,7 @@ const Tours = () => {
               {loading ? (
                 <div className="w-[40px] bg-[var(--sklClr)] rounded-md inline-block"></div>
               ) : (
-                10
+                tours.length
               )}
             </span>
 
@@ -202,13 +186,15 @@ const Tours = () => {
                 {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
                   Most Popular
                 </h3> */}
-                <span
+
+                <label
+                  htmlFor="select"
                   className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
-                  onClick={() => setMostPopularModal(true)}
+                  onClick={() => setIsFilterModal(true)}
                 >
-                  Most Popular
+                  {filterValue?.name}
                   <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
-                </span>
+                </label>
                 {/* <div className="flex">
                 <div className="w-full rounded-lg bg-white md:bg-transparent md:shadow-none ">
                   {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
@@ -234,7 +220,7 @@ const Tours = () => {
                 {tours?.map((tour, index) => {
                   console.log(tour);
                   const {
-                    title,
+                    name,
                     image,
                     price: { aed, rupees },
                     tourType,
@@ -247,13 +233,14 @@ const Tours = () => {
                       className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white shadow-xl "
                     >
                       <div className="absolute flex gap-x-2 items-center top-2 left-2 text-xs text-white">
-
-                      {typeSlice.title.trim().toLowerCase() == "top tour" && <span className="text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
-                        {tourType}
-                      </span>}
-                      <span className="text-xs text-white bg-[#ff612c] px-1 rounded-md">
-                        {city}
-                      </span>
+                        {typeSlice.name.trim().toLowerCase() == "top tour" && (
+                          <span className="text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
+                            {tourType}
+                          </span>
+                        )}
+                        <span className="text-xs text-white bg-[#ff612c] px-1 rounded-md">
+                          {city}
+                        </span>
                       </div>
 
                       <div className="w-full">
@@ -264,9 +251,9 @@ const Tours = () => {
                         />
                       </div>
                       <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                        <Tooltip content={title}>
+                        <Tooltip content={name}>
                           <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2 truncate">
-                            {title}
+                            {name}
                           </h3>
                         </Tooltip>
                         <h3 className="text-xs font-medium text-richblack-900 mt-1">
@@ -304,7 +291,7 @@ const Tours = () => {
           )}
 
           {/* Loading Skleton  */}
-          {loading && loadingSkleton}
+          {loading && <PostsSkl></PostsSkl>}
         </div>
 
         <div className="pb-4 max-w-maxWidthContent mx-auto ">
@@ -1010,21 +997,47 @@ const Tours = () => {
         </div>
       </div>
 
-      {/* Modal section  */}
+      {/* Modal section 
       {mostPopularModal && (
         <Modal
           title={
             <div className="flex items-center gap-x-2 GTE_light">
-              Most Popular
+              Filter Options
             </div>
           }
           setModal={setMostPopularModal}
         >
-          <div className="w-fit mx-auto">
-            <div className="flex justify-start flex-wrap px-1 gap-y-1 my-2"></div>
+          <div className="mx-auto select-none">
+            <div className="flex flex-col w-full flex-wrap px-1 gap-y-1 my-2">
+              {NormalFilter.map((item, index) => {
+                return ( 
+                    <div key={index} className="flex items-center py-1 text-richblack-700 cursor-pointer">
+                      <input
+                        key={index}
+                        type="radio"
+                        id={"checkbox_" + index}
+                        name="normalfilter"
+                        value={item.title}
+                        onChange={handleNormalFilter}
+                        checked={normalFilter["checkbox_" + index]}
+                      />
+                      <label htmlFor={"checkbox_" + index} className="text-sm select-none GTE_light cursor-pointer pl-3 ">{item.title}</label>
+                    </div>
+                );
+              })}
+            </div>
           </div>
         </Modal>
-      )}
+      )} */}
+
+      {/* filter Modal */}
+      <FilterModal
+        isFilterModal={isFilterModal}
+        setIsFilterModal={setIsFilterModal}
+        setFilterValue={setFilterValue}
+        setLoading={setLoading}
+        filterValue={filterValue}
+      ></FilterModal>
       {/*---------------------------------- Open Service Modal ---------------------------- */}
       {priceModal && (
         <Modal

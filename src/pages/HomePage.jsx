@@ -8,17 +8,41 @@ import img3 from "../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../assets/images/IMG-20240205-WA0070.jpg";
 import Modal from "../components/Modal";
 import { IoEarth } from "react-icons/io5";
-import { FaCity, FaFileAlt, FaHotel, FaPlane } from "react-icons/fa";
+import { FaCity, FaFileAlt, FaFileSignature, FaHotel, FaPlane } from "react-icons/fa";
 
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { Button, ButtonGroup, Carousel, IconButton, Tooltip } from "@material-tailwind/react";
 import { FaAngleLeft, FaAngleRight, FaArrowLeft, FaStar } from "react-icons/fa";
 import { GoChevronRight } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Destinations from "../data/Destinations";
+import TourType from "../data/TourType";
+import DestinationModal from "../components/common/DestinationModal";
+import SelectModal from "../components/common/SelectModal";
 const HomePage = () => {
-  const [selectDestination, setSelectDestination] = useState(false);
-  const [selectAdvanture, setSelectAdvanture] = useState(false);
+  const [selectionType , setSelectionType] = useState([]);
+  const [selectType, setSelectType] = useState(false);
+  const [destinationValue , setDestinationValue] = useState({});
+  const [isModal , setIsModal] = useState(false);
+  const [tourType , setTourType] = useState({});
+  const navigate = useNavigate();
 
+  console.log(setSelectionType)
+  const handleSelectionType = (typeString,setStateFun,stateValue ) => {
+      setSelectionType([typeString,setStateFun,stateValue]);
+      setIsModal(true);
+  };
+
+  // const handleChanges = (type , selectedData) => {
+  //   if(type == "Destination"){
+  //     setDestination({...selectedData});
+  //   setIsDestinationModal(false);
+  //   }
+  //   if(type == "tourType"){
+  //     setTourType({...selectedData});
+  //     setSelectType(false)
+  //   }
+  // }
   return (
     <div className="">
       <Navigation></Navigation>
@@ -26,8 +50,6 @@ const HomePage = () => {
 
         {/* ------------------------------Header section ----------------------------------------------------- */}
         <HeaderSection
-          setSelectDestination={setSelectDestination}
-          setSelectAdvanture={setSelectAdvanture}
         ></HeaderSection>
 
 
@@ -44,13 +66,17 @@ const HomePage = () => {
                               <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%] ">
                                
                                 Destination</h3>
-                              <span className="text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 items-center w-full max-w-[120px] md:max-w-full md:pr-6" onClick={() => setSelectDestination(true) }>Search Location  <GoChevronRight className="rotate-90  ml-0 md:ml-8"></GoChevronRight></span>
+                              <span className="text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 items-center w-full max-w-[120px] md:max-w-full md:pr-6" onClick={() =>{ 
+                              handleSelectionType("tourDestination",setDestinationValue,destinationValue);
+                              } }>{destinationValue?.name ? <span className="text-richblack-900"> {destinationValue?.name} </span> : <>Search Location</> }  <GoChevronRight className="rotate-90  ml-0 md:ml-8"></GoChevronRight></span>
                           </div>  
                       </div>  
                       <div className="flex md:pl-7 md:border-r md:border-[#08aca0]  pl-1">
                           <div className="w-full rounded-lg bg-white md:pl-0 md:bg-transparent md:shadow-none ">
                           <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">Type</h3>
-                          <span className="text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] " onClick={() => setSelectAdvanture(true)}>Advanture  <GoChevronRight className="rotate-90"></GoChevronRight></span>
+                          <span className="text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] " onClick={() => {
+                          handleSelectionType("tourType", setTourType,tourType)}
+                          }>{tourType?.name ? <span className="text-richblack-900"> {tourType?.name} </span> : <>Tour Type</> } <GoChevronRight className="rotate-90"></GoChevronRight></span>
                           </div>
                       </div>
                       <div className="hidden md:flex md:pl-7 md:border-r border-[#08aca0]  ">
@@ -67,7 +93,10 @@ const HomePage = () => {
                       </div>  
                       
                       <div className="flex md:ml-4 w-full md:col-span-1 md:px-0 items-center ml-3">
-                          <Button size="sm" className="normal-case w-[80px] bg-[#ff621c] text-white text-xs rounded-full md:rounded-full font-medium !px-0 md:px-4 ">Find Trip</Button>
+                          <Button size="sm" className="normal-case w-[80px] bg-[#ff621c] text-white text-xs rounded-full md:rounded-full font-medium !px-0 md:px-4 " onClick={() =>{
+                            if(!destinationValue?.name || !tourType?.name )return;
+                             navigate(`/searched?destination=${destinationValue?.name}&tourType=${tourType?.name}`)}
+                             }>Find Trip</Button>
                           </div>  
                   </div> 
             </div> 
@@ -795,7 +824,7 @@ const HomePage = () => {
       {/*---------------------------------------------------- Models ----------------------------- */}
 
                     {/*---------------------------------- Select Destination ---------------------------- */}
-      {selectDestination && (
+      {/* {selectDestination && (
         <Modal
           title={
             <div className="flex items-center gap-x-2 GTE_light">
@@ -804,67 +833,50 @@ const HomePage = () => {
               <IoEarth className="text-richblack-500"></IoEarth>{" "}
             </div>
           }
-          setModal={setSelectDestination}
+          setModal={setIsDestinationModal}
         >
           <div className="w-fit mx-auto">
             <div className="flex justify-start flex-wrap gap-y-1 my-2">
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+            { Destinations.map((destination,index) => {
+              return (
+                <div key={index} className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1" onClick={() => handleChanges("Destination" , destination)}>
                 <img
-                  src={img1}
+                  src={destination.image}
                   alt=""
                   className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
                 />
                 <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Abu Dhabi
+                  {destinationValue?.name}
                 </h3>
               </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  src={img2}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Desert Safari
-                </h3>
-              </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  src={img3}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Rajsthan
-                </h3>
-              </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  src={img4}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Mumbai
-                </h3>
-              </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  src={img1}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Kuvait
-                </h3>
-              </div>
+              )
+            })  
+             }
+           
             </div>
           </div>
         </Modal>
-      )}
-                    {/*---------------------------------- Select ADvanture ---------------------------- */}
+      )} */}
 
-      {selectAdvanture && (
+
+
+
+      {/* <DestinationModal 
+      isDestinationModal={isDestinationModal}
+      setIsDestinationModal={setIsDestinationModal}
+      destinationValue={destinationValue}
+      setDestinationValue={setDestinationValue}></DestinationModal>
+                    ---------------------------------- Select ADvanture ---------------------------- */}
+
+      <SelectModal
+        isSelectModal={isModal}
+        setIsSelectModal={setIsModal}
+        setSelectValue={selectionType[1]}
+        selectValue={selectionType[2]}
+        type={selectionType[0]}
+      ></SelectModal>
+
+      {selectType&& (
         <Modal
           title={
             <div className="flex items-center gap-x-2 GTE_light">
@@ -872,21 +884,28 @@ const HomePage = () => {
               Choose Type
             </div>
           }
-          setModal={setSelectAdvanture}
+          setModal={setSelectType}
         >
           <div className="w-fit mx-auto">
             <div className="flex justify-start flex-wrap px-1 gap-y-1 my-2">
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+
+             {TourType.map((type , index) => {
+              return (
+                <div  key={index}
+                className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1" onClick={() => handleChanges("tourType" , type)}>
                 <img
-                  src={img1}
+                  src={type.image}
                   alt=""
                   className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
                 />
                 <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Adventure
+                  {type.title} Tour
                 </h3>
               </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
+              )
+             })}
+
+              {/* <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
                 <img
                   src={img2}
                   alt=""
@@ -935,7 +954,8 @@ const HomePage = () => {
                 <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
                   Attractions visit{" "}
                 </h3>
-              </div>
+              </div> */}
+
             </div>
           </div>
         </Modal>

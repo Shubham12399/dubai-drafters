@@ -4,7 +4,7 @@ const typeSlice = createSlice({
     name:"Type",
     initialState:{
         id: 'Top_Tour_1',
-        title: 'Top Tour',
+        name: 'Top Tour',
         tours: [],
         image: '/src/assets/images/travel 1920x450 banner.png',
         subtitle: 'Top Tour in Cities',

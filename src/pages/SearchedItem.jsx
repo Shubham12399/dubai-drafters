@@ -1,7 +1,7 @@
 import { FaSort, FaStar } from "react-icons/fa";
 import BottomNav from "../components/common/BottomNav";
 import Navigation from "../components/common/Navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GoChevronRight, GoX } from "react-icons/go";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { Button, Tooltip } from "@material-tailwind/react";
@@ -9,12 +9,37 @@ import img1 from "../assets/images/IMG-20240205-WA0063.jpg";
 import img2 from "../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../assets/images/IMG-20240205-WA0070.jpg";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import FilterModal from "../components/common/FilterModal";
 
 const SearchedItem = () => {
   const [filterAsideModal, setFilterAsideModal] = useState(false);
+  const [searchedObj , setSearchedObj] = useState({});
+
+  const [isFilterModal, setIsFilterModal] = useState(false);
+  const [filterValue, setFilterValue] = useState({
+    checkbox_0: true,
+    name: "No Filter",
+  });
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const location = useLocation();
+  let paramsObj = useRef({});
+
+  useEffect(() => {
+    paramsObj.current = {};
+    console.log(location?.search)
+    location?.search
+      .split("?")[1]
+      ?.split("&")
+      .forEach((e) => {
+        const key = e.split("=")[0];
+        const value = decodeURIComponent(e.split("=")[1]);
+        paramsObj.current[key] = value;
+      });
+      setSearchedObj(paramsObj.current);
+  },[location] );
   return (
     <>
       <Navigation></Navigation>
@@ -23,9 +48,10 @@ const SearchedItem = () => {
         {/* searched heading */}
         <h3 className=" px-4 text-lg md:text-xl text-richblack-900 ">
           Search For: Destination{" "}
-          <span className="text-[#ff621c]"> Dubai </span> and Type{" "}
-          <span className="text-[#ff621c]">Adventure</span>
+          <span className="text-[#ff621c]">{searchedObj?.destination} </span> and Type{" "}
+          <span className="text-[#ff621c]">{searchedObj?.tourType}</span>
           <Link
+          to={"/all-tours"}
             className="text-xs block w-fit px-3 py-1 rounded-full border border-richblack-900 text-richblack-900 mt-4"
           >
             View All
@@ -55,8 +81,9 @@ const SearchedItem = () => {
                 </h3> */}
                   <span
                     className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
+                    onClick={() => setIsFilterModal(true)}
                   >
-                    Most Popular
+                    {filterValue?.name}
                     <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
                   </span>
                   {/* <div className="flex">
@@ -708,11 +735,14 @@ const SearchedItem = () => {
         </div>
 
 
-
-
-
-
-
+  {/* filter Modal */}
+  <FilterModal
+        isFilterModal={isFilterModal}
+        setIsFilterModal={setIsFilterModal}
+        setFilterValue={setFilterValue}
+        setLoading={setLoading}
+        filterValue={filterValue}
+      ></FilterModal>
         {/* ------------------------------------------------------------------------------------- */}
       
       </div>
