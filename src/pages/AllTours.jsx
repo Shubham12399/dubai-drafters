@@ -11,7 +11,7 @@ import img1 from "../assets/images/travel 1920x450 banner.png";
 import img2 from "../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../assets/images/IMG-20240205-WA0070.jpg";
-import { GoChevronRight } from "react-icons/go";
+import { GoChevronDown, GoChevronRight, GoLocation, GoTag } from "react-icons/go";
 import { useEffect, useState } from "react";
 import BottomNav from "../components/common/BottomNav";
 import Modal from "../components/Modal";
@@ -75,7 +75,7 @@ const AllTours = () => {
           }}
         >
           <div className="flex items-center gap-x-2">
-            <FaSearchLocation className="text-richblack-400"></FaSearchLocation>
+            <GoLocation className="text-richblack-400 text-sm"></GoLocation>
             <span className="text-richblack-200 GTE_light text-xs md:text-sm">
               {destinationValue?.name ? (
                 <span className="text-richblack-900">
@@ -87,7 +87,7 @@ const AllTours = () => {
               )}
             </span>
           </div>
-          <FaChevronDown className="text-richblack-400"></FaChevronDown>
+          <GoChevronDown className="text-richblack-400 text-sm"></GoChevronDown>
         </div>
 
         <div
@@ -97,7 +97,7 @@ const AllTours = () => {
           }}
         >
           <div className="flex items-center gap-x-2">
-            <FaSearchLocation className="text-richblack-400"></FaSearchLocation>
+            <GoTag className="text-richblack-400 text-sm"></GoTag>
             <span className="text-richblack-200 GTE_light text-xs md:text-sm">
               {tourType?.name ? (
                 <span className="text-richblack-900"> {tourType?.name} </span>
@@ -106,7 +106,7 @@ const AllTours = () => {
               )}
             </span>
           </div>
-          <FaChevronDown className="text-richblack-400"></FaChevronDown>
+          <GoChevronDown className="text-richblack-400 text-sm"></GoChevronDown>
         </div>
         <Button
           variant="outlined"

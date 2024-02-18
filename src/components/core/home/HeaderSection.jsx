@@ -34,7 +34,7 @@ const HeaderSection = () => {
 
 
   return (
-    <div className="w-full bg-[rgba(0,0,0,0.03)]">
+    <div className="w-full bg-[rgba(0,0,0,0.03)] h-full">
 {
       <Carousel
         className="rounded-none relative"

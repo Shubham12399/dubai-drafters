@@ -14,28 +14,28 @@ const TourTypes = [
           description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam?"
         },
         {
-          name:"Adventure",
+          name:"Adventure Tour",
           tours:[],
           image:img1,
           subtitle:"Adventure Tour in Cities",
           description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam?"
         },
         {
-          name:"City",
+          name:"City Tour",
           tours:[],
           image:img2,
           subtitle:"Adventure Tour in Cities",
           description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam?"
         },
         {
-          name:"Water",
+          name:"Water Tour",
           tours:[],
           image:img3,
           subtitle:"Adventure Tour in Cities",
           description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore, adipisci beatae dicta deserunt, non velit quas obcaecati cumque saepe exercitationem explicabo ipsum eum consequuntur optio earum nostrum dolor. Nam?"
         },
         {
-          name:"Luxury",
+          name:"Luxury Tour",
           tours:[],
           image:img4,
           subtitle:"Adventure Tour in Cities",

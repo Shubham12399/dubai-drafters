@@ -17,7 +17,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"Adventure",
+        tourType:"Adventure Tour",
         city:"Dubai",
     },
     {
@@ -29,7 +29,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"Water",
+        tourType:"Water Tour",
         city:"Dubai",
     },
     {
@@ -41,7 +41,7 @@ const activities = [
             rupees: 80000
         },
         rating:4,
-        tourType:"City",
+        tourType:"City Tour",
         city:"Island",
     },
     {
@@ -53,7 +53,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"City",
+        tourType:"City Tour",
         city:"Europe",
     },
     {
@@ -65,7 +65,7 @@ const activities = [
             rupees: 80000
         },
         rating:4,
-        tourType:"Luxury",
+        tourType:"Luxury Tour",
         city:"Europe",
     },
     {
@@ -77,7 +77,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"Adventure",
+        tourType:"Adventure Tour",
         city:"Europe",
     },
     {
@@ -89,7 +89,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"City",
+        tourType:"City Tour",
         city:"America",
     },
     {
@@ -101,7 +101,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"City",
+        tourType:"City Tour",
         city:"England",
     },
     {
@@ -113,7 +113,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"Luxury",
+        tourType:"Luxury Tour",
         city:"Egypt",
     },
     {
@@ -125,7 +125,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"Adventure",
+        tourType:"Adventure Tour",
         city:"India",
     },
     {
@@ -137,7 +137,7 @@ const activities = [
             rupees: 80000
         },
         rating:5,
-        tourType:"Adventure",
+        tourType:"Adventure Tour",
         city:"India",
     },
 ];

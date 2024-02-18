@@ -2,55 +2,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{
-  --sklClr:rgba(0,0,0,00.04);
+:root {
+  --sklClr: rgba(0, 0, 0, 00.04);
 }
 @font-face {
-    font-family: "geist-light";
-    src: url("./assets/fonts/GTEestiProDisplay-Light.woff");
-  }
+  font-family: "geist-light";
+  src: url("./assets/fonts/GTEestiProDisplay-Light.woff");
+}
 @font-face {
-    font-family: "geist-regular";
-    src: url("./assets/fonts/GTEestiProDisplay-Regular.ttf");
-  }
-  @font-face {
-    font-family: "geist-medium";
-    src: url("./assets/fonts/GTEestiProDisplay-Medium.ttf");
-  }
- 
-  @font-face {
-    font-family: "geist-bold";
-    src: url("./assets/fonts/GTEestiProDisplay-Bold.ttf");
-  }
-  @font-face {
-    font-family: "geist-black";
-    src: url("./assets/fonts/GTEestiProDisplay-UltraBold.ttf");
-  }
-  @font-face {
-    font-family: "geist-variable";
-    src: url("./assets/fonts/GeistVariableVF.ttf");
-  }
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 400;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-  }
-  *{
-    font-family: geist-regular !important;
-    /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
-    margin: 0;
-    padding: 0;
-  }
-  h1{
-    font-family: geist-medium !important;
-  }
-  .GTE_light{
-    font-family: geist-light !important;
-  }
-  .GTE_medium{
-    font-family: geist-medium !important;
-  }
+  font-family: "geist-regular";
+  src: url("./assets/fonts/GTEestiProDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "geist-medium";
+  src: url("./assets/fonts/GTEestiProDisplay-Medium.ttf");
+}
 
-  .GTE_bold{
-    font-family: geist-bold !important;
-  }
+@font-face {
+  font-family: "geist-bold";
+  src: url("./assets/fonts/GTEestiProDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: "geist-black";
+  src: url("./assets/fonts/GTEestiProDisplay-UltraBold.ttf");
+}
+@font-face {
+  font-family: "geist-variable";
+  src: url("./assets/fonts/GeistVariableVF.ttf");
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+* {
+  font-family: geist-regular !important;
+  /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: geist-medium !important;
+}
+.GTE_light {
+  font-family: geist-light !important;
+}
+.GTE_medium {
+  font-family: geist-medium !important;
+}
+.GTE_bold {
+  font-family: geist-bold !important;
+}
+.GTE_regular {
+  font-family: geist-regular !important;
+}

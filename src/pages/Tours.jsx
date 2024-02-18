@@ -49,13 +49,14 @@ const Tours = () => {
   const dispatch = useDispatch();
  
 
-  TourType.map(
-    (e, index) => (e.id = e.name.split(" ").join("_") + "_" + (index + 1))
-  );
+  // TourType.map(
+  //   (e, index) => (e.id = e.name.split(" ").join("_") + "_" + (index + 1))
+  // );
 
   // handle the type when click on type
   useEffect(() => {
     // window.scrollTo(0, 0);
+    console.log(typeSlice) 
     setTimeout(() => setLoading(false), 700);
     const filtred = activities.filter((tour) => {
       return (
@@ -86,7 +87,7 @@ const Tours = () => {
 
       {/* Banner IMage */}
       <img
-        src={changedType?.image}
+        src={typeSlice?.image}
         alt=""
         className="w-full h-[160px] md:h-[270px] object-cover object-right"
       />
@@ -100,7 +101,7 @@ const Tours = () => {
       <div className="bg-deep-orange-50 py-5 -mt-8 pt-10 ">
         <div className="max-w-maxWidthContent mx-auto">
           <h3 className="text-lg md:text-2xl text-center GTE_bold">
-            {changedType?.name} & Activities
+            {typeSlice?.name} & Activities
           </h3>
           <div className="mx-4 md:ml-0 flex justify-start md:justify-center gap-x-0 md:gap-x-4 items-start mt-3 overflow-auto hide-scrollbar">
             {TourType.map((type, index) => {
@@ -146,7 +147,7 @@ const Tours = () => {
         </div>
       </div>
 
-      {/* Heading Area  */}
+      {/* Heading Area and Post  */}
       <div className="p-4 max-w-maxWidthContent mx-auto md:pt-8 pb-0">
         {/* Tourse heading and view all btn */}
         <div>
@@ -220,7 +221,7 @@ const Tours = () => {
                 {tours?.map((tour, index) => {
                   console.log(tour);
                   const {
-                    name,
+                    title,
                     image,
                     price: { aed, rupees },
                     tourType,
@@ -251,9 +252,9 @@ const Tours = () => {
                         />
                       </div>
                       <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                        <Tooltip content={name}>
-                          <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2 truncate">
-                            {name}
+                        <Tooltip content={title}>
+                          <h3 className="text-[13px] sm:text-sm font-medium line-clamp-1">
+                            {title} 
                           </h3>
                         </Tooltip>
                         <h3 className="text-xs font-medium text-richblack-900 mt-1">
@@ -349,7 +350,8 @@ const Tours = () => {
         </div>
       </div>
 
-      {/* Types  -------------------------------------------------------------------------------  */}
+
+      {/* Types  -------------------------------------------------------------------------  */}
       <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-3 md:px-6">
         <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">
           <div>
