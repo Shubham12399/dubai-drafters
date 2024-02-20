@@ -5,6 +5,7 @@ import img1 from "../../assets/images/IMG-20240205-WA0063.jpg";
 import img2 from "../../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../../assets/images/IMG-20240205-WA0070.jpg";
+import { Collapse } from "react-collapse";
 import {
   GoAlert,
   GoArrowLeft,
@@ -16,8 +17,12 @@ import {
 } from "react-icons/go";
 import { Button } from "@material-tailwind/react";
 import { FaPaperPlane, FaPlane, FaStar } from "react-icons/fa";
+import { useState } from "react";
+import CollapseComp from "./Collapse";
+import checkImg from "../../assets/images/check.png";
 
 const TourDetails = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
   window.addEventListener("scroll", (e) => {
     // console.log(e);
   });
@@ -26,6 +31,7 @@ const TourDetails = () => {
       <Navigation></Navigation>
       <div className="relative h-[170px] w-full md:h-[60vh] select-none">
         <img
+          loading="lazy"
           src={img}
           alt="travel 1920x450 banner.png"
           className="h-full object-cover object-right"
@@ -33,7 +39,7 @@ const TourDetails = () => {
         <div className="absolute top-2 left-2 text-xl w-fit cursor-pointer p-2 text-white GTE_light">
           <GoArrowLeft></GoArrowLeft>
         </div>
-        <div className="w-full px-3 relative -mt-4">
+        <div className="w-full px-8 relative -mt-4">
           <button className="flex-grow w-full normal-case py-2 rounded-md px-2 text-xs sm:text-lg text-white bg-[#ff612c] hover:border-[#f77031] GTE_light">
             Book Now
           </button>
@@ -94,26 +100,31 @@ const TourDetails = () => {
             <p>Visitors</p>
             <div className="mt-2 flex gap-x-0 ">
               <img
+                loading="lazy"
                 src={img2}
                 alt=""
                 className="w-[50px] relative z-[4] rounded-full aspect-square object-cover bg-white shadow-sm p-[2px]"
               />
               <img
+                loading="lazy"
                 src={img1}
                 alt=""
                 className="w-[50px] relative  z-[3] -ml-3 rounded-full aspect-square object-cover bg-white shadow-sm p-[2px]"
               />
               <img
+                loading="lazy"
                 src={img3}
                 alt=""
                 className="w-[50px] relative z-[2]  -ml-3 rounded-full aspect-square object-cover bg-white shadow-sm p-[2px]"
               />
               <img
+                loading="lazy"
                 src={img4}
                 alt=""
                 className="w-[50px] relative z-[1] -ml-3 rounded-full aspect-square object-cover bg-white shadow-sm p-[2px]"
               />
               <img
+                loading="lazy"
                 src={img}
                 alt=""
                 className="w-[50px] relative z-[0]  -ml-3 rounded-full aspect-square object-cover bg-white shadow-sm p-[2px]"
@@ -136,62 +147,74 @@ const TourDetails = () => {
       {/* <div className="max-w-maxWidthContent mx-auto px-4 my-4">
         <h1>Image Gallery</h1>
         <div className="flex flex-wrap my-2 gap-x-2 gap-y-2 justify-start">
-          <img
+          <img 
+          loading="lazy"
             src={img1}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img2}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img3}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img4}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img1}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img2}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img3}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img4}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img1}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-             <img
+             <img 
+             loading="lazy"
             src={img4}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img2}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
           />
-          <img
+          <img 
+          loading="lazy"
             src={img3}
             alt={`${img1}`}
             className="h-[60px] aspect-auto object-cover rounded-md "
@@ -244,88 +267,54 @@ const TourDetails = () => {
         </div>
       </div>
 
-  <hr className="mt-8"/> 
       {/* Tabs Section */}
-      <div className="max-w-maxWidthContent mx-auto px-4 mt-6">
-        {/* <div className="flex items-center mt-5">
-          <div className="border-richblue-800 bg-[#ff612c] text-white p-2 px-4">
-            <span className="flex text-sm ">
-              Overview
-            </span>
-          </div>
-          <div className="border-b border-[#ff612c] p-2 px-4">
-            <span className="flex text-richblack-600 GTE_light text-sm">
-              Details
-            </span>
-          </div>
-          <div className="border-b border-[#ff612c] p-2 px-4">
-            <span className="flex text-richblack-600 GTE_light text-sm">
-              Instructions
-            </span>
-          </div>
-          <div className="border-b border-[#ff612c] p-2 px-4">
-            <span className="flex text-richblack-600 GTE_light text-sm">
-              Security
-            </span>
-          </div>
-        </div> */}
-        <div>
-          <div className="w-fit">
-            <h2 className="text-richblue-600 text-center">Overview</h2>
-            <span className="block w-[60%] h-1 bg-[#ff612c] rounded-xl"></span>
-          </div>
+      <div className="max-w-maxWidthContent mx-auto px-0 mt-6 flex flex-col divide-y">
+     
+        <CollapseComp title="Overview">
+          <div className="py-3">
 
-          <div className="py-5">
-            <p className="text-sm leading-snug GTE_regular text-richblack-700 ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-              laudantium tenetur maiores obcaecati voluptatibus consectetur
-              assumenda adipisci ullam quia dolorem nam itaque, optio quaerat
-              voluptate, ea odio sequi! Tempora dolores dolorem sed sint
-              cupiditate?{" "}
-            </p>
+      
+         <h1>Dubai Safari Abu Dhabi Overview</h1> 
+          <p className="text-sm mt-3 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium aliquam dolorum cumque error, similique voluptate nisi consequuntur ipsam suscipit fugiat expedita nobis! 
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span className="text-[#ff612c] text-xs">...more</span>
+          </p>
           </div>
-        </div>
-        <div>
-          <div className="w-fit">
-            <h2 className="text-richblue-600 text-center">Details</h2>
-            <span className="block w-[60%] h-1 bg-[#ff612c] rounded-xl"></span>
-          </div>
-
-          <div className="py-5">
-            <p className="text-sm leading-snug GTE_regular text-richblack-700 ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-              laudantium tenetur maiores obcaecati voluptatibus consectetur
-              assumenda adipisci ullam quia dolorem nam itaque, optio quaerat
-              voluptate, ea odio sequi! Tempora dolores dolorem sed sint
-              cupiditate?{" "}
-            </p>
-          </div>
-        </div>
-        <div>
-          <div className="w-fit">
-            <h2 className="text-richblue-600 text-center">Instructions</h2>
-            <span className="block w-[60%] h-1 bg-[#ff612c] rounded-xl"></span>
-          </div>
-
-          <div className="py-5">
-            <p className="text-sm leading-snug GTE_regular text-richblack-700 ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-              laudantium tenetur maiores obcaecati voluptatibus consectetur
-              assumenda adipisci ullam quia dolorem nam itaque, optio quaerat
-              voluptate, ea odio sequi! Tempora dolores dolorem sed sint
-              cupiditate?{" "}
-            </p>
-          </div>
-        </div>
+        </CollapseComp>
+        <CollapseComp  title="Details">
+          <ul className=" text-sm">
+            <li className="px-2 py-1 flex gap-x-4 items-center">
+              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li className="px-2 py-1 flex gap-x-4 items-center">
+              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li className="px-2 py-1 flex gap-x-4 items-center">
+              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li className="px-2 py-1 flex gap-x-4 items-center">
+              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li className="px-2 py-1 flex gap-x-4 items-center">
+              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li className="px-2 py-1 flex gap-x-4 items-center">
+              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+         
+          </ul>
+        </CollapseComp>
+        <CollapseComp  title="Instructions">
+          This is Collapsible Box
+        </CollapseComp>
+      
 
       </div>
-
-  <hr className="mt-8"/> 
-  <div className="max-w-maxWidthContent mx-auto px-4 mt-6">
-    <h1>Tour Map</h1>
-    </div>
-
-
 
       {/* Last Div  */}
       {

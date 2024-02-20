@@ -27,6 +27,7 @@ const DestinationModal = ({isDestinationModal, setIsDestinationModal , destinati
               return (
                 <div key={index} className={`min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1 ${destinationValue == destination && " outline " }`} onClick={() => handleDestinationValue(destination)}>
                 <img
+                  loading='lazy'
                   src={destination.image}
                   alt=""
                   className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
