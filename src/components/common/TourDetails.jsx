@@ -9,14 +9,16 @@ import { Collapse } from "react-collapse";
 import {
   GoAlert,
   GoArrowLeft,
+  GoCheck,
   GoCheckCircle,
   GoClock,
   GoLocation,
+  GoPlus,
   GoProject,
   GoTag,
 } from "react-icons/go";
 import { Button } from "@material-tailwind/react";
-import { FaPaperPlane, FaPlane, FaStar } from "react-icons/fa";
+import { FaPaperPlane, FaPlane, FaPlus, FaStar } from "react-icons/fa";
 import { useState } from "react";
 import CollapseComp from "./Collapse";
 import checkImg from "../../assets/images/check.png";
@@ -51,6 +53,7 @@ const TourDetails = () => {
 
          </div> */}
 
+      {/* Description */}
       <div className="max-w-maxWidthContent mx-auto px-4 my-4 pt-4">
         <div>
           {/* <FaPlane className="min-w-fit mt-1"></FaPlane> */}
@@ -267,53 +270,148 @@ const TourDetails = () => {
         </div>
       </div>
 
-      {/* Tabs Section */}
-      <div className="max-w-maxWidthContent mx-auto px-0 mt-6 flex flex-col divide-y">
-     
-        <CollapseComp title="Overview">
-          <div className="py-3">
+      {/* Collapse Section */}
+      <div className="max-w-maxWidthContent mx-auto mt-6 flex flex-col ">
+        <CollapseComp title="Overview" className={"px-4"}>
+          <div className="pt-2 pb-3">
+            <h1>Dubai Safari Abu Dhabi </h1>
+            <p className="text-sm leading-relaxed mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              laudantium aliquam dolorum cumque error, similique voluptate nisi
+              consequuntur ipsam suscipit fugiat expedita nobis! Lorem ipsum,
+              dolor sit amet consectetur adipisicing elit.{" "}
+              <span className="text-caribbeangreen-300 text-xs">...more</span>
+            </p>
 
-      
-         <h1>Dubai Safari Abu Dhabi Overview</h1> 
-          <p className="text-sm mt-3 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium aliquam dolorum cumque error, similique voluptate nisi consequuntur ipsam suscipit fugiat expedita nobis! 
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span className="text-[#ff612c] text-xs">...more</span>
-          </p>
+            <ul className=" text-sm mt-4">
+              <li className="px-2 py-2 flex gap-x-4 items-start ">
+                <div className="w-[25px] aspect-square rounded-full flex items-center justify-center bg-green-50 mt-1">
+                  <GoCheck className="text-caribbeangreen-300"></GoCheck>
+                </div>
+                <p className="GTE_regular text-richblack-600">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </li>
+              <li className="px-2 py-2 flex gap-x-4 items-start ">
+                <div className="w-[25px] aspect-square rounded-full flex items-center justify-center bg-green-50 mt-1">
+                  <GoCheck className="text-caribbeangreen-300"></GoCheck>
+                </div>
+                <p className="GTE_regular text-richblack-600">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </li>
+              <li className="px-2 py-2 flex gap-x-4 items-start ">
+                <div className="w-[25px] aspect-square rounded-full flex items-center justify-center bg-green-50 mt-1">
+                  <GoCheck className="text-caribbeangreen-300"></GoCheck>
+                </div>
+                <p className="GTE_regular text-richblack-600">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </li>
+              <li className="px-2 py-2 flex gap-x-4 items-start ">
+                <div className="w-[25px] aspect-square rounded-full flex items-center justify-center bg-green-50 mt-1">
+                  <GoCheck className="text-caribbeangreen-300"></GoCheck>
+                </div>
+                <p className="GTE_regular text-richblack-600">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </li>
+              <li className="px-2 py-2 flex gap-x-4 items-start ">
+                <div className="w-[25px] aspect-square rounded-full flex items-center justify-center bg-green-50 mt-1">
+                  <GoCheck className="text-caribbeangreen-300"></GoCheck>
+                </div>
+                <p className="GTE_regular text-richblack-600">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </li>
+              <li className="px-2 py-2 flex gap-x-4 items-start ">
+                <div className="w-[25px] aspect-square rounded-full flex items-center justify-center bg-green-50 mt-1">
+                  <GoCheck className="text-caribbeangreen-300"></GoCheck>
+                </div>
+                <p className="GTE_regular text-richblack-600">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </li>
+            </ul>
           </div>
         </CollapseComp>
-        <CollapseComp  title="Details">
-          <ul className=" text-sm">
-            <li className="px-2 py-1 flex gap-x-4 items-center">
-              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </li>
-            <li className="px-2 py-1 flex gap-x-4 items-center">
-              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </li>
-            <li className="px-2 py-1 flex gap-x-4 items-center">
-              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </li>
-            <li className="px-2 py-1 flex gap-x-4 items-center">
-              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </li>
-            <li className="px-2 py-1 flex gap-x-4 items-center">
-              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </li>
-            <li className="px-2 py-1 flex gap-x-4 items-center">
-              <img src={checkImg} alt="" className="w-[13px] h-fit"/>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </li>
-         
-          </ul>
+        <CollapseComp title="Itinerary" className={"px-4"}>
+          <div>
+            <div className="py-2 ">
+              <h3 className="text-xs text-[#ff612c]">Destination</h3>
+              <h2 className="mt-1 text-sm"> Dubai Safari Full Day Tour</h2>
+            </div>
+            <div className="py-2 mb-2">
+              <h3 className="text-xs text-[#ff612c]">Date</h3>
+              <p className="mt-1 text-sm"> 3 Feb - 10 Feb 2024</p>
+            </div>
+            <hr />
+
+            {/* Tour Schedule */}
+            <div className="py-2 mb-2 mt-3 ">
+              <h3 className="text-xs text-[#ff612c]">Tour Schedule</h3>
+              {/* Days */}
+              <div className="flex gap-x-2 overflow-auto mt-4 hide-scrollbar ">
+                <div className="min-w-fit px-3 py-0 bg-[#ff621c] flex flex-col justify-center text-white text-xs rounded-md ">
+                  <h1 className="text-center GTE_light">1 <span className="text-xs GTE_light">Day</span></h1>
+                  {/* <span className="GTE_light text-xs">Starting</span> */}
+                </div>
+                <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
+                  <h1 className="text-center GTE_light">2 <span className="text-xs GTE_light">Day</span></h1>
+                  {/* <span className="GTE_light text-xs">Starting</span> */}
+                </div>
+                <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
+                  <h1 className="text-center GTE_light">3 <span className="text-xs GTE_light">Day</span></h1>
+                  {/* <span className="GTE_light text-xs">Starting</span> */}
+                </div>
+                <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
+                  <h1 className="text-center GTE_light">4 <span className="text-xs GTE_light">Day</span></h1>
+                  {/* <span className="GTE_light text-xs">Starting</span> */}
+                </div>
+                <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
+                  <h1 className="text-center GTE_light">5 <span className="text-xs GTE_light">Day</span></h1>
+                  {/* <span className="GTE_light text-xs">Starting</span> */}
+                </div>
+              
+
+                <div className="min-w-fit px-3 py-1 flex flex-col justify-center text-richblack-900 text-sm rounded-md border border-[#ff612c]">
+                  <h1 className="text-center text-xl GTE_light flex justify-center text-[#ff612c]">
+                    <GoPlus className=""></GoPlus>
+                    </h1>
+                  <span className="GTE_light text-xs text-[#ff612c]"></span>
+                </div>
+              </div>
+
+              {/* Outlets */}
+              <div className="pt-6">
+                  
+                  <div>
+                    <div className="flex justify-between items-center">
+                    <p>Visit place</p>
+
+                    <p className="text-xs text-richblack-600 text-right border-b border-[#ff612c]">Date - 03/09/2024</p>
+                    </div>
+                    
+                    <div className="flex gap-x-1 mt-4 overflow-auto hide-scrollbar rounded-md">
+                      <img src={img} alt="" className="h-[170px] object-cover object-right"/>
+                      <img src={img3} alt="" className="h-[170px] object-cover object-right"/>
+                      <img src={img4} alt="" className="h-[170px] object-cover object-right"/>
+                    </div>
+
+                    <h3 className="mt-4">Food Activity</h3>
+                     <p className="text-sm mt-2">Vegitables , Non-Vegitable ,  Sweets , Special Recepies</p>
+                    <h3 className="mt-4">Living Room</h3>
+                     <p className="text-sm mt-2">Book now to select Homtels</p>
+                  </div>
+              </div>
+            </div>
+
+
+          </div>
         </CollapseComp>
-        <CollapseComp  title="Instructions">
+        <CollapseComp title="Inclusions" className={"px-4"}>
           This is Collapsible Box
         </CollapseComp>
-      
-
       </div>
 
       {/* Last Div  */}

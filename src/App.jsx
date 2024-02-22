@@ -7,6 +7,7 @@ import SearchedItem from "./pages/SearchedItem";
 import Search from "./components/common/Search";
 import Category from "./pages/Category";
 import TourDetails from "./components/common/TourDetails";
+import CityTours from "./components/common/CityTours";
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/search" element={<Search />}></Route>
           <Route path="/tour/:id" element={<TourDetails />}></Route>
           <Route path="/category/:categoryName" element={<Category />}></Route>
+          <Route path="/city/:cityId" element={<CityTours />}></Route>
         </Routes>
       </div>
     </Router>
