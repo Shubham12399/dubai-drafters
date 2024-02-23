@@ -22,10 +22,12 @@ import { FaPaperPlane, FaPlane, FaPlus, FaStar } from "react-icons/fa";
 import { useState } from "react";
 import CollapseComp from "./Collapse";
 import checkImg from "../../assets/images/check.png";
+import { useNavigate } from "react-router";
 
 const TourDetails = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  
+  const navigate = useNavigate();
+
   return (
     <div className="pb-16 text-richblue-700">
       <Navigation></Navigation>
@@ -415,7 +417,7 @@ const TourDetails = () => {
       {/* Last Div  */}
       {
         <div className="fixed bottom-0 w-full bg-white py-3  z-[999] flex gap-x-2 items-stretch px-4 max-w-maxContent mx-auto -mt-0 md:-mt-5 left-1/2 -translate-x-1/2 shadow-[0_0_20px_rgba(0,0,0,0.2)] GTE_light">
-          <button className="flex-grow normal-case py-2 rounded-md px-2 text-xs sm:text-lg text-white bg-[#ff612c] hover:border-[#f77031] GTE_light">
+          <button className="flex-grow normal-case py-2 rounded-md px-2 text-xs sm:text-lg text-white bg-[#ff612c] hover:border-[#f77031] GTE_light" onClick={() => navigate("/booking")}>
             Book Now
           </button>
           <button className="normal-case py-2 rounded-md w-fit px-5 text-xs sm:text-lg text-[#ff621c]  border border-[#ff612c] GTE_light">
