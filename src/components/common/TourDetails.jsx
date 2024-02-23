@@ -25,9 +25,7 @@ import checkImg from "../../assets/images/check.png";
 
 const TourDetails = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  window.addEventListener("scroll", (e) => {
-    // console.log(e);
-  });
+  
   return (
     <div className="pb-16 text-richblue-700">
       <Navigation></Navigation>
@@ -272,7 +270,7 @@ const TourDetails = () => {
 
       {/* Collapse Section */}
       <div className="max-w-maxWidthContent mx-auto mt-6 flex flex-col ">
-        <CollapseComp title="Overview" className={"px-4"}>
+        <CollapseComp isCollapsed={true} title="Overview" className={"px-4"}>
           <div className="pt-2 pb-3">
             <h1>Dubai Safari Abu Dhabi </h1>
             <p className="text-sm leading-relaxed mt-2">
