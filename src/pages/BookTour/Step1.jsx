@@ -127,24 +127,23 @@ const Step1 = () => {
                 // const isActive =
                 return (
                   <>
-                    {/* Active Card */}
                     <div
-                      className={`min-w-[65px] bg-richblack-25 flex flex-col justify-center text-richblack-500 text-xs rounded-lg border border-richblack-25 cursor-pointer ${
+                      className={`min-w-[80px] bg-richblack-25 flex flex-col justify-center text-richblack-500 text-xs rounded-lg border border-richblack-25 cursor-pointer ${
                         e?.active &&
                         "!bg-[#ff612c] !text-white !border-[#ff612c]"
                       } `}
                       onClick={() => setSelectedDateByOnClickOnDatesTags(e)}
                     >
-                      <div className="pt-2 flex flex-col items-center">
+                      <div className="pt-3 flex flex-col items-center">
                         <h1 className="text-center GTE_light">
-                          <p className="text-[10px] GTE_light ">
+                          <p className="text-xs GTE_light ">
                             {e?.status ? e.status : e?.month}
                           </p>
-                          <p className="text-sm">{e?.day}</p>
+                          <p className="text-sm pb-1">{e?.day}</p>
                         </h1>
                       </div>
 
-                      <div className="bg-white rounded-lg rounded-tl-none rounded-tr-none py-1 flex items-center justify-center text-richblack-400 text-[10px]">
+                      <div className="bg-white rounded-lg rounded-tl-none rounded-tr-none py-2 flex items-center justify-center text-richblack-400 text-xs">
                         AED {adults * 400}
                       </div>
                       {/* <span className="GTE_light text-xs">Starting</span> */}
