@@ -353,60 +353,82 @@ const TourDetails = () => {
               {/* Days */}
               <div className="flex gap-x-2 overflow-auto mt-4 hide-scrollbar ">
                 <div className="min-w-fit px-3 py-0 bg-[#ff621c] flex flex-col justify-center text-white text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">1 <span className="text-xs GTE_light">Day</span></h1>
+                  <h1 className="text-center GTE_light">
+                    1 <span className="text-xs GTE_light">Day</span>
+                  </h1>
                   {/* <span className="GTE_light text-xs">Starting</span> */}
                 </div>
                 <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">2 <span className="text-xs GTE_light">Day</span></h1>
+                  <h1 className="text-center GTE_light">
+                    2 <span className="text-xs GTE_light">Day</span>
+                  </h1>
                   {/* <span className="GTE_light text-xs">Starting</span> */}
                 </div>
                 <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">3 <span className="text-xs GTE_light">Day</span></h1>
+                  <h1 className="text-center GTE_light">
+                    3 <span className="text-xs GTE_light">Day</span>
+                  </h1>
                   {/* <span className="GTE_light text-xs">Starting</span> */}
                 </div>
                 <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">4 <span className="text-xs GTE_light">Day</span></h1>
+                  <h1 className="text-center GTE_light">
+                    4 <span className="text-xs GTE_light">Day</span>
+                  </h1>
                   {/* <span className="GTE_light text-xs">Starting</span> */}
                 </div>
                 <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">5 <span className="text-xs GTE_light">Day</span></h1>
+                  <h1 className="text-center GTE_light">
+                    5 <span className="text-xs GTE_light">Day</span>
+                  </h1>
                   {/* <span className="GTE_light text-xs">Starting</span> */}
                 </div>
-              
 
                 <div className="min-w-fit px-3 py-1 flex flex-col justify-center text-richblack-900 text-sm rounded-md border border-[#ff612c]">
                   <h1 className="text-center text-xl GTE_light flex justify-center text-[#ff612c]">
                     <GoPlus className=""></GoPlus>
-                    </h1>
+                  </h1>
                   <span className="GTE_light text-xs text-[#ff612c]"></span>
                 </div>
               </div>
 
               {/* Outlets */}
               <div className="pt-6">
-                  
-                  <div>
-                    <div className="flex justify-between items-center">
+                <div>
+                  <div className="flex justify-between items-center">
                     <p>Visit place</p>
 
-                    <p className="text-xs text-richblack-600 text-right border-b border-[#ff612c]">Date - 03/09/2024</p>
-                    </div>
-                    
-                    <div className="flex gap-x-1 mt-4 overflow-auto hide-scrollbar rounded-md">
-                      <img src={img} alt="" className="h-[170px] object-cover object-right"/>
-                      <img src={img3} alt="" className="h-[170px] object-cover object-right"/>
-                      <img src={img4} alt="" className="h-[170px] object-cover object-right"/>
-                    </div>
-
-                    <h3 className="mt-4">Food Activity</h3>
-                     <p className="text-sm mt-2">Vegitables , Non-Vegitable ,  Sweets , Special Recepies</p>
-                    <h3 className="mt-4">Living Room</h3>
-                     <p className="text-sm mt-2">Book now to select Homtels</p>
+                    <p className="text-xs text-richblack-600 text-right border-b border-[#ff612c]">
+                      Date - 03/09/2024
+                    </p>
                   </div>
+
+                  <div className="flex gap-x-1 mt-4 overflow-auto hide-scrollbar rounded-md">
+                    <img
+                      src={img}
+                      alt=""
+                      className="h-[170px] object-cover object-right"
+                    />
+                    <img
+                      src={img3}
+                      alt=""
+                      className="h-[170px] object-cover object-right"
+                    />
+                    <img
+                      src={img4}
+                      alt=""
+                      className="h-[170px] object-cover object-right"
+                    />
+                  </div>
+
+                  <h3 className="mt-4">Food Activity</h3>
+                  <p className="text-sm mt-2">
+                    Vegitables , Non-Vegitable , Sweets , Special Recepies
+                  </p>
+                  <h3 className="mt-4">Living Room</h3>
+                  <p className="text-sm mt-2">Book now to select Homtels</p>
+                </div>
               </div>
             </div>
-
-
           </div>
         </CollapseComp>
         <CollapseComp title="Inclusions" className={"px-4"}>
@@ -417,7 +439,10 @@ const TourDetails = () => {
       {/* Last Div  */}
       {
         <div className="fixed bottom-0 w-full bg-white py-3  z-[999] flex gap-x-2 items-stretch px-4 max-w-maxContent mx-auto -mt-0 md:-mt-5 left-1/2 -translate-x-1/2 shadow-[0_0_20px_rgba(0,0,0,0.2)] GTE_light">
-          <button className="flex-grow normal-case py-2 rounded-md px-2 text-xs sm:text-lg text-white bg-[#ff612c] hover:border-[#f77031] GTE_light" onClick={() => navigate("/booking")}>
+          <button
+            className="flex-grow normal-case py-2 rounded-md px-2 text-xs sm:text-lg text-white bg-[#ff612c] hover:border-[#f77031] GTE_light"
+            onClick={() => navigate("/booking")}
+          >
             Book Now
           </button>
           <button className="normal-case py-2 rounded-md w-fit px-5 text-xs sm:text-lg text-[#ff621c]  border border-[#ff612c] GTE_light">

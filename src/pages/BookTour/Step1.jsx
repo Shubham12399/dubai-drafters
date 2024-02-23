@@ -35,7 +35,7 @@ const Step1 = () => {
 
   const shiftActiveFlagToSelectedDate = useCallback(() => {
     const activeFlagShiftedArray = [...selectDatesStore].map((e) => {
-      if (e.day == selectedDate.day) {
+      if (e.day == selectedDate.day && e.month == selectedDate.month) {
         return { ...e, active: true };
       } else {
         return { ...e, active: false };
@@ -49,14 +49,19 @@ const Step1 = () => {
     const month = date.toLocaleString("default", { month: "long" });
     const day = date.toLocaleString().split("/")[1];
     const year = date.getFullYear();
-    console.log(date.toLocaleString().split("/")[1]);
+    console.log(month);
     const weekendDay = date.getDay();
 
     dispatch(
       setselectDateSlice([
         ...[...selectDatesStore]
           .map((e) => ({ ...e, active: false }))
-          .filter((e) => e.day != day),
+          .filter((e) =>{
+            if(!((e.day == day) && (e.month == month))){
+              //statement
+              return e
+            }
+          }),
         {
           month: month,
           day: day,
@@ -209,7 +214,7 @@ const Step1 = () => {
 
         {/* select Date Modal */}
         {isDateModal && (
-          <Modal title={"Select Date"} setModal={setIsDateModal}>
+          <Modal title={"Select Date"} setModal={setIsDateModal} className="pb-4">
             <Calendar
               className={"!border-none !select-none"}
               onChange={(value) => handleSelectedDate(value)}
