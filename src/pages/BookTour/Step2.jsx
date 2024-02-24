@@ -24,8 +24,9 @@ const Step2 = () => {
   };
 
   var date;
+  console.log(tourDetails?.date);
   if (tourDetails?.date !== undefined) {
-    date = new Date(JSON.parse(JSON.parse(tourDetails?.date))).toLocaleString(
+    date = new Date(JSON.parse(tourDetails?.date)).toLocaleString(
       "en-US",
       options
     );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GoX } from "react-icons/go";
 
-const Modal = ({ title, setModal, children }) => {
+const Modal = ({ title, setModal, children ,className }) => {
   const [modalBottom, setModalBottom] = useState(false);
   const bottomModal = () => {
     setModalBottom(true);
@@ -21,7 +21,7 @@ const Modal = ({ title, setModal, children }) => {
       <div
         className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] transition-all drop-shadow-lg ${
           modalBottom ? " -bottom-[600px] " : " !bottom-0 "
-        } pb-14 `}
+        } pb-14 ${ className } `}
         onClick={(e) => e.stopPropagation()}
       >
         <div className=" max-w-maxContentTab mx-auto ">
