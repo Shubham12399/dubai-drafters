@@ -5,6 +5,7 @@ const bookingProcess = createSlice({
   initialState: 1,
   reducers: {
     setBookingProcess: (_, action) => {
+      console.log(action.payload)
       return action.payload;
     },
   },

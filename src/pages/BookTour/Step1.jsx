@@ -36,12 +36,13 @@ const Step1 = () => {
   const shiftActiveFlagToSelectedDate = useCallback(() => {
     const activeFlagShiftedArray = [...selectDatesStore].map((e) => {
       if (e.day == selectedDate.day && e.month == selectedDate.month) {
-        return { ...e, active: true };
+        return { ...e, active: true,date:JSON.stringify(e.date) };
       } else {
-        return { ...e, active: false };
+        return { ...e, active: false, date:JSON.stringify(e.date)};
       }
     });
-    dispatch(setselectDateSlice([...activeFlagShiftedArray]));
+    console.log(activeFlagShiftedArray);
+    dispatch(setselectDateSlice([...activeFlagShiftedArray])); 
     console.log(activeFlagShiftedArray);
   }, [selectedDate, dispatch]); // dont add selectDatesStore dependencies
 
@@ -52,20 +53,22 @@ const Step1 = () => {
     console.log(month);
     const weekendDay = date.getDay();
 
+    console.log(new Date(date))
     dispatch(
       setselectDateSlice([
         ...[...selectDatesStore]
           .map((e) => ({ ...e, active: false }))
-          .filter((e) =>{
-            if(!((e.day == day) && (e.month == month))){
+          .filter((e) => {
+            if (!(e.day == day && e.month == month)) {
               //statement
-              return e
+              return e;
             }
           }),
         {
           month: month,
           day: day,
           year: year,
+          date:JSON.stringify(new Date(date)),
           active: true,
         },
       ])
@@ -207,13 +210,27 @@ const Step1 = () => {
         </div>
 
         {/* Next Button  */}
-        <div className="absolute bottom-0 w-full bg-white py-2 px-4 flex items-center justify-center">
-          <ActionButton onClick={handleNextProcess}>Next</ActionButton>
+        <div className="absolute bottom-0 w-full max-w-maxWidthContent bg-white py-2 px-4 flex items-center justify-center">
+          <ActionButton
+            onClick={() => {
+              if (usersQuantity.adults > 0) {
+                handleNextProcess();
+              } else {
+                alert("Please Select At Least One Adult 😊");
+              }
+            }}
+          >
+            Next
+          </ActionButton>
         </div>
 
         {/* select Date Modal */}
         {isDateModal && (
-          <Modal title={"Select Date"} setModal={setIsDateModal} className="pb-4">
+          <Modal
+            title={"Select Date"}
+            setModal={setIsDateModal}
+            className="pb-4"
+          >
             <Calendar
               className={"!border-none !select-none"}
               onChange={(value) => handleSelectedDate(value)}
