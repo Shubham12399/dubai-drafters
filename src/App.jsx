@@ -9,6 +9,7 @@ import Category from "./pages/Category";
 import TourDetails from "./components/common/TourDetails";
 import CityTours from "./components/common/CityTours";
 import BookingProcess from "./pages/BookTour/BookingProcess";
+import Cart from "./pages/Cart";
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
           <Route path="/category/:categoryName" element={<Category />}></Route>
           <Route path="/city/:cityId" element={<CityTours />}></Route>
           <Route path="/booking" element={<BookingProcess></BookingProcess>}></Route>
+          <Route path="/cart" element={<Cart></Cart>}></Route>
           
         </Routes>
       </div>

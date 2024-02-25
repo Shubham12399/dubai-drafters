@@ -2,7 +2,7 @@ import { FaSort, FaStar } from "react-icons/fa";
 import BottomNav from "../components/common/BottomNav";
 import Navigation from "../components/common/Navigation";
 import { useEffect, useRef, useState } from "react";
-import { GoChevronRight, GoX } from "react-icons/go";
+import { GoCheck, GoChevronRight, GoX } from "react-icons/go";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { Button, Tooltip } from "@material-tailwind/react";
 import img1 from "../assets/images/IMG-20240205-WA0063.jpg";
@@ -12,10 +12,12 @@ import img4 from "../assets/images/IMG-20240205-WA0070.jpg";
 import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import FilterModal from "../components/common/FilterModal";
+import PriceRangeModal from "../components/common/PriceRangeModal";
+import ActionButton from "../components/common/ActionButton";
 
 const SearchedItem = () => {
   const [filterAsideModal, setFilterAsideModal] = useState(false);
-  const [searchedObj , setSearchedObj] = useState({});
+  const [searchedObj, setSearchedObj] = useState({});
 
   const [isFilterModal, setIsFilterModal] = useState(false);
   const [filterValue, setFilterValue] = useState({
@@ -23,13 +25,15 @@ const SearchedItem = () => {
     name: "No Filter",
   });
   const [loading, setLoading] = useState(true);
+  const [priceRangeModal, setIsPriceRangeModal] = useState(false);
+  const [priceRangeValue, setPriceRangeValue] = useState([300, 1000]);
   const navigate = useNavigate();
   const location = useLocation();
   let paramsObj = useRef({});
 
   useEffect(() => {
     paramsObj.current = {};
-    console.log(location?.search)
+    console.log(location?.search);
     location?.search
       .split("?")[1]
       ?.split("&")
@@ -38,30 +42,35 @@ const SearchedItem = () => {
         const value = decodeURIComponent(e.split("=")[1]);
         paramsObj.current[key] = value;
       });
-      setSearchedObj(paramsObj.current);
-  },[location] );
+    setSearchedObj(paramsObj.current);
+  }, [location]);
+
+  const handlePriceRange = () => {
+    setLoading(true);
+    setTimeout(() => setLoading(false), 700);
+    console.log(priceRangeValue);
+    setIsPriceRangeModal(false);
+  };
   return (
     <>
       <Navigation></Navigation>
       <div className=" py-4 md:max-w-maxWidthContent mx-auto md:mt-4">
-
         {/* searched heading */}
         <h3 className=" px-4 text-lg md:text-xl text-richblack-900 ">
           Search For: Destination{" "}
-          <span className="text-[#ff621c]">{searchedObj?.destination} </span> and Type{" "}
+          <span className="text-[#ff621c]">{searchedObj?.destination} </span>{" "}
+          and Type{" "}
           <span className="text-[#ff621c]">{searchedObj?.tourType}</span>
           <Link
-          to={"/all-tours"}
+            to={"/all-tours"}
             className="text-xs block w-fit px-3 py-1 rounded-full border border-richblack-900 text-richblack-900 mt-4"
           >
             View All
           </Link>
         </h3>
 
-       
         {/* Total result and sort option  */}
         <div className=" px-4 flex justify-between items-center pr-4 sticky top-10 z-[99] bg-white mt-2">
-
           <h4 className="text-sm md:text-sm text-richblack-900">
             Results: <span> 22 </span>
           </h4>
@@ -72,41 +81,45 @@ const SearchedItem = () => {
           >
             <FaSort></FaSort>Sort
           </h4> */}
-           <div className="flex gap-y-4 min-w-fit justify-between items-center">
-              <div className="flex items-center py-2">
-              
-                <div className="w-max flex gap-x-3 items-center md:bg-transparent md:shadow-none">
-                  {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
+          <div className="flex gap-y-4 min-w-fit justify-between items-center">
+            <div className="flex items-center py-2">
+              <div className="w-max flex gap-x-3 items-center md:bg-transparent md:shadow-none">
+                {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
                   Most Popular
                 </h3> */}
-                  <span
-                    className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
-                    onClick={() => setIsFilterModal(true)}
-                  >
-                    {filterValue?.name}
-                    <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
-                  </span>
-                  {/* <div className="flex">
+                <span
+                  className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
+                  onClick={() => setIsFilterModal(true)}
+                >
+                  {filterValue?.name}
+                  <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
+                </span>
+                {/* <div className="flex">
                 <div className="w-full rounded-lg bg-white md:bg-transparent md:shadow-none ">
                   {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
                   Price
                 </h3> */}
-                  <span
-                    className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 w-full items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
-                  >
-                    Price Range
-                    <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
-                  </span>
-                  {/* </div>
+                <span
+                  className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 w-full items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
+                  onClick={() => setIsPriceRangeModal(true)}
+                >
+                  Price{" "}
+                  {priceRangeValue && (
+                    <>
+                      ({priceRangeValue[0]} - {priceRangeValue[1]})
+                    </>
+                  )}
+                  <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
+                </span>
+                {/* </div>
               </div> */}
-                </div>
               </div>
             </div>
+          </div>
         </div>
 
         {/* All Items */}
         <div className="px-4 w-full md:pb-0">
-       
           <div className="mt-3 flex flex-wrap justify-between gap-3 md:gap-4  md:mt-4 pb-6 ">
             <div className="min-w-[140px] w-[48%] transition-all sm:w-[160px] md:min-w-[170px] md:w-[173px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
               <span className="absolute top-2 left-2 text-xs text-white bg-caribbeangreen-200 px-1 rounded-md">
@@ -521,10 +534,11 @@ const SearchedItem = () => {
         {/* Other like Top Tours */}
         <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-4 md:px-6">
           <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">
-            <div>
-              Top Tours
-            </div>
-            <Button className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 md:py-1 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case" onClick={() => navigate("/tours")}>
+            <div>Top Tours</div>
+            <Button
+              className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 md:py-1 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case"
+              onClick={() => navigate("/tours")}
+            >
               See All
             </Button>
           </h1>
@@ -734,26 +748,46 @@ const SearchedItem = () => {
           </div>
         </div>
 
+        {/* filter Modal */}
+        <FilterModal
+          isFilterModal={isFilterModal}
+          setIsFilterModal={setIsFilterModal}
+          setFilterValue={setFilterValue}
+          setLoading={setLoading}
+          filterValue={filterValue}
+        ></FilterModal>
 
-  {/* filter Modal */}
-  <FilterModal
-        isFilterModal={isFilterModal}
-        setIsFilterModal={setIsFilterModal}
-        setFilterValue={setFilterValue}
-        setLoading={setLoading}
-        filterValue={filterValue}
-      ></FilterModal>
-        {/* ------------------------------------------------------------------------------------- */}
-      
+        {/* Price Range */}
+
+        {priceRangeModal && (
+          <PriceRangeModal
+            priceRangeModal={priceRangeModal}
+            setIsPriceRangeModal={setIsPriceRangeModal}
+            setValue={setPriceRangeValue}
+            value={priceRangeValue}
+          >
+            <div className="flex justify-end mt-2">
+              <ActionButton
+                className={"w-fit py-1 px-2 rounded-md GTE_light"}
+                onClick={handlePriceRange}
+              >
+                <GoCheck></GoCheck>
+                Select
+              </ActionButton>
+            </div>
+          </PriceRangeModal>
+        )}
+        {/* 
+        
+        ------------------------------------------------------------------------------------- */}
       </div>
+
       <BottomNav></BottomNav>
     </>
   );
 };
 
 export default SearchedItem;
-
-
 
 /* 
   // {/* Aside Content here  */

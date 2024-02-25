@@ -2,6 +2,20 @@
     appearance: none;
     display: none;
   }
+  :root {
+    --bg-clr: #f7f7f7;
+    --post-clr: white;
+    --txt-clr: black;
+    --theme-clr: rgb(235, 236, 2);
+    --light-grey: #959595;
+    --grey: #282828;
+    --white: rgb(240, 240, 240);
+    --green: rgb(95 186 167);
+    /* --bg-clr: #0c4c7d;
+      --post-clr: #093a60;
+      --txt-clr: #ffffe6;
+      --theme-clr: rgb(7 43 71); */
+  }
 
   .ReactCollapse--collapse {
     transition: height 500ms;
@@ -45,3 +59,95 @@
     background-color: #ff612c !important;
     color: white;
   }
+
+  
+.checkBox-con {
+  display: block;
+  border: 2px solid red;
+  position: relative;
+}
+
+.checkBox-con input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  /* border:1px solid red; */
+}
+
+.checkBox {
+  border-radius: 8px;
+  background-color: var(--theme-clr);
+  position: relative;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 23px;
+  right: 13px;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  /* border: 1px solid red; */
+  border-radius: 13px;
+}
+
+/* On mouse-over, add a grey background color */
+/* .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+   */
+/* When the checkbox is checked, add a blue background */
+.checkBox-con input:checked ~ .checkmark {
+  background-color: var(--theme-clr);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkBox-con input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBox-con .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+
+.range-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ff612c;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* Custome Price Range Slider Css code  */
+
+.range-slider__range,.range-slider__thumb{
+  /* CSS for range */
+  background-color: #ff612c !important;
+}
+.range-slider__thumb{
+  width: 15px !important;
+  height: 15px !important;
+}

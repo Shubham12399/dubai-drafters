@@ -11,7 +11,7 @@ import img1 from "../assets/images/travel 1920x450 banner.png";
 import img2 from "../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../assets/images/IMG-20240205-WA0070.jpg";
-import { GoChevronDown, GoChevronRight, GoLocation, GoTag } from "react-icons/go";
+import { GoCheck, GoChevronDown, GoChevronRight, GoLocation, GoTag } from "react-icons/go";
 import { useEffect, useState } from "react";
 import BottomNav from "../components/common/BottomNav";
 import Modal from "../components/Modal";
@@ -22,6 +22,8 @@ import Tours from "./Tours";
 import FilterModal from "../components/common/FilterModal";
 import activities from "../data/Activities";
 import SelectModal from "../components/common/SelectModal";
+import PriceRangeModal from "../components/common/PriceRangeModal";
+import ActionButton from "../components/common/ActionButton";
 
 const AllTours = () => {
   const [selectionType, setSelectionType] = useState([]);
@@ -37,7 +39,8 @@ const AllTours = () => {
   });
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([...activities]);
-  const [priceModal, setPriceModal] = useState(false);
+  const [priceRangeModal, setIsPriceRangeModal] = useState(false);
+  const [priceRangeValue, setPriceRangeValue] = useState([300, 1000]);
   const [destinationModal, setDestinationModal] = useState(false);
   const [selectTypeModal, setSelectTypeModal] = useState(false);
 
@@ -49,6 +52,13 @@ const AllTours = () => {
   useEffect(() => {
     setTimeout(() => setLoading(false), 700);
   }, []);
+
+  const handlePriceRange = () => {
+    setLoading(true);
+    setTimeout(() => setLoading(false), 700);
+console.log(priceRangeValue);
+setIsPriceRangeModal(false);
+  }
 
   const navigate = useNavigate();
   return (
@@ -154,13 +164,17 @@ const AllTours = () => {
                   {/* <h3 className="text-[13px] md:text-sm GTE_light text-[#2e3844] flex gap-x-2 items-center ">
                   Price
                 </h3> */}
-                  <span
-                    className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 w-full items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
-                    onClick={() => setPriceModal(true)}
-                  >
-                    Price
-                    <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
-                  </span>
+                   <span
+                  className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 w-full items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
+                  onClick={() => setIsPriceRangeModal(true)}
+                >
+                  Price {
+                    priceRangeValue && (
+                     <>({priceRangeValue[0]} -  {priceRangeValue[1]})</>
+                    )
+                  }
+                  <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
+                </span>
                   {/* </div>
               </div> */}
                 </div>
@@ -740,17 +754,20 @@ const AllTours = () => {
         filterValue={filterValue}
       ></FilterModal>
       {/*---------------------------------- Open Service Modal ---------------------------- */}
-      {priceModal && (
-        <Modal
-          title={
-            <div className="flex items-center gap-x-2 GTE_light"> Price</div>
-          }
-          setModal={setPriceModal}
+      {priceRangeModal && (
+        <PriceRangeModal
+          priceRangeModal={priceRangeModal}
+          setIsPriceRangeModal={setIsPriceRangeModal}
+          setValue={setPriceRangeValue}
+          value={priceRangeValue}
         >
-          <div className="w-fit mx-auto">
-            <div className="flex justify-start flex-wrap px-1 gap-y-1 my-2"></div>
+          <div className="flex justify-end mt-2">
+            <ActionButton className={"w-fit py-1 px-2 rounded-md GTE_light"} onClick={handlePriceRange}>
+              <GoCheck></GoCheck>
+              Select
+            </ActionButton>
           </div>
-        </Modal>
+        </PriceRangeModal>
       )}
     </div>
   );

@@ -19,15 +19,18 @@ import {
 } from "react-icons/go";
 import { Button } from "@material-tailwind/react";
 import { FaPaperPlane, FaPlane, FaPlus, FaStar } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CollapseComp from "./Collapse";
 import checkImg from "../../assets/images/check.png";
 import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { setBookingData } from "../../redux/slices/BookingData";
 
 const TourDetails = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
+  useEffect(() => {window.scrollTo(0,0)},[]);
   return (
     <div className="pb-16 text-richblue-700">
       <Navigation></Navigation>
@@ -147,85 +150,7 @@ const TourDetails = () => {
         </div>
       </div>
 
-      {/* <div className="max-w-maxWidthContent mx-auto px-4 my-4">
-        <h1>Image Gallery</h1>
-        <div className="flex flex-wrap my-2 gap-x-2 gap-y-2 justify-start">
-          <img 
-          loading="lazy"
-            src={img1}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img2}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img3}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img4}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img1}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img2}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img3}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img4}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img1}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-             <img 
-             loading="lazy"
-            src={img4}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img2}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-          <img 
-          loading="lazy"
-            src={img3}
-            alt={`${img1}`}
-            className="h-[60px] aspect-auto object-cover rounded-md "
-          />
-       
-        </div>
-      </div> */}
-
+    
       {/* Lists  */}
       <div className="max-w-maxWidthContent mx-auto px-4">
         <div className="flex items-center rounded-lg py-2 pr-3 border-[#ff641c84]">
@@ -254,7 +179,6 @@ const TourDetails = () => {
             </p>
           </div>
         </div>
-
         <div className="flex items-center rounded-lg py-2 pr-3 border-[#ff641c84]">
           <div className="text-richblack-900 p-3 rounded-xl bg-white flex justify-center items-center shadow-md mr-2">
             <GoCheckCircle></GoCheckCircle>
@@ -441,7 +365,12 @@ const TourDetails = () => {
         <div className="fixed bottom-0 w-full bg-white py-3  z-[999] flex gap-x-2 items-stretch px-4 max-w-maxContent mx-auto -mt-0 md:-mt-5 left-1/2 -translate-x-1/2 shadow-[0_0_20px_rgba(0,0,0,0.2)] GTE_light">
           <button
             className="flex-grow normal-case py-2 rounded-md px-2 text-xs sm:text-lg text-white bg-[#ff612c] hover:border-[#f77031] GTE_light"
-            onClick={() => navigate("/booking")}
+            onClick={() => {
+              dispatch(setBookingData({key:"currency" , value:"doller" }));
+              dispatch(setBookingData({key:"price" , value:488 }));
+              dispatch(setBookingData({key:"destination" , value:"Dubai Safari" }));
+              dispatch(setBookingData({key:"type" , value:"Adventure" }));
+              navigate("/booking")}}
           >
             Book Now
           </button>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GoChevronDown } from "react-icons/go";
 import { Collapse } from "react-collapse";
 const CollapseComp = ({ className,title, children }) => {
-  const [isCollapsed, setIsCollapsed] = useState();
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
     <div className={ `border cursor-pointer `}>

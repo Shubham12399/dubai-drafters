@@ -7,7 +7,7 @@ import {
   useSelect,
 } from "@material-tailwind/react";
 import { FaPlane, FaStar } from "react-icons/fa";
-import { GoChevronLeft, GoChevronRight } from "react-icons/go";
+import { GoCheck, GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import img1 from "../assets/images/IMG-20240205-WA0063.jpg";
 import img2 from "../assets/images/IMG-20240205-WA0067.jpg";
@@ -29,7 +29,8 @@ import { setType } from "../redux/slices/typeSlice";
 import NormalFilter from "../data/NormalFilter";
 import FilterModal from "../components/common/FilterModal";
 import PostsSkl from "../components/skelaton/common/PostsSkl";
-
+import PriceRangeModal from "../components/common/PriceRangeModal";
+import ActionButton from "../components/common/ActionButton";
 const Tours = () => {
   // filter configurations
   const [isFilterModal, setIsFilterModal] = useState(false);
@@ -39,7 +40,8 @@ const Tours = () => {
   });
   const [loading, setLoading] = useState(true);
 
-  const [priceModal, setPriceModal] = useState(false);
+  const [priceRangeModal, setIsPriceRangeModal] = useState(false);
+  const [priceRangeValue, setPriceRangeValue] = useState([300, 1000]);
   const [allToursModal, setAllToursModal] = useState(false);
   const [changedType, setChangedType] = useState(TourType);
   const [tours, setTours] = useState([...activities]);
@@ -47,8 +49,8 @@ const Tours = () => {
   // tours is data of all tours
 
   const dispatch = useDispatch();
- 
 
+  console.log(priceRangeValue);
   // TourType.map(
   //   (e, index) => (e.id = e.name.split(" ").join("_") + "_" + (index + 1))
   // );
@@ -56,7 +58,7 @@ const Tours = () => {
   // handle the type when click on type
   useEffect(() => {
     // window.scrollTo(0, 0);
-    console.log(typeSlice) 
+    console.log(typeSlice);
     setTimeout(() => setLoading(false), 700);
     const filtred = activities.filter((tour) => {
       return (
@@ -81,6 +83,12 @@ const Tours = () => {
     setTimeout(() => setLoading(false), 400);
   };
 
+  const handlePriceRange = () => {
+    setLoading(true);
+    setTimeout(() => setLoading(false), 700);
+console.log(priceRangeValue);
+setIsPriceRangeModal(false);
+  }
   return (
     <div className="pb-8">
       <Navigation></Navigation>
@@ -203,9 +211,13 @@ const Tours = () => {
                 </h3> */}
                 <span
                   className="text-xs text-richblack-900 select-none cursor-pointer GTE_light flex justify-between pr-1 w-full items-center min-w-max px-2 py-1 border border-richblack-900 rounded-md "
-                  onClick={() => setPriceModal(true)}
+                  onClick={() => setIsPriceRangeModal(true)}
                 >
-                  Price
+                  Price {
+                    priceRangeValue && (
+                     <>({priceRangeValue[0]} -  {priceRangeValue[1]})</>
+                    )
+                  }
                   <GoChevronRight className="rotate-90 ml-3"></GoChevronRight>
                 </span>
                 {/* </div>
@@ -254,7 +266,7 @@ const Tours = () => {
                       <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
                         <Tooltip content={title}>
                           <h3 className="text-[13px] sm:text-sm font-medium line-clamp-1">
-                            {title} 
+                            {title}
                           </h3>
                         </Tooltip>
                         <h3 className="text-xs font-medium text-richblack-900 mt-1">
@@ -349,7 +361,6 @@ const Tours = () => {
           </div>
         </div>
       </div>
-
 
       {/* Types  -------------------------------------------------------------------------  */}
       <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-3 md:px-6">
@@ -1041,17 +1052,20 @@ const Tours = () => {
         filterValue={filterValue}
       ></FilterModal>
       {/*---------------------------------- Open Service Modal ---------------------------- */}
-      {priceModal && (
-        <Modal
-          title={
-            <div className="flex items-center gap-x-2 GTE_light"> Price</div>
-          }
-          setModal={setPriceModal}
+      {priceRangeModal && (
+        <PriceRangeModal
+          priceRangeModal={priceRangeModal}
+          setIsPriceRangeModal={setIsPriceRangeModal}
+          setValue={setPriceRangeValue}
+          value={priceRangeValue}
         >
-          <div className="w-fit mx-auto">
-            <div className="flex justify-start flex-wrap px-1 gap-y-1 my-2"></div>
+          <div className="flex justify-end mt-2">
+            <ActionButton className={"w-fit py-1 px-2 rounded-md GTE_light"} onClick={handlePriceRange}>
+              <GoCheck></GoCheck>
+              Select
+            </ActionButton>
           </div>
-        </Modal>
+        </PriceRangeModal>
       )}
       {allToursModal && (
         <Modal

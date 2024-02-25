@@ -11,12 +11,12 @@ const Navigation = () => {
            </Link>
            <div className="flex gap-x-3 items-center">
 
-           <div className="block text-richblack-900 cursor-pointer ">
+           <Link to={"/search"} className="block text-richblack-900 cursor-pointer ">
                 <GoSearch className="text-lg"></GoSearch>
-           </div>
-           <div className="block text-richblack-900 cursor-pointer ">
+           </Link>
+           <Link to={"/cart"} className="block text-richblack-900 cursor-pointer ">
                 <IoCartOutline className="text-xl"></IoCartOutline>
-           </div>
+           </Link>
            </div>
 
         </nav>

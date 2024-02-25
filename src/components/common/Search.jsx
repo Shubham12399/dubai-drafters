@@ -9,7 +9,7 @@ const Search = () => {
             <GoSearch></GoSearch>
             <input type="search" placeholder='Search' className='flex-grow text-sm GTE_light md:text-[15px] cursor-pointer  outline-none border-none text-richblack-900 placeholder:text-richblack-400 pl-2'/>
         </div>
-        <Link className='text-richblack-900 text-xs md:text-sm GTE_light md:text-[15px] cursor-pointer'>Cancel</Link>
+        <Link className='text-richblack-900 text-xs md:text-sm GTE_light md:text-[15px] cursor-pointer' onClick={() => window.history.back()}>Cancel</Link>
         </div>
 
 
