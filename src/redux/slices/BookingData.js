@@ -7,7 +7,10 @@ const bookingData = createSlice({
     setBookingData: (state, { payload }) => {
       state[payload.key] = payload.value;
     },
+    removeBookingData:(state ,{payload}) => {
+      state = {};
+    }
   },
 });
 export default bookingData.reducer;
-export const {setBookingData} = bookingData.actions;
+export const {setBookingData,removeBookingData} = bookingData.actions;

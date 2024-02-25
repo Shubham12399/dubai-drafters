@@ -9,6 +9,8 @@ import { Button } from "@material-tailwind/react";
 import { addItem, updateAllItem } from "../../redux/slices/Cart";
 import { useNavigate } from "react-router";
 import { v4 as uuidv4 } from 'uuid';
+import { removeBookingData, setBookingData } from "../../redux/slices/BookingData";
+import { Link } from "react-router-dom";
 const Step2 = () => {
   const dispatch = useDispatch();
   const handleNextProcess = () => {
@@ -49,7 +51,7 @@ const Step2 = () => {
       localStorage.setItem("cartItems" , JSON.stringify([...cart.items , item ]));
     }
     dispatch(addItem(item));
-   
+    dispatch(removeBookingData());
     navigate("/cart");
   };
 
@@ -61,6 +63,26 @@ const Step2 = () => {
     //   "en-US",
     //   options
     // );
+  }
+  if (!bookingData.destination && !bookingData.type) {
+    console.log("selectedDate, adults, children");
+    return (
+      <div className="w-full h-screen backdrop-blur-sm fixed z-[99999] bg-transparent flex justify-center items-center top-0">
+        <div className="w-[300px] h-fit py-4 px-3 text-richblack-900">
+          <h2 className="text-lg text-center">
+            Please Book Any Tour For Select <br /> Dates and more options{" "}
+          </h2>
+          <div className="flex justify-center ">
+            <Link
+              to={"/all-tours"}
+              className="text-xs block w-fit px-3 py-1 rounded-full border border-richblack-900 text-richblack-900 mt-4"
+            >
+              View All Tours
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

@@ -265,94 +265,10 @@ const TourDetails = () => {
               <h3 className="text-xs text-[#ff612c]">Destination</h3>
               <h2 className="mt-1 text-sm"> Dubai Safari Full Day Tour</h2>
             </div>
-            <div className="py-2 mb-2">
-              <h3 className="text-xs text-[#ff612c]">Date</h3>
-              <p className="mt-1 text-sm"> 3 Feb - 10 Feb 2024</p>
-            </div>
+            
             <hr />
 
-            {/* Tour Schedule */}
-            <div className="py-2 mb-2 mt-3 ">
-              <h3 className="text-xs text-[#ff612c]">Tour Schedule</h3>
-              {/* Days */}
-              <div className="flex gap-x-2 overflow-auto mt-4 hide-scrollbar ">
-                <div className="min-w-fit px-3 py-0 bg-[#ff621c] flex flex-col justify-center text-white text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">
-                    1 <span className="text-xs GTE_light">Day</span>
-                  </h1>
-                  {/* <span className="GTE_light text-xs">Starting</span> */}
-                </div>
-                <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">
-                    2 <span className="text-xs GTE_light">Day</span>
-                  </h1>
-                  {/* <span className="GTE_light text-xs">Starting</span> */}
-                </div>
-                <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">
-                    3 <span className="text-xs GTE_light">Day</span>
-                  </h1>
-                  {/* <span className="GTE_light text-xs">Starting</span> */}
-                </div>
-                <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">
-                    4 <span className="text-xs GTE_light">Day</span>
-                  </h1>
-                  {/* <span className="GTE_light text-xs">Starting</span> */}
-                </div>
-                <div className="min-w-fit px-3 py-0 bg-white flex flex-col justify-center text-richblack-900 border border-richblack-100 text-xs rounded-md ">
-                  <h1 className="text-center GTE_light">
-                    5 <span className="text-xs GTE_light">Day</span>
-                  </h1>
-                  {/* <span className="GTE_light text-xs">Starting</span> */}
-                </div>
-
-                <div className="min-w-fit px-3 py-1 flex flex-col justify-center text-richblack-900 text-sm rounded-md border border-[#ff612c]">
-                  <h1 className="text-center text-xl GTE_light flex justify-center text-[#ff612c]">
-                    <GoPlus className=""></GoPlus>
-                  </h1>
-                  <span className="GTE_light text-xs text-[#ff612c]"></span>
-                </div>
-              </div>
-
-              {/* Outlets */}
-              <div className="pt-6">
-                <div>
-                  <div className="flex justify-between items-center">
-                    <p>Visit place</p>
-
-                    <p className="text-xs text-richblack-600 text-right border-b border-[#ff612c]">
-                      Date - 03/09/2024
-                    </p>
-                  </div>
-
-                  <div className="flex gap-x-1 mt-4 overflow-auto hide-scrollbar rounded-md">
-                    <img
-                      src={img}
-                      alt=""
-                      className="h-[170px] object-cover object-right"
-                    />
-                    <img
-                      src={img3}
-                      alt=""
-                      className="h-[170px] object-cover object-right"
-                    />
-                    <img
-                      src={img4}
-                      alt=""
-                      className="h-[170px] object-cover object-right"
-                    />
-                  </div>
-
-                  <h3 className="mt-4">Food Activity</h3>
-                  <p className="text-sm mt-2">
-                    Vegitables , Non-Vegitable , Sweets , Special Recepies
-                  </p>
-                  <h3 className="mt-4">Living Room</h3>
-                  <p className="text-sm mt-2">Book now to select Homtels</p>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </CollapseComp>
         <CollapseComp title="Inclusions" className={"px-4"}>

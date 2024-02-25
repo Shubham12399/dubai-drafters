@@ -41,7 +41,7 @@ const Step1 = () => {
     if(selectedDate?.date){
     setCalenderDate(new Date(JSON.parse(selectedDate?.date)));
   }
-  }, [selectDatesStore, selectedDate]);
+  }, [selectDatesStore, selectedDate,bookingData]);
 
   // useEffect(() => {
 
@@ -108,23 +108,25 @@ const Step1 = () => {
     const weekendDay = date.getDay();
 
     console.log(new Date(date));
+
+    const arr = [ ...[...selectDatesStore]
+    .map((e) => ({ ...e, active: false }))
+    .filter((e) => {
+      if (!(e.day == day && e.month == month)) {
+        //statement
+        return e;
+      }
+    })];
+    arr.splice(1,0 , {
+      month: month,
+      day: day,
+      year: year,
+      date: JSON.stringify(new Date(date)),
+      active: true,
+    });
     dispatch(
       setselectDateSlice([
-        ...[...selectDatesStore]
-          .map((e) => ({ ...e, active: false }))
-          .filter((e) => {
-            if (!(e.day == day && e.month == month)) {
-              //statement
-              return e;
-            }
-          }),
-        {
-          month: month,
-          day: day,
-          year: year,
-          date: JSON.stringify(new Date(date)),
-          active: true,
-        },
+        ...arr
       ])
     );
     hasRendered.current = true;
@@ -138,6 +140,10 @@ const Step1 = () => {
     });
     setCalenderDate(date);
     setIsDateModal(false);
+
+    // this code will help to full left to div
+    // const allDatesContainer = document.querySelector(".all-dates-container");
+    // allDatesContainer.scrollLeft = allDatesContainer.scrollWidth;
   };
 
   const setSelectedDateByOnClickOnDatesTags = (jsonDate) => {
@@ -146,6 +152,10 @@ const Step1 = () => {
     hasRendered.current = true;
   };
 
+  // useEffect(() => {
+  //   const allDatesContainer = document.querySelector(".all-dates-container");
+  //   allDatesContainer.scrollLeft = allDatesContainer.scrollWidth;
+  // },[]);
   useEffect(() => {
     if (hasRendered.current) {
       shiftActiveFlagToSelectedDate();
@@ -206,7 +216,7 @@ const Step1 = () => {
             </span>
 
             {/* Dates */}
-            <div className="flex gap-x-2 overflow-auto mt-1 hide-scrollbar ">
+            <div className="flex gap-x-2 overflow-auto mt-1 hide-scrollbar all-dates-container">
               {/* All cards */}
 
               {allDates.map((e, i) => {

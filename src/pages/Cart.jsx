@@ -41,12 +41,13 @@ const Cart = () => {
     <>
       <Navigation></Navigation>
       <div className="w-full max-w-maxWidthContent mx-auto mb-28">
-        <div className="mt-3 mb-8 px-3 pt-3 flex gap-x-2 items-center">
+        <div className="mt-3 px-3 pt-3 flex gap-x-2 items-center">
           <BackArrow></BackArrow>
           <h1>Checkout Tours</h1>
         </div>
+        <div className=" mt-4 px-3 text-[13px]">Total Cart Items : <span>{cartItems.items.length}</span></div>
 
-        <div>
+        <div className="mt-2">
           {cartItems.items.length == 0 && (
             <div>
               <h3 className="text-richblack-100 text-center mt-4">
