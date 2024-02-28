@@ -22,7 +22,7 @@ const TourCard = ({ tourImg, tourTitle, tourDesc, tourPrice, starsCount }) => {
 
   return (
     <>
-      <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+      <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md ">
         <div className="w-full">
           <img
             src={tourImg}

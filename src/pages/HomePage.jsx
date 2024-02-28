@@ -243,7 +243,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* our destination  -------------------------------------------------------------------------------  */}
+        {/* our Adventures Tours  -------------------------------------------------------------------------------  */}
         <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-3 md:px-6">
           <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">
             Adventure
@@ -263,7 +263,7 @@ const HomePage = () => {
               tourPrice={355.0}
               starsCount={4}
             ></TourCard>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -308,7 +308,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -348,7 +348,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -388,7 +388,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -428,7 +428,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -485,7 +485,7 @@ const HomePage = () => {
             her!
           </p>
           <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -527,7 +527,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -567,7 +567,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -607,7 +607,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -647,7 +647,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -704,7 +704,7 @@ const HomePage = () => {
             her!
           </p>
           <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -746,7 +746,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -786,7 +786,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -826,7 +826,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -866,7 +866,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -923,7 +923,7 @@ const HomePage = () => {
             her!
           </p>
           <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -965,7 +965,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -1005,7 +1005,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -1045,7 +1045,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -1085,7 +1085,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -1142,7 +1142,7 @@ const HomePage = () => {
             her!
           </p>
           <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -1184,7 +1184,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -1224,7 +1224,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -1264,7 +1264,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"
@@ -1304,7 +1304,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-xl ">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md">
               <div className="w-full">
                 <img
                   loading="lazy"

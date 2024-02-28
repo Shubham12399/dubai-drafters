@@ -151,3 +151,23 @@
   width: 15px !important;
   height: 15px !important;
 }
+.bg_tab_switcher{
+  width: 70px !important;
+  transition: all .3s ease;
+}
+.bg_tab_switcher_parent{
+  left: 5px !important;
+  transition: all .3s ease;
+}
+.tour_quantity_selection .tab_item.active:nth-child(1) ~ div .bg_tab_switcher{
+  width: 70px !important;
+}
+.tour_quantity_selection .tab_item.active:nth-child(1) ~ .bg_tab_switcher_parent{
+  left: 5px !important;
+}
+.tour_quantity_selection .tab_item.active:nth-child(2) ~ div .bg_tab_switcher{
+  width: 55px !important;
+}
+.tour_quantity_selection .tab_item.active:nth-child(2) ~ .bg_tab_switcher_parent{
+  left: 84px !important;
+}
