@@ -260,6 +260,13 @@ const Step1 = () => {
                   ,{" "}
                   {new Date(JSON.parse(selectedDate?.date)).getFullYear()}
                 </h3>
+                <span className="text-xs text-[#ff612c] block mt-3">
+                  Price
+                </span>
+                <p className="text-sm">
+                 {bookingData?.currency == "doller" ? "AED " : "RS "}{" "}
+        {adults * bookingData?.price}
+                </p>
                 {/* <button
             to={"/all-tours"}
             className="text-xs block w-fit px-3 py-1 rounded-full border border-richblack-900 text-richblack-900 mt-2"
