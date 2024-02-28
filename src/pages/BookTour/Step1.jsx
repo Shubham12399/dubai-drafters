@@ -17,6 +17,12 @@ import { setselectDateSlice } from "../../redux/slices/SelectDateSlice.js";
 import { setBookingData } from "../../redux/slices/BookingData.js";
 import { Link } from "react-router-dom";
 // import BookingProcess from "./BookingProcess.jsx";
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 const Step1 = () => {
   const dispatch = useDispatch();
   const [usersQuantity, setUsersQuantity] = useState({});
@@ -29,6 +35,22 @@ const Step1 = () => {
   const [allDates, setAllDates] = useState([]);
   const [selectionType, setSelectionType] = useState("");
   const bookingData = useSelector((store) => store.bookingData);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+
   const hasRendered = useRef(false);
   useEffect(() => {
     setAllDates(selectDatesStore);
@@ -45,6 +67,7 @@ const Step1 = () => {
     }
   }, [selectDatesStore, selectedDate, bookingData]);
 
+  console.log(selectedDate);
   useEffect(() => {
     setSelectionType("Indivisual");
   }, []);
@@ -213,69 +236,75 @@ const Step1 = () => {
 
           {/* Dates */}
           <div className="px-4 mt-2">
-            {/* date
+            <div className="bg-white border shadow-md rounded-xl pt-2">
+              {/* date
             <span className="text-xs text-[#ff612c] ">
               Feb 4<span className="ml-1"> </span>
             </span> */}
 
-            <div className="py-3">
-              <span className="text-xs text-[#ff612c] block">Chosen date</span>
-              <span className="">Today</span>
-              <h3>7 Feburary , Saturday</h3>
-              {/* <button
+              <div className="py-3 border-b  px-4 ">
+                <span className="text-xs text-[#ff612c] block">
+                  Chosen date
+                </span>
+                <span className="">
+                  {selectedDate?.status
+                    ? selectedDate?.status
+                    : new Date(JSON.parse(selectedDate?.date))
+                    .toLocaleDateString("en-US", options)
+                    .trim()
+                    .split(",")[0]}
+                </span>
+                <h3>
+                  {selectedDate?.day}{" "}
+                  {months[new Date(JSON.parse(selectedDate?.date)).getMonth()]}{" "}
+                  ,{" "}
+                  {new Date(JSON.parse(selectedDate?.date)).getFullYear()}
+                </h3>
+                {/* <button
             to={"/all-tours"}
             className="text-xs block w-fit px-3 py-1 rounded-full border border-richblack-900 text-richblack-900 mt-2"
           >
             View Some Dates
           </button> */}
-            </div>
-            <div className="flex justify-between items-center ">
-              <span className="text-xs text-[#ff612c] block">
-                Some other dates
-              </span>
-              {/* <div
-                className="flex gap-x-2 text-sm items-center cursor-pointer"
-                onClick={() => setIsDateModal(true)}
-              >
-                <GoCalendar className="text-[#ff612c]"></GoCalendar>
-                <p className="GTE_light text-xs">More Dates</p>
-              </div> */}
-            </div>
-            {/* Dates */}
-            <div className="grid gap-0 grid-cols-3 overflow-auto mt-4 hide-scrollbar all-dates-container">
-              {/* All cards */}
+              </div>
 
-              {allDates.map((e, i) => {
-                // const isActive =
-                return (
-                  <Date2Component
-                    key={i}
-                    e={e}
-                    bookingData={bookingData}
-                    setSelectedDateByOnClickOnDatesTags={
-                      setSelectedDateByOnClickOnDatesTags
-                    }
-                    adults={adults}
-                  ></Date2Component>
-                );
-              })}
-              <div
-                className={`min-w-[80px] flex flex-col justify-center text-richblack-500 text-xs border border-richblack-25 cursor-pointer `}
-                onClick={() => setIsDateModal(true)}
-              >
-                <div className="pt-3 flex flex-col justify-center items-center">
-                  <GoCalendar className="text-[#ff612c] text-base mb-1"></GoCalendar>
-
-                  <p className="text-sm GTE_light ">More Dates</p>
+              <div className="flex justify-between items-center mt-4  px-4 ">
+                <span className="text-xs text-[#ff612c] block">
+                  Some other dates
+                </span>
+                <div
+                  className="flex gap-x-2 text-sm items-center cursor-pointer"
+                  onClick={() => setIsDateModal(true)}
+                >
+                  <GoCalendar className="text-[#ff612c]"></GoCalendar>
+                  <p className="GTE_light text-xs">More Dates</p>
                 </div>
+              </div>
+              {/* Dates */}
+              <div className="flex gap-x-2 overflow-auto mt-4 hide-scrollbar all-dates-container pl-4 pb-4 pt-2 pr-4">
+                {/* All cards */}
+
+                {allDates.map((e, i) => {
+                  // const isActive =
+                  return (
+                    <Date2Component
+                      key={i}
+                      e={e}
+                      bookingData={bookingData}
+                      setSelectedDateByOnClickOnDatesTags={
+                        setSelectedDateByOnClickOnDatesTags
+                      }
+                      adults={adults}
+                    ></Date2Component>
+                  );
+                })}
               </div>
             </div>
           </div>
 
-          <hr className="mt-2 mb-4" />
 
           {/* Quantity Selection */}
-          <div className="px-4 tour_quantity_selection">
+          <div className="px-4 tour_quantity_selection mt-8">
             <h1 className="mb-2">Select Travellers</h1>
 
             <div className="flex gap-x-2 w-fit p-1 rounded-lg relative ">
@@ -301,7 +330,7 @@ const Step1 = () => {
             </div>
 
             <div className="py-2 ">
-              <div className="b-white rounded-xl drop-shadow-2xl p-4 pt-3 border shadow-lg">
+              <div className="b-white rounded-xl drop-shadow-2xl p-4 pt-3 border shadow-md">
                 {/* Adults */}
                 {selectionType == "Indivisual" && (
                   <>
@@ -495,28 +524,30 @@ const Date2Component = ({
 
   return (
     <div
-      className={`min-w-[80px] flex flex-col justify-center text-richblack-500 text-xs border border-richblack-25 cursor-pointer ${
-        e?.active && "!bg-[#ff612c] !text-white !border-[#ff612c] "
-      } `}
+      className={`min-w-[80px] flex flex-col justify-center text-richblack-200 text-xs border bg-white shadow-lg rounded-lg border-richblack-25 cursor-pointer ${
+        e?.active && " outline !outline-[#ff612c] !"
+      }   `}
       onClick={() => setSelectedDateByOnClickOnDatesTags(e)}
     >
       <div className="py-3 flex flex-col">
-        <h1 className="pl-4 GTE_light">
-          <p className="text-xs GTE_light ">
-            {e?.status ? e.status : e?.month}
+        <h1 className="px-3 GTE_light ">
+          <p className="text-xs GTE_light border-b pb-1">
+            {e?.status ? e.status : new Date(JSON.parse(e?.date))
+                    .toLocaleDateString("en-US", options)
+                    .trim()
+                    .split(",")[0]}
           </p>
-          <p className="text-sm mt-1">
+          <p className="text-[13px] GTE_light mt-1 text-richblack-900">
             {" "}
-            {e?.day} {months[new Date(JSON.parse(e?.date)).getMonth()]}
+            {e?.day} <br /> {months[new Date(JSON.parse(e?.date)).getMonth()]}
           </p>
-          <p className="text-xs pb-1 mt-2">
+          {/* <p className="text-xs GTE_light">
           {bookingData?.currency == "doller" ? "AED " : "RS "}{" "}
         {adults * bookingData?.price}
-          </p>
+          </p> */}
         </h1>
       </div>
 
-     
       {/* <span className="GTE_light text-xs">Starting</span> */}
     </div>
   );
