@@ -345,6 +345,7 @@ const Step1 = () => {
               </div>
             </div>
 
+
             <div className="py-2 ">
               <div className="b-white rounded-xl drop-shadow-2xl p-4 pt-3 border shadow-md">
                 {/* Adults */}

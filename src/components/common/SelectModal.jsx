@@ -50,7 +50,8 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
                   <div key={index} className={`min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden  cursor-pointer rounded-xl p-1 `} onClick={() =>
                    {console.log(mappedItem ) ;handleSelectValue(mappedItem)}}>
                   <img
-                    src={mappedItem.image}
+                    // src={mappedItem.image}
+                    src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
                     alt=""
                     className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
                   />

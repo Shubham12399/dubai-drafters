@@ -34,7 +34,10 @@ const HeaderSection = () => {
 
 
   return (
-    <div className="w-full bg-[rgba(0,0,0,0.03)] h-full">
+    <div className="w-full  h-full max-w-maxContent mx-auto ">
+      <div className="px-4 py-2 pt-1">
+<div className="rounded-2xl overflow-hidden">
+
 {
       <Carousel
         className="rounded-none relative"
@@ -112,6 +115,8 @@ const HeaderSection = () => {
         </div>
       </Carousel>
       }
+      </div>
+</div>
       
     </div>
   );};
