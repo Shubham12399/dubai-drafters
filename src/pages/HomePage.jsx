@@ -15,7 +15,7 @@ import {
   FaHotel,
   FaPlane,
 } from "react-icons/fa";
-
+import {AnimatePresence, motion} from "framer-motion";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import {
   Button,
@@ -40,7 +40,7 @@ const HomePage = () => {
   const [tourType, setTourType] = useState({});
   const navigate = useNavigate();
 
-  console.log(setSelectionType);
+  // console.log(setSelectionType);
   const handleSelectionType = (typeString, setStateFun, stateValue) => {
     setSelectionType([typeString, setStateFun, stateValue]);
     setIsModal(true);
@@ -1396,6 +1396,7 @@ const HomePage = () => {
       setDestinationValue={setDestinationValue}></DestinationModal>
                     ---------------------------------- Select ADvanture ---------------------------- */}
 
+
       <SelectModal
         isSelectModal={isModal}
         setIsSelectModal={setIsModal}
@@ -1403,7 +1404,6 @@ const HomePage = () => {
         selectValue={selectionType[2]}
         type={selectionType[0]}
       ></SelectModal>
-
       {selectType && (
         <Modal
           title={

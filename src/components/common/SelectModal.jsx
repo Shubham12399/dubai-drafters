@@ -3,10 +3,12 @@ import TourType from "../../data/TourType";
 import Destinations from "../../data/Destinations";
 import Modal from "../Modal";
 import { IoEarth } from "react-icons/io5";
+import { AnimatePresence } from "framer-motion";
 
 const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelectValue,type}) => {
     const [mappedData , setMappedData] = useState([]); 
     console.log(type);
+
     useEffect(() => { 
       setMappedData([]);
         if(type == "tourType"){
@@ -30,6 +32,7 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
 
     return (
       <>
+      <AnimatePresence>
       {isSelectModal && (
           <Modal
             title={
@@ -45,7 +48,7 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
             <div className="w-fit mx-auto">
               <div className="flex justify-start flex-wrap gap-y-1 my-2">
               { mappedData?.map((mappedItem,index) => {
-                console.log(mappedItem)  
+                // console.log(mappedItem)  
                 return (
                   <div key={index} className={`min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden  cursor-pointer rounded-xl p-1 `} onClick={() =>
                    {console.log(mappedItem ) ;handleSelectValue(mappedItem)}}>
@@ -67,6 +70,7 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
             </div>
           </Modal>
         )}
+        </AnimatePresence>
       </>
     )
 }

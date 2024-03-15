@@ -1,44 +1,85 @@
-import { Button, ButtonGroup, Carousel, IconButton, Tooltip } from "@material-tailwind/react";
+import {
+  Button,
+  ButtonGroup,
+  Carousel,
+  IconButton,
+  Tooltip,
+} from "@material-tailwind/react";
 import { FaAngleLeft, FaAngleRight, FaArrowLeft, FaStar } from "react-icons/fa";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import collaborationBanner1 from "../../../assets/images/WhatsApp Image 2024-02-05 at 14.34.43_ed310961.jpg";
-
+        // import function to register Swiper custom elements
+        import { register } from 'swiper/element/bundle';
+      // Import Swiper styles
+import 'swiper/css';
 import { useQuery } from "@tanstack/react-query";
 
 
+  // register Swiper custom elements
+  register();
 const HeaderSection = () => {
-  
-    const { isPending, error, data } = useQuery({
-        queryKey: ['repoData'],
-        queryFn: () =>
-          fetch('https://api.github.com/repos/TanStack/query').then((res) =>
-            res.json(),
-          ),
-      });
-    //   if (isPending){ 
-    //     return (<div className="pb-12 max-w-maxContent mx-auto">
-    //   <HeaderSkl></HeaderSkl>
-    //   <div className="max-w-[900px] mx-auto">
-    //   <TitleSkl></TitleSkl>
-    //   <TagsSkl></TagsSkl>
-    //   <PostSkl></PostSkl>
-    //   <TitleSkl></TitleSkl>
-    //   <PostSkl></PostSkl>
-    //   </div>
-     
-    //   </div>)}
-    
-    //   if (error) return 'An error has occurred: ' + error.message
-    
-      console.log(data); 
+  const { isPending, error, data } = useQuery({
+    queryKey: ["repoData"],
+    queryFn: () =>
+      fetch("https://api.github.com/repos/TanStack/query").then((res) =>
+        res.json()
+      ),
+  });
+  //   if (isPending){
+  //     return (<div className="pb-12 max-w-maxContent mx-auto">
+  //   <HeaderSkl></HeaderSkl>
+  //   <div className="max-w-[900px] mx-auto">
+  //   <TitleSkl></TitleSkl>
+  //   <TagsSkl></TagsSkl>
+  //   <PostSkl></PostSkl>
+  //   <TitleSkl></TitleSkl>
+  //   <PostSkl></PostSkl>
+  //   </div>
 
+  //   </div>)}
+
+  //   if (error) return 'An error has occurred: ' + error.message
+
+  console.log(data);
 
   return (
     <div className="w-full  h-full max-w-maxContent mx-auto ">
       <div className="px-4 py-2 pt-1">
-<div className="rounded-2xl overflow-hidden">
+        <div className="rounded-2xl overflow-hidden">
+ 
 
-{
+        {/* <swiper-container slides-per-view="3" speed="500" loop="true" css-mode="true">
+  <swiper-slide>
+  <div className="w-full h-[155px] md:h-[500px] overflow-hidden">
+          <img
+            src={collaborationBanner1}
+            alt="image 1"
+            className="h-full w-full object-cover"
+          />
+        </div>
+  </swiper-slide>
+  <swiper-slide>
+  <div className="w-full h-[155px] md:h-[500px] overflow-hidden">
+          <img
+             src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+            alt="image 1"
+            className="h-full w-full object-cover"
+          />
+        </div>
+  </swiper-slide>
+  <swiper-slide>
+  <div className="w-full h-[155px] md:h-[500px] overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+            alt="image 1"
+            className="h-full w-full object-cover"
+          />
+        </div>
+  </swiper-slide>
+
+</swiper-container> */}
+
+          {
       <Carousel
         className="rounded-none relative"
         autoplay={true}
@@ -100,7 +141,7 @@ const HeaderSection = () => {
             alt="image 3"
             className="h-full w-full object-cover"
           />
-          {/* <div className="absolute w-full top-0 left-0 h-full bg-gradient-to-r from-[rgba(0,0,0,0.7)] to-transparent z-[999] p-3 md:p-16 hidden md:block">
+         {/* /* <div className="absolute w-full top-0 left-0 h-full bg-gradient-to-r from-[rgba(0,0,0,0.7)] to-transparent z-[999] p-3 md:p-16 hidden md:block">
           <h1 className="text-white text-xs md:text-4xl font-black leading-tight first-letter:text-6xl flex gap-2 items-baseline "> <span className="text-[#ff621c]">?</span>
           <p className="text-[10px] md:text-lg text-white mb-2 md:mb-4 font-medium">a travel agent or freelancer</p>
 
@@ -111,14 +152,13 @@ const HeaderSection = () => {
                 <Button className="bg-[#ff612c] text-white normal-case">Join Now </Button>
                 <Button className=" normal-case">Contact us </Button>
             </ButtonGroup>
-          </div> */}
+          </div>  #/ */}
         </div>
-      </Carousel>
-      }
+      </Carousel>}
+        </div>
       </div>
-</div>
-      
     </div>
-  );};
+  );
+};
 
 export default HeaderSection;

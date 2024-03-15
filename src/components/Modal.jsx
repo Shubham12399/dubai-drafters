@@ -1,27 +1,54 @@
 import { useState } from "react";
 import { GoX } from "react-icons/go";
+import {AnimatePresence, motion} from "framer-motion";
 
 const Modal = ({ title, setModal, children ,className }) => {
   const [modalBottom, setModalBottom] = useState(false);
   const bottomModal = () => {
-    setModalBottom(true);
-    setTimeout(() => {
-      setModal(false);
-    }, 100);
+    // setModalBottom(true);
+    // setTimeout(() => {
+    // }, 100);
+    setModal(false);
   };
   
   return (
-    <div
-      className="w-full h-screen backdrop-blur-md fixed left-0 top-0 z-[999999] bg-[rgba(0,0,0,0.06)]"
+    <motion.div
+    transition={{
+      duration:.3,
+      ease:"linear"
+     }}
+     initial={{
+      backdropFilter: "blur(0px)",
+     }}
+     animate={{
+      backdropFilter: "blur(9px)",
+     }}
+     exit={{
+      backdropFilter: "blur(0px)",
+     }}
+      className="w-full h-screen fixed left-0 top-0 z-[999999] bg-[rgba(0,0,0,0.06)]"
       onClick={(e) => {
         e.stopPropagation();
         bottomModal()
       }}
     >
-      <div
-        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] transition-all drop-shadow-lg ${
-          modalBottom ? " -bottom-[600px] " : " !bottom-0 "
-        } pb-14 ${ className } `}
+      <motion.div
+       transition={{
+        duration:.5,
+        ease:"linear"
+       }}
+       initial={{
+        bottom:"-300px",
+       }}
+       animate={{
+        bottom:0,
+       }}
+      
+       exit={{
+        bottom:"-500px",
+       }}
+        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] transition-all drop-shadow-lg pb-14 ${ className } 
+        `}
         onClick={(e) => e.stopPropagation()}
       >
         <div className=" max-w-maxContentTab mx-auto ">
@@ -38,8 +65,9 @@ const Modal = ({ title, setModal, children ,className }) => {
           </div>
           <div>{children}</div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
+
   );
 };
 
