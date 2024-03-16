@@ -5,7 +5,7 @@ import HeaderSection from "../components/core/home/HeaderSection";
 import Modal from "../components/Modal";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@material-tailwind/react";
-import { GoChevronRight } from "react-icons/go";
+import { GoChevronRight, GoX } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import TourType from "../data/TourType";
 import SelectModal from "../components/common/SelectModal";
@@ -78,7 +78,7 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                         //   setDestinationValue,
                         //   destinationValue
                         // );
-                        setShow(prev=>!prev);
+                        setShow((prev) => !prev);
                       }}
                     >
                       {destinationValue?.name ? (
@@ -181,11 +181,10 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                   bottom: "-650px",
                 }}
                 className="fixed w-full mt-64 h-[600px] bg-red-500 shadow-xl rounded-2xl"
-              >
-
-              </motion.div>
+              ></motion.div>
             )}
           </AnimatePresence>
+   
         </div>
         <TypeTours></TypeTours>
       </div>
@@ -245,99 +244,6 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
         selectValue={selectionType[2]}
         type={selectionType[0]}
       ></SelectModal> */}
-      <AnimatePresence>
-        {selectType && (
-          <Modal
-            title={
-              <div className="flex items-center gap-x-2 GTE_light">
-                {" "}
-                Choose Type
-              </div>
-            }
-            setModal={setSelectType}
-          >
-            <div className="w-fit mx-auto">
-              <div className="flex justify-start flex-wrap px-1 gap-y-1 my-2">
-                {TourType.map((type, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1"
-                      // onClick={() => handleChanges("tourType", type)}
-                    >
-                      <img
-                        loading="lazy"
-                        src={type.image}
-                        alt=""
-                        className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                      />
-                      <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                        {type.title} Tour
-                      </h3>
-                    </div>
-                  );
-                })}
-
-                {/* <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  loading="lazy"
-                  src={img2}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  City Tours
-                </h3>
-              </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  loading="lazy"
-                  src={img3}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Water activities
-                </h3>
-              </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  loading="lazy"
-                  src={img4}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Attractions visit{" "}
-                </h3>
-              </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  loading="lazy"
-                  src={img4}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Attractions visit{" "}
-                </h3>
-              </div>
-              <div className="min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden hover:outline outline-[#ff621c] cursor-pointer rounded-xl p-1">
-                <img
-                  loading="lazy"
-                  src={img4}
-                  alt=""
-                  className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
-                />
-                <h3 className="font-light text-xs mt-1 GTE_light ml-1 ">
-                  Attractions visit{" "}
-                </h3>
-              </div> */}
-              </div>
-            </div>
-          </Modal>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
