@@ -19,7 +19,7 @@ const Modal = ({ title, setModal, children ,className }) => {
   return (
     <div
    
-      className="w-full h-screen fixed left-0 backdrop-blur-sm top-0 z-[999999] bg-[rgba(0,0,0,0.06)]"
+      className="w-full h-screen fixed left-0 top-0 z-[999999] bg-[rgba(0,0,0,0.06)]"
       onClick={(e) => {
         e.stopPropagation();
         bottomModal()
