@@ -12,32 +12,38 @@ import { GrHomeRounded } from "react-icons/gr";
 import { PiAirplaneTilt } from "react-icons/pi";
 import Modal from "../Modal";
 import { Link } from "react-router-dom";
-import { AnimatePresence,motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { GoX } from "react-icons/go";
 
 const BottomNav = () => {
   const [openService, setOpenServices] = useState(false);
 
   return (
-    <div className="md:hidden flex gap-x-0 items-center bg-white fixed bottom-0 z-[99999] shadow-md rounded-tl-md rounded-tr justify-center w-full " style={{
-      boxShadow:"0 0 20px rgba(0,0,0,0.1)"
-    }}>
-      <Link to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c]">
+    <div
+      className="md:hidden flex gap-x-0 items-center bg-white fixed bottom-0 z-[99999] shadow-md rounded-tl-md rounded-tr justify-center w-full "
+      style={{
+        boxShadow: "0 0 20px rgba(0,0,0,0.1)",
+      }}
+    >
+      <Link
+        to={"/"}
+        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
+      >
         <GrHomeRounded className="text-[16px] my-1 group-hover:text-[#ff612c]"></GrHomeRounded>
         <span className="text-xs">Home</span>
       </Link>
       <div
-        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c]"
-        onClick={() => setOpenServices(true)}
+        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
+        onClick={() => setOpenServices(prev=>!prev)}
       >
         <PiAirplaneTilt className="text-[16px] my-1 group-hover:text-[#ff612c] -rotate-90"></PiAirplaneTilt>
         <span className="text-xs">Services</span>
       </div>
-      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c]">
+      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
         <FaCity className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaCity>
         <span className="text-xs">Cites</span>{" "}
       </div>
-      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c]">
+      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
         <FaUser className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaUser>
         <span className="text-xs">Profile</span>{" "}
       </div>
@@ -80,47 +86,80 @@ const BottomNav = () => {
         </Modal>
       )} */}
 
-
-<AnimatePresence>
-            {openService && (
-              <motion.div
-                transition={{
-                  duration: 0.9,
-                  ease: "easeOut",
-                }}
-                initial={{
-                  bottom: "-300px",
-                }}
-                animate={{
-                  bottom: 0,
-                }}
-                exit={{
-                  bottom: "-500px",
-                }}
-                className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh drop-shadow-lg pb-44  
-      `}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className=" max-w-maxContentTab mx-auto ">
-                  <div className="flex justify-between px-2 items-center border-b">
-                    <div className="select-none text-sm">{"title"}</div>
-                    <div
-                      className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
-                      onClick={() => {
-                        setOpenServices(false);
-                      }}
-                    >
-                      <GoX className="text-lg text-richblack-900"></GoX>
-                    </div>
-                  </div>
-                  {/* <div>{children}</div> */}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
+    
+      <AnimatePresence>
+        {openService && (
+          <motion.div
+            initial={{
+              bottom: "-650px",
+            }}
+            animate={{
+              bottom: "-300px",
+            }}
+            exit={{
+              bottom: "-650px",
+            }}
+            className="absolute w-full mt-64 h-[600px] bg-white shadow-xl rounded-2xl z-0 py-4 px-4 shadow-xl"
+          >
+             <div className=" max-w-maxContentTab mx-auto ">
+   <div className="flex justify-between px-2 items-center border-b">
+     <div className="select-none text-sm">{"title"}</div>
+     <div
+          className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
+          onClick={() => {
+            setOpenServices(false);
+          }}
+        >
+          <GoX className="text-lg text-richblack-900"></GoX>
+        </div>
+      </div>
+ </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
+
+
+
+
+// <AnimatePresence>
+// {openService && (
+//   <motion.div
+//     transition={{
+//       duration: 0.9,
+//       ease: "easeOut",
+//     }}
+//     initial={{
+//       bottom: "-300px",
+//     }}
+//     animate={{
+//       bottom: 0,
+//     }}
+//     exit={{
+//       bottom: "-500px",
+//     }}
+//     className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] drop-shadow-lg pb-44  
+// `}
+//     onClick={(e) => e.stopPropagation()}
+//   >
+//     <div className=" max-w-maxContentTab mx-auto ">
+//       <div className="flex justify-between px-2 items-center border-b">
+//         <div className="select-none text-sm">{"title"}</div>
+//         <div
+//           className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
+//           onClick={() => {
+//             setOpenServices(false);
+//           }}
+//         >
+//           <GoX className="text-lg text-richblack-900"></GoX>
+//         </div>
+//       </div>
+// //       <div>{children}</div>
+// //     </div>
+//   </motion.div>
+// )}
+// </AnimatePresence>
 
 export default BottomNav;
