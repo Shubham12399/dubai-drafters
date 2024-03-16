@@ -12,25 +12,25 @@ const Modal = ({ title, setModal, children ,className }) => {
     setModalBottom(false);
       setTimeout(() => {
         setModal(false);
-    }, 400);
+    }, 300);
    
   };
   
   return (
-    <div
-    // transition={{
-    //   duration:.06,
-    //   ease:"linear"
-    //  }}
-    //  initial={{
-    //   backdropFilter: "blur(0px)",
-    //  }}
-    //  animate={{
-    //   backdropFilter: "blur(9px)",
-    //  }}
-    //  exit={{
-    //   backdropFilter: "blur(0px)",
-    //  }}
+    <motion.div
+    transition={{
+      duration:.06,
+      ease:"linear"
+     }}
+     initial={{
+      backdropFilter: "blur(0px)",
+     }}
+     animate={{
+      backdropFilter: "blur(9px)",
+     }}
+     exit={{
+      backdropFilter: "blur(0px)",
+     }}
       className="w-full h-screen fixed left-0 top-0 z-[999999] bg-[rgba(0,0,0,0.06)]"
       onClick={(e) => {
         e.stopPropagation();
@@ -77,7 +77,7 @@ const Modal = ({ title, setModal, children ,className }) => {
       }
       </AnimatePresence>
 
-    </div>
+    </motion.div>
 
   );
 };
