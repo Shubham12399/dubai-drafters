@@ -20,6 +20,7 @@ const HomePage = () => {
   const [destinationValue, setDestinationValue] = useState({});
   const [isModal, setIsModal] = useState(false);
   const [tourType, setTourType] = useState({});
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
   // console.log(setSelectionType);
@@ -72,11 +73,12 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                     <span
                       className="text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 items-center w-full max-w-[120px] md:max-w-full md:pr-6"
                       onClick={() => {
-                        handleSelectionType(
-                          "tourDestination",
-                          setDestinationValue,
-                          destinationValue
-                        );
+                        // handleSelectionType(
+                        //   "tourDestination",
+                        //   setDestinationValue,
+                        //   destinationValue
+                        // );
+                        setShow(prev=>!prev);
                       }}
                     >
                       {destinationValue?.name ? (
@@ -161,6 +163,28 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
         {/* All Sections  */}
         <ChooseDestination></ChooseDestination>
 
+        <div>
+          {/* <button onClick={() => setShow((prev) => !prev)}>
+            {!show ? "show" : "hide"}
+          </button> */}
+
+          <AnimatePresence>
+            {show && (
+              <motion.div
+                initial={{
+                  bottom: "-650px",
+                }}
+                animate={{
+                  bottom: "-300px",
+                }}
+                exit={{
+                  bottom: "-650px",
+                }}
+                className="fixed w-full mt-64 h-[600px] bg-red-500 shadow-xl rounded-2xl"
+              ></motion.div>
+            )}
+          </AnimatePresence>
+        </div>
         <TypeTours></TypeTours>
       </div>
 
