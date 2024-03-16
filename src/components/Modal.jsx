@@ -19,12 +19,13 @@ const Modal = ({ title, setModal, children ,className }) => {
   return (
     <div
    
-      className="w-full h-screen fixed left-0 top-0 z-[999999] bg-[rgba(0,0,0,0.06)]"
+      className="w-full h-screen fixed left-0 top-0 z-[999999] "
       onClick={(e) => {
         e.stopPropagation();
         bottomModal()
       }}
     >
+      <div className="fixed left-0 top-0 z-0 bg-[rgba(0,0,0,0.3)] backdrop-blur-sm h-screen w-full"></div>
       <AnimatePresence>
 
 {
@@ -40,7 +41,7 @@ const Modal = ({ title, setModal, children ,className }) => {
        exit={{
         bottom:"-500px",
        }}
-        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 fixed min-h-[10vh] drop-shadow-lg pb-20 ${ className } 
+        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 fixed min-h-[10vh] drop-shadow-lg pb-20 z-[9999] ${ className } 
         `}
         onClick={(e) => e.stopPropagation()}
       >
