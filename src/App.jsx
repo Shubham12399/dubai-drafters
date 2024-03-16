@@ -15,7 +15,7 @@ import { useState } from "react";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="pb-4">
         {/* Important Routes  */}
         <Routes>
           {/* home "/" route  */}

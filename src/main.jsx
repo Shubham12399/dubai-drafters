@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
       <QueryClientProvider client={queryClient}>
     <Provider store={store}>
-        {/* <App /> */}
+        <App />
        <App2></App2>
     </Provider>
       </QueryClientProvider>
