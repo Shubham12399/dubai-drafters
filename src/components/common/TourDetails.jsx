@@ -85,7 +85,7 @@ const TourDetails = () => {
         }}
         initial={{
           borderRadius: "1rem",
-          y: 700,
+          y: 300,
           // height:"400px",
         }}
         animate={{
