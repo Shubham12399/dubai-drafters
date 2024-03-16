@@ -18,7 +18,6 @@ const Modal = ({ title, setModal, children ,className }) => {
   
   return (
     <div
-   
       className="w-full h-screen fixed left-0 top-0 z-[999999] "
       onClick={(e) => {
         e.stopPropagation();
