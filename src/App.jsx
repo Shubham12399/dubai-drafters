@@ -10,6 +10,8 @@ import TourDetails from "./components/common/TourDetails";
 import CityTours from "./components/common/CityTours";
 import BookingProcess from "./pages/BookTour/BookingProcess";
 import Cart from "./pages/Cart";
+import { AnimatePresence,motion } from "framer-motion";
+import { useState } from "react";
 function App() {
   return (
     <Router>
@@ -36,4 +38,30 @@ function App() {
   );
 }
 
+
+const App2 = () => {
+  const [show, setShow] = useState(false);
+  return(
+    <div>
+    <button onClick={() => setShow(prev=>!prev)}>
+    {!show?"show":"hide"}
+    </button>
+
+<AnimatePresence>
+{ show && <motion.div initial={{
+      bottom:"-650px"
+    }} animate={{
+      bottom:"-200px"
+    }}
+    exit={{
+      bottom:"-650px"
+    }} className="fixed w-full mt-64 h-[600px] bg-red-500 shadow-xl rounded-2xl">
+
+    </motion.div>}
+    </AnimatePresence>
+  </div>
+  )
+}
+
+export {App2};
 export default App;
