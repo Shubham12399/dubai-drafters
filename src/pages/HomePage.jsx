@@ -181,7 +181,9 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                   bottom: "-650px",
                 }}
                 className="fixed w-full mt-64 h-[600px] bg-red-500 shadow-xl rounded-2xl"
-              ></motion.div>
+              >
+
+              </motion.div>
             )}
           </AnimatePresence>
         </div>
@@ -236,13 +238,13 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
       setDestinationValue={setDestinationValue}></DestinationModal>
                     ---------------------------------- Select ADvanture ---------------------------- */}
 
-      <SelectModal
+      {/* <SelectModal
         isSelectModal={isModal}
         setIsSelectModal={setIsModal}
         setSelectValue={selectionType[1]}
         selectValue={selectionType[2]}
         type={selectionType[0]}
-      ></SelectModal>
+      ></SelectModal> */}
       <AnimatePresence>
         {selectType && (
           <Modal

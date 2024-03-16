@@ -3,12 +3,17 @@ import { GoX } from "react-icons/go";
 import {AnimatePresence, motion} from "framer-motion";
 
 const Modal = ({ title, setModal, children ,className }) => {
-  const [modalBottom, setModalBottom] = useState(false);
+  const [modalBottom, setModalBottom] = useState(true);
   const bottomModal = () => {
     // setModalBottom(true);
     // setTimeout(() => {
     // }, 100);
-    setModal(false);
+    // setModal(false);
+    setModalBottom(false);
+      setTimeout(() => {
+        setModal(false);
+    }, 400);
+   
   };
   
   return (
@@ -32,9 +37,13 @@ const Modal = ({ title, setModal, children ,className }) => {
         bottomModal()
       }}
     >
+      <AnimatePresence>
+
+{
+  modalBottom &&
       <motion.div
        transition={{
-        duration:.08,
+        duration:.9,
         ease:"easeOut"
        }}
        initial={{
@@ -43,11 +52,10 @@ const Modal = ({ title, setModal, children ,className }) => {
        animate={{
         bottom:0,
        }}
-      
        exit={{
         bottom:"-500px",
        }}
-        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] transition-all drop-shadow-lg pb-64 ${ className } 
+        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh drop-shadow-lg pb-44 ${ className } 
         `}
         onClick={(e) => e.stopPropagation()}
       >
@@ -63,9 +71,12 @@ const Modal = ({ title, setModal, children ,className }) => {
               <GoX className="text-lg text-richblack-900"></GoX>
             </div>
           </div>
-          {/* <div>{children}</div> */}
+          <div>{children}</div>
         </div>
       </motion.div>
+      }
+      </AnimatePresence>
+
     </div>
 
   );
