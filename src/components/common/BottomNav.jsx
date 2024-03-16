@@ -101,7 +101,7 @@ const BottomNav = () => {
             }}
             className="absolute w-full mt-64 h-[600px] bg-white shadow-xl rounded-2xl z-0 py-4 px-4 shadow-xl"
           >
-             <div className=" max-w-maxContentTab mx-auto ">
+             {/* <div className=" max-w-maxContentTab mx-auto ">
    <div className="flex justify-between px-2 items-center border-b">
      <div className="select-none text-sm">{"title"}</div>
      <div
@@ -113,7 +113,7 @@ const BottomNav = () => {
           <GoX className="text-lg text-richblack-900"></GoX>
         </div>
       </div>
- </div>
+ </div> */}
           </motion.div>
         )}
       </AnimatePresence>
