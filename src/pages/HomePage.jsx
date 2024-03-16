@@ -180,8 +180,23 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                 exit={{
                   bottom: "-650px",
                 }}
-                className="fixed w-full mt-64 h-[600px] bg-red-500 shadow-xl rounded-2xl"
-              ></motion.div>
+                className="fixed w-full mt-64 h-[600px] bg-white py-4 px-4 shadow-xl rounded-2xl"
+              >
+  <div className=" max-w-maxContentTab mx-auto ">
+   <div className="flex justify-between px-2 items-center border-b">
+     <div className="select-none text-sm">{"title"}</div>
+     <div
+          className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
+          onClick={() => {
+            setShow(false);
+          }}
+        >
+          <GoX className="text-lg text-richblack-900"></GoX>
+        </div>
+      </div>
+ </div>
+
+              </motion.div>
             )}
           </AnimatePresence>
    

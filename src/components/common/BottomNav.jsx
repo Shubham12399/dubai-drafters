@@ -94,7 +94,7 @@ const BottomNav = () => {
             exit={{
               bottom: "-650px",
             }}
-            className="absolute w-full mt-64 h-[600px] border bg-red-700 rounded-2xl z-0 py-4 px-4"
+            className="fixed w-full mt-64 h-[600px] border bg-red-700 rounded-2xl z-0 py-4 px-4"
           >
              {/* <div className=" max-w-maxContentTab mx-auto ">
    <div className="flex justify-between px-2 items-center border-b">
