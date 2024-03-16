@@ -32,6 +32,9 @@ import TourType from "../data/TourType";
 import DestinationModal from "../components/common/DestinationModal";
 import SelectModal from "../components/common/SelectModal";
 import TourCard from "../components/common/TourCard";
+import locationIcon from "../assets/images/icons8-location.gif";
+import mapIcon from "../assets/images/icons8-map-marker.gif";
+
 const HomePage = () => {
   const [selectionType, setSelectionType] = useState([]);
   const [selectType, setSelectType] = useState(false);
@@ -77,8 +80,15 @@ const HomePage = () => {
               <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))_130px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 ">
                 <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1">
                   <div className="w-full md:w-full md:bg-transparent md:shadow-none">
-                    <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden after:w-[34%] ">
+                    <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center  after:w-[34%] ">
                       Destination
+                      <span>
+                        <img src={locationIcon} alt="" className="w-[40px]"/>
+                      </span>
+                      {/* after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden
+after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden
+after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden
+after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                     </h3>
                     <span
                       className="text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 items-center w-full max-w-[120px] md:max-w-full md:pr-6"
@@ -104,8 +114,11 @@ const HomePage = () => {
                 </div>
                 <div className="flex md:pl-7 md:border-r md:border-[#08aca0]  pl-1">
                   <div className="w-full rounded-lg bg-white md:pl-0 md:bg-transparent md:shadow-none ">
-                    <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:w-[50%] after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">
+                    <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:w-[50%]  ">
                       Type
+                      <span>
+                        <img src={mapIcon} alt="" className="w-[30px]"/>
+                      </span>
                     </h3>
                     <span
                       className="text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 w-full items-center max-w-[120px] "
@@ -127,7 +140,7 @@ const HomePage = () => {
                 </div>
                 <div className="hidden md:flex md:pl-7 md:border-r border-[#08aca0]  ">
                   <div className="w-full md:w-fit p-2 rounded-lg bg-white md:p-0 md:bg-transparent md:shadow-none pl-3">
-                    <h3 className="text-[10px] sm:text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-full after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">
+                    <h3 className="text-[10px] sm:text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-full  ">
                       Date
                     </h3>
                     <span className="text-[10px] md:text-xs text-richblack-200 select-none cursor-pointer GTE_light block mt-1">
@@ -137,7 +150,7 @@ const HomePage = () => {
                 </div>
                 <div className=" hidden md:flex md:pl-7  ">
                   <div className="w-full md:w-fit p-2 rounded-lg bg-white md:p-0 md:bg-transparent md:shadow-none pl-3">
-                    <h3 className="text-[10px] sm:text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-full after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden ">
+                    <h3 className="text-[10px] sm:text-[13px] md:text-sm font-bold text-[#2e3844] flex gap-x-2 items-center after:w-full  ">
                       Guest
                     </h3>
                     <span className="text-[10px] md:text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 w-fit items-center ">
@@ -1404,6 +1417,7 @@ const HomePage = () => {
         selectValue={selectionType[2]}
         type={selectionType[0]}
       ></SelectModal>
+      <AnimatePresence>
       {selectType && (
         <Modal
           title={
@@ -1495,6 +1509,7 @@ const HomePage = () => {
           </div>
         </Modal>
       )}
+      </AnimatePresence>
     </div>
   );
 };

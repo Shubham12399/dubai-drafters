@@ -23,6 +23,15 @@ const Navigation = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     let previousValue = scrollY.getPrevious();
+   
+   ;(()=>{
+    if(latest < 8) {
+      document.getElementById("nav_container").style.boxShadow = "none"
+    }else{
+      document.getElementById("nav_container").style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
+   
+    }
+   })()
     if (latest > previousValue  && latest > 30) {
       setHidden(true);
     } else {
@@ -30,15 +39,19 @@ const Navigation = () => {
     }
     // console.log(latest);
   });
+
+
+
+
   return (
     <motion.div
-      initial={{ y: -50, opacity: 50 }}
+      initial={{ y: -100, opacity: 50 }}
       variants={{
         visible: {
           y: 0,
         },
         hidden: {
-          y: -50,
+          y: -100,
         },
       }}
       transition={{
@@ -47,7 +60,8 @@ const Navigation = () => {
         // stiffness:300
       }}
       animate={hidden ? "hidden" : "visible"}
-      className="w-full z-[9999] sticky bg-white top-0"
+      className="w-full z-[9999] sticky bg-white top-0 "
+      id="nav_container"
     >
       <nav className="relative z-50 max-w-maxContent mx-auto py-0 md:py-2 pr-4 pl-2 flex items-center justify-between">
         <div>

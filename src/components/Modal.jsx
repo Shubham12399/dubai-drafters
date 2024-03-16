@@ -14,7 +14,7 @@ const Modal = ({ title, setModal, children ,className }) => {
   return (
     <motion.div
     transition={{
-      duration:.3,
+      duration:.06,
       ease:"linear"
      }}
      initial={{
@@ -34,8 +34,8 @@ const Modal = ({ title, setModal, children ,className }) => {
     >
       <motion.div
        transition={{
-        duration:.5,
-        ease:"linear"
+        duration:.08,
+        ease:"easeOut"
        }}
        initial={{
         bottom:"-300px",
@@ -47,7 +47,7 @@ const Modal = ({ title, setModal, children ,className }) => {
        exit={{
         bottom:"-500px",
        }}
-        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] transition-all drop-shadow-lg pb-14 ${ className } 
+        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 absolute min-h-[10vh] transition-all drop-shadow-lg pb-64 ${ className } 
         `}
         onClick={(e) => e.stopPropagation()}
       >
@@ -63,7 +63,7 @@ const Modal = ({ title, setModal, children ,className }) => {
               <GoX className="text-lg text-richblack-900"></GoX>
             </div>
           </div>
-          <div>{children}</div>
+          {/* <div>{children}</div> */}
         </div>
       </motion.div>
     </motion.div>

@@ -43,9 +43,9 @@ const HeaderSection = () => {
   console.log(data);
 
   return (
-    <div className="w-full  h-full max-w-maxContent mx-auto ">
-      <div className="px-4 py-2 pt-1">
-        <div className="rounded-2xl overflow-hidden">
+    <div className="w-full h-full max-w-maxContent mx-auto ">
+      <div className="px-1 pb-0 pt-1">
+        <div className="rounded-lg overflow-hidden">
  
 
         {/* <swiper-container slides-per-view="3" speed="500" loop="true" css-mode="true">
