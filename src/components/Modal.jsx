@@ -30,10 +30,7 @@ const Modal = ({ title, setModal, children ,className }) => {
 {
   modalBottom &&
       <motion.div
-       transition={{
-        duration:.6,
-        ease:"easeOut"
-       }}
+   
        initial={{
         bottom:"-300px",
        }}
@@ -43,7 +40,7 @@ const Modal = ({ title, setModal, children ,className }) => {
        exit={{
         bottom:"-500px",
        }}
-        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 fixed min-h-[10vh] drop-shadow-lg pb-20  ${ className } 
+        className={`w-full rounded-tl-2xl rounded-tr-2xl -bottom-[600px] bg-white p-4 fixed min-h-[10vh] drop-shadow-lg pb-20 ${ className } 
         `}
         onClick={(e) => e.stopPropagation()}
       >
