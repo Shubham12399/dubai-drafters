@@ -42,10 +42,10 @@ const Modal = ({ title, setModal, children ,className }) => {
 {
   modalBottom &&
       <motion.div
-      //  transition={{
-      //   duration:.9,
-      //   ease:"easeOut"
-      //  }}
+       transition={{
+        duration:.6,
+        ease:"easeOut"
+       }}
        initial={{
         bottom:"-300px",
        }}
