@@ -71,7 +71,7 @@ const Modal = ({ title, setModal, children ,className }) => {
               <GoX className="text-lg text-richblack-900"></GoX>
             </div>
           </div>
-          <div>{children}</div>
+          {/* <div>{children}</div> */}
         </div>
       </motion.div>
       }
