@@ -28,7 +28,7 @@ const TypeTours = () => {
           <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6">
             <TourCard
               tourTitle={"India Gate Full Day Tour"}
-              tourImg={img2}
+              tourImg="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
               tourPrice={355.0}
               starsCount={4}
             ></TourCard>
@@ -36,7 +36,7 @@ const TypeTours = () => {
               <div className="w-full">
                 <img
                   loading="lazy"
-                  src={img4}
+                  src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
                   alt=""
                   className="w-full h-[110px] sm:h-[110px] object-cover"
                 />
@@ -82,7 +82,7 @@ const TypeTours = () => {
               <div className="w-full">
                 <img
                   loading="lazy"
-                  src={img2}
+                  src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
                   alt=""
                   className="w-full h-[110px] sm:h-[110px] object-cover"
                 />
@@ -122,7 +122,7 @@ const TypeTours = () => {
               <div className="w-full">
                 <img
                   loading="lazy"
-                  src={img3}
+                  src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
                   alt=""
                   className="w-full h-[110px] sm:h-[110px] object-cover"
                 />
@@ -162,7 +162,7 @@ const TypeTours = () => {
               <div className="w-full">
                 <img
                   loading="lazy"
-                  src={img2}
+                  src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
                   alt=""
                   className="w-full h-[110px] sm:h-[110px] object-cover"
                 />
@@ -202,7 +202,7 @@ const TypeTours = () => {
               <div className="w-full">
                 <img
                   loading="lazy"
-                  src={img1}
+                  src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
                   alt=""
                   className="w-full h-[110px] sm:h-[110px] object-cover"
                 />

@@ -123,21 +123,22 @@ const HeaderSection = () => {
       >
         <div className="w-full h-[155px] md:h-[500px] overflow-hidden">
           <img
-            src={collaborationBanner1}
+            // src={collaborationBanner1}
+            src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
             alt="image 1"
             className="h-full w-full object-cover"
           />
         </div>
         <div className="w-full h-[155px] md:h-[500px]">
           <img
-            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+           src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
             alt="image 2"
             className="h-full w-full object-cover"
           />{" "}
         </div>
         <div className="w-full h-[155px] md:h-[500px] relative">
           <img
-            src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+           src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
             alt="image 3"
             className="h-full w-full object-cover"
           />
