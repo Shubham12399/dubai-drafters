@@ -33,67 +33,67 @@ const TourDetails = () => {
   const { scrollY } = useScroll();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  const [directionMove , setDirectionMove] = useState(0);
   useMotionValueEvent(scrollY, "change", (latest) => {
-    let direction = scrollY.getVelocity();
     let previousValue = scrollY.getPrevious();
     if (latest > previousValue) {
       setIsDrag(false);
     } else {
-      if (latest == 0) {
+      if (latest == 0 && directionMove < 0) {
         setIsDrag(true);
       }
     }
   });
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="pb-4 text-richblue-700">
+    <motion.div key={"tourDetails"} transition={{stiffness:100}} initial={{x:"100%",opacity:0}} animate={{x:0,opacity:100}}  className="pb-4 text-richblue-700">
       <Navigation></Navigation>
-      <motion.div className="fixed z-0 w-full h-screen left-0 top-0 bg-[rgba(0,0,0,0.1)]"></motion.div>
+      {/* <motion.div className="fixed z-0 w-full h-screen left-0 top-0 bg-[rgba(0,0,0,0.1)]"></motion.div> */}
 
       <motion.div
-        drag={"y"}
-        whileDrag={{
-          scale: 1,
-          marginInline: "auto",
-          borderRadius: "1rem",
-          transition: {
-            duration: 0.3,
-          },
-        }}
-        dragElastic={0.2}
-        dragTransition={{ bounceStiffness: 600, bounceDamping: 80 }}
-        // dragDirectionLock={{
-        //   screenY:true
+        // drag={"y"}
+        // whileDrag={{
+        //   scale: 1,
+        //   marginInline: "auto",
+        //   borderRadius: "1rem",
+        //   transition: {
+        //     duration: 0.3,
+        //   },
         // }}
-        onDragStart={(e) => {
-          console.log(e);
-          if (e.movementY < 0) {
-            setIsDrag(false);
-          }
-        }}
-        dragListener={isDrag}
-        dragConstraints={{
-          top: 0,
-          bottom: "0px",
-        }}
-        dragSnapToOrigin={{
-          y: true,
-        }}
-        initial={{
-          borderRadius: "1rem",
-          y: 300,
-          // height:"400px",
-        }}
-        animate={{
-          borderRadius: 0,
-          y: 0,
-          // height:"100vh"
-        }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        // dragElastic={0.2}
+        // dragTransition={{ bounceStiffness: 600, bounceDamping: 80 }}
+        // // dragDirectionLock={{
+        // //   screenY:true
+        // // }}
+        // onDragStart={(e) => {
+        //   console.log(e);
+        //   setDirectionMove(e.movementY);
+        //   if (e.movementY < 0) {
+        //     setIsDrag(false);
+        //   }
+        // }}
+        // dragListener={isDrag}
+        // dragConstraints={{
+        //   top: 0,
+        //   bottom: "0px",
+        // }}
+        // dragSnapToOrigin={{
+        //   y: true,
+        // }}
+        // initial={{
+        //   borderRadius: "1rem",
+        //   y: 300,
+        //   // height:"400px",
+        // }}
+        // animate={{
+        //   borderRadius: 0,
+        //   y: 0,
+        //   // height:"100vh"
+        // }}
+        // transition={{ duration: 0.8, delay: 0.2 }}
         className="bg-white relative z-50 h-auto overflow-hidden"
       >
         <div className="max-h-auto min-h-fit">
@@ -371,7 +371,7 @@ const TourDetails = () => {
           }
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

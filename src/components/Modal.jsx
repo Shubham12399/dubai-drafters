@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoX } from "react-icons/go";
 import {AnimatePresence, motion} from "framer-motion";
 
-const Modal = ({ title, setModal, children ,className }) => {
+const Modal = ({ title,isSelectModal, setModal, children ,className }) => {
   const [modalBottom, setModalBottom] = useState(true);
   const bottomModal = () => {
     // setModalBottom(true);
@@ -15,7 +15,7 @@ const Modal = ({ title, setModal, children ,className }) => {
     }, 300);
    
   };
-  
+
   return (
     <div
       className="w-full h-screen fixed left-0 top-0 z-[999999] "

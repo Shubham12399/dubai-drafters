@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 
 const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelectValue,type}) => {
     const [mappedData , setMappedData] = useState([]); 
+    
     console.log(type);
 
     useEffect(() => { 
@@ -26,7 +27,9 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
     const handleSelectValue = (value) => {
       console.log(value); 
       setSelectValue(value);
-      setIsSelectModal(false);
+      setTimeout(()=>{
+        setIsSelectModal(false);
+      },300);
     };
 
 
@@ -44,6 +47,7 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
               </div>
             }
             setModal={setIsSelectModal}
+            isSelectModal={isSelectModal}
           >
             <div className="w-fit mx-auto">
               <div className="flex justify-start flex-wrap gap-y-1 my-2">

@@ -6,13 +6,14 @@ import Modal from "../components/Modal";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@material-tailwind/react";
 import { GoChevronRight, GoX } from "react-icons/go";
-import { useNavigate } from "react-router-dom";
+import { Router, useNavigate } from "react-router-dom";
 import TourType from "../data/TourType";
 import SelectModal from "../components/common/SelectModal";
 import locationIcon from "../assets/images/icons8-location.gif";
 import mapIcon from "../assets/images/icons8-map-marker.gif";
 import ChooseDestination from "../components/core/home/ChooseDestination";
 import TypeTours from "../components/core/home/TypeTours";
+import { slide } from "../data/animationConstants";
 
 const HomePage = () => {
   const [selectionType, setSelectionType] = useState([]);
@@ -39,9 +40,36 @@ const HomePage = () => {
   //     setSelectType(false)
   //   }
   // }
+ 
   return (
-    <div className="">
+    <motion.div className="relative">
+      <div>
+
+      {/* <motion.div
+        initial={{
+          position: "static",
+          width: 0,
+          height: 0,
+          opacity: 0,
+        }}
+        exit={{
+          position: "fixed",
+          width: "100%",
+          height: "100vh",
+          opacity: 1,
+          background: "rgba(0,0,0,0.7)",
+        }}
+        animate={{
+          position: "static",
+          width: 0,
+          height: 0,
+          opacity: 0,
+        }}
+        className="fixed w-full h-screen top-0 left-0 z-[51] "
+      ></motion.div> */}
+
       <Navigation></Navigation>
+
       <div className="w-full">
         {/* ------------------------------Header section ----------------------------------------------------- */}
         <HeaderSection></HeaderSection>
@@ -73,12 +101,12 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                     <span
                       className="text-xs text-richblack-200 select-none cursor-pointer GTE_light flex justify-between pr-1 mt-1 items-center w-full max-w-[120px] md:max-w-full md:pr-6"
                       onClick={() => {
-                        // handleSelectionType(
-                        //   "tourDestination",
-                        //   setDestinationValue,
-                        //   destinationValue
-                        // );
-                        setShow((prev) => !prev);
+                        handleSelectionType(
+                          "tourDestination",
+                          setDestinationValue,
+                          destinationValue
+                        );
+                        // setShow((prev) => !prev);
                       }}
                     >
                       {destinationValue?.name ? (
@@ -182,30 +210,29 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                 }}
                 className="fixed w-full mt-64 h-[600px] bg-white py-4 px-4 shadow-xl rounded-2xl"
               >
-  <div className=" max-w-maxContentTab mx-auto ">
-   <div className="flex justify-between px-2 items-center border-b">
-     <div className="select-none text-sm">{"title"}</div>
-     <div
-          className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
-          onClick={() => {
-            setShow(false);
-          }}
-        >
-          <GoX className="text-lg text-richblack-900"></GoX>
-        </div>
-      </div>
- </div>
-
+                <div className=" max-w-maxContentTab mx-auto ">
+                  <div className="flex justify-between px-2 items-center border-b">
+                    <div className="select-none text-sm">{"title"}</div>
+                    <div
+                      className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
+                      onClick={() => {
+                        setShow(false);
+                      }}
+                    >
+                      <GoX className="text-lg text-richblack-900"></GoX>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
-   
         </div>
         <TypeTours></TypeTours>
       </div>
 
       {/* ----------------------------------Bottom Nav ---------------------------------------- */}
       <BottomNav></BottomNav>
+      </div>
 
       {/*---------------------------------------------------- Models ----------------------------- */}
 
@@ -252,14 +279,14 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
       setDestinationValue={setDestinationValue}></DestinationModal>
                     ---------------------------------- Select ADvanture ---------------------------- */}
 
-      {/* <SelectModal
+      <SelectModal
         isSelectModal={isModal}
         setIsSelectModal={setIsModal}
         setSelectValue={selectionType[1]}
         selectValue={selectionType[2]}
         type={selectionType[0]}
-      ></SelectModal> */}
-    </div>
+      ></SelectModal>
+    </motion.div>
   );
 };
 

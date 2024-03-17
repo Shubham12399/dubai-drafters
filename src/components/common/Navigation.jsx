@@ -60,7 +60,7 @@ const Navigation = () => {
         // stiffness:300
       }}
       animate={hidden ? "hidden" : "visible"}
-      className="w-full z-[9999] sticky bg-white top-0 "
+      className="w-full z-[50] sticky bg-white top-0 "
       id="nav_container"
     >
       <nav className="relative z-50 max-w-maxContent mx-auto py-0 md:py-2 pr-4 pl-2 flex items-center justify-between">

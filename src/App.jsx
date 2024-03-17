@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import "./App.css";
 import Tours from "./pages/Tours";
@@ -13,11 +13,12 @@ import Cart from "./pages/Cart";
 import { AnimatePresence,motion } from "framer-motion";
 import { useState } from "react";
 function App() {
+  let location = useLocation();
   return (
-    <Router>
-      <div className="pb-4">
+      <div className="pb-4"> 
+        <AnimatePresence>
         {/* Important Routes  */}
-        <Routes>
+        <Routes location={location} key={location.key}>
           {/* home "/" route  */}
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/tours" element={<Tours />}>
@@ -33,10 +34,11 @@ function App() {
           <Route path="/cart" element={<Cart></Cart>}></Route>
           
         </Routes>
+        </AnimatePresence>
       </div>
-    </Router>
   );
 }
+
 
 
 const App2 = () => {
