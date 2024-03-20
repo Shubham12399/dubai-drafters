@@ -12,13 +12,17 @@ import BookingProcess from "./pages/BookTour/BookingProcess";
 import Cart from "./pages/Cart";
 import { AnimatePresence,motion } from "framer-motion";
 import { useState } from "react";
+import AllHotels from "./pages/Hotel/AllHotels";
+// we need to map the `scale` prop we define below
+
 function App() {
   let location = useLocation();
   return (
       <div className="pb-4"> 
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout" initial={false}>
         {/* Important Routes  */}
         <Routes location={location} key={location.key}>
+        {/* <PageTransition timeout={500}> */}
           {/* home "/" route  */}
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/tours" element={<Tours />}>
@@ -32,7 +36,8 @@ function App() {
           <Route path="/city/:cityId" element={<CityTours />}></Route>
           <Route path="/booking" element={<BookingProcess></BookingProcess>}></Route>
           <Route path="/cart" element={<Cart></Cart>}></Route>
-          
+          <Route path="/hotels" element={<AllHotels></AllHotels>}></Route>
+          {/* </PageTransition> */}
         </Routes>
         </AnimatePresence>
       </div>
@@ -42,26 +47,20 @@ function App() {
 
 
 const App2 = () => {
-  const [show, setShow] = useState(false);
-  return(
-    <div>
-    <button onClick={() => setShow(prev=>!prev)}>
-    {!show?"show":"hide"}
-    </button>
-
-<AnimatePresence>
-{ show && <motion.div initial={{
-      bottom:"-650px"
-    }} animate={{
-      bottom:"-200px"
-    }}
-    exit={{
-      bottom:"-650px"
-    }} className="fixed w-full mt-64 h-[600px] bg-red-500 shadow-xl rounded-2xl">
-
-    </motion.div>}
-    </AnimatePresence>
-  </div>
+  return (
+    <>
+     {/* <Route
+  render={({ location }) => (
+    <PageTransition timeout={500}>
+      <Switch location={location}>
+        <Route exact path="/" component={List} />
+        <Route path="/list" component={List}/>
+        <Route path="/item" component={Item} />
+      </Switch>
+    </PageTransition>
+  )}
+/> */}
+    </>
   )
 }
 

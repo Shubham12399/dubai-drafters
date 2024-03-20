@@ -5,7 +5,7 @@ import FinalStep from "./FinalStep";
 import { setBookingProcess } from "../../redux/slices/bookingProcessSlice";
 import Navigation from "../../components/common/Navigation";
 import BackArrow from "../../components/common/BackArrow";
-
+import {motion} from "framer-motion";
 const BookingProcess = () => {
   const bookingProcess = useSelector((store) => store.bookingProcessSlice);
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const BookingProcess = () => {
   };
 
   return (
-    <>
+    <motion.div key={"tourBookingProcess"} transition={{stiffness:100}} initial={{x:"100%",opacity:0}} animate={{x:0,opacity:100}} exit={{x:"100%"}} className="z-[9999]">
     <Navigation></Navigation>
       <div>
         <div className="py-3 border-b ">
@@ -33,7 +33,7 @@ const BookingProcess = () => {
           {bookingProcess && bookingProcess == 3 && <FinalStep></FinalStep>}
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

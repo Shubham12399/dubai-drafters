@@ -16,7 +16,13 @@
       --txt-clr: #ffffe6;
       --theme-clr: rgb(7 43 71); */
   }
-
+  .route-wrapper {
+    position: relative;
+  }
+  
+  .route-wrapper > div {
+    position: absolute;
+  }
   .ReactCollapse--collapse {
     transition: height 500ms;
   }

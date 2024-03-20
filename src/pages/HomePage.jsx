@@ -42,7 +42,7 @@ const HomePage = () => {
   // }
  
   return (
-    <motion.div className="relative">
+    <motion.div  key={"homePage"} exit={{opacity:0}} className="relative">
       <div>
 
       {/* <motion.div

@@ -49,7 +49,7 @@ const TourDetails = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <motion.div key={"tourDetails"} transition={{stiffness:100}} initial={{x:"100%",opacity:0}} animate={{x:0,opacity:100}}  className="pb-4 text-richblue-700">
+    <motion.div key={"tourDetails"} transition={{stiffness:100}} initial={{x:"100%",opacity:0}} animate={{x:0,opacity:100}}  exit={{x:"100%"}} className="pb-4 text-richblue-700">
       <Navigation></Navigation>
       {/* <motion.div className="fixed z-0 w-full h-screen left-0 top-0 bg-[rgba(0,0,0,0.1)]"></motion.div> */}
 
@@ -104,7 +104,7 @@ const TourDetails = () => {
               alt="travel 1920x450 banner.png"
               className="h-full object-cover object-right"
             />
-            <div className="absolute top-2 left-2 text-xl w-fit cursor-pointer p-2 text-white GTE_light">
+            <div className="absolute top-2 left-2 text-xl w-fit cursor-pointer p-2 text-white GTE_light" onClick={()=>window.history.back()}>
               <GoArrowLeft></GoArrowLeft>
             </div>
             <div className="w-full px-8 relative -mt-4">
