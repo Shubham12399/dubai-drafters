@@ -42,7 +42,7 @@ const ChooseDestination = () => {
           <div>
             {/* <h1 className="text-lg md:text-2xl font-medium">America</h1> */}
 
-            <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-6 overflow-auto hide-scrollbar">
+            <div className="my-3 flex gap-x-2 md:gap-x-4 md:mt-6 overflow-auto hide-scrollbar pr-3">
               <div className="min-w-[100px] w-[100px] h-[120px] sm:w-[160px] sm:h-[200px] md:w-[230px] md:h-[280px] rounded-lg overflow-hidden relative " onClick={() => navigate("/city/city1")}>
                 <img
                   loading="lazy" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/11/f5/21/a0.jpg" alt="" className="w-full h-full object-cover" />
