@@ -8,8 +8,6 @@ import { AnimatePresence } from "framer-motion";
 const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelectValue,type}) => {
     const [mappedData , setMappedData] = useState([]); 
     
-    console.log(type);
-
     useEffect(() => { 
       setMappedData([]);
         if(type == "tourType"){
@@ -19,20 +17,15 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
         if(type == "tourDestination"){
           console.log(Destinations) 
             setMappedData([...Destinations]);
-        }
-       
-          
+        }  
     },[type]);
 
     const handleSelectValue = (value) => {
-      console.log(value); 
       setSelectValue(value);
       setTimeout(()=>{
         setIsSelectModal(false);
       },300);
     };
-
-
     return (
       <>
       <AnimatePresence>
@@ -52,13 +45,12 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
             <div className="w-fit mx-auto">
               <div className="flex justify-start flex-wrap gap-y-1 my-2">
               { mappedData?.map((mappedItem,index) => {
-                // console.log(mappedItem)  
                 return (
                   <div key={index} className={`min-w-[30%] w-[33%] sm:w-[160px] overflow-hidden  cursor-pointer rounded-xl p-1 `} onClick={() =>
-                   {console.log(mappedItem ) ;handleSelectValue(mappedItem)}}>
+                   {handleSelectValue(mappedItem);}}>
                   <img
                     // src={mappedItem.image}
-                    src="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
+                    src="https://res.cloudinary.com/dky0bhd07/image/upload/ar_16:9,c_fill,g_auto/c_scale,w_603/v1711187913/roverDrifters/yi3tyxq81uvlgya2jccr.png"
                     alt=""
                     className="w-full object-cover h-[54px] md:h-[80px] rounded-lg select-none"
                   />
@@ -69,7 +61,6 @@ const SelectModal = ({isSelectModal , setIsSelectModal , selectValue , setSelect
                 )
               })  
                }
-          
               </div>
             </div>
           </Modal>
