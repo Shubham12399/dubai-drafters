@@ -3,9 +3,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
-import { register } from 'swiper/element/bundle';
 
-register();
 const HeaderSection = () => {
   // const { isPending, error, data } = useQuery({
   //   queryKey: ["repoData"],
