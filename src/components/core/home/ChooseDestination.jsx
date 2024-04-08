@@ -10,7 +10,7 @@ const ChooseDestination = () => {
             Choose Destination{" "}
           </h1>
           {/* Tags */}
-          <div className="flex items-start overflow-auto gap-1 py-2 hide-scrollbar font-normal GTE_light ">
+          <div className="flex items-start overflow-auto gap-2 py-2 hide-scrollbar font-normal GTE_light ">
             <div className="min-w-fit normal-case bg-[#ff621c] text-white text-xs rounded-full font-medium md:px-4 drop-shadow-[0_0_4px_#ff641c6a] px-2 py-2 flex items-center gap-x-1 ">
              <img src="https://www.shutterstock.com/image-vector/national-flag-islamic-united-arab-260nw-1487573891.jpg"className="rounded-full w-[18px] h-[18px] border-[3px] border-white" alt="" />
               <span className="font-normal">UAE</span>
