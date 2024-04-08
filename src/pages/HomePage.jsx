@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import bgWaterMark from "../assets/images/bg-watermark.jpg";
 // import locationIcon from "../assets/images/icons8-location.gif";
 // import mapIcon from "../assets/images/icons8-map-marker.gif";
-import Icon1 from "../assets/images/3d-icon-1.png";
+import Icon1 from "../assets/images/flight-icon.png";
 const HeaderSection = React.lazy(() => import("../components/core/home/HeaderSection"));
 const ChooseDestination = React.lazy(() => import("../components/core/home/ChooseDestination"));
 const TypeTours = React.lazy(() => import("../components/core/home/TypeTours"));
@@ -59,7 +59,7 @@ const HomePage = () => {
             </p>
             <div className="mt-2 relative">
               {/* <img src={bgWaterMark} alt="" className="opacity-10 h-full absolute z-0 object-cover overflow-hidden w-full" /> */}
-              <img src={Icon1} alt="" className="relative z-40 w-[90px] ml-3 -mb-6 -mt-2" />
+              <img src={Icon1} alt="" className="relative z-40 w-[240px] -ml-24 -mb-6" />
               <div className="relative py-4 mt-2 md:py-6 mb-4 px-2 pl-4 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border-[#ff621c] md:border-none rounded-xl md:bg-transparent ">
                 <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))_130px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 ">
                   <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1">

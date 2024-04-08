@@ -10,31 +10,31 @@ const ChooseDestination = () => {
             Choose Destination{" "}
           </h1>
           {/* Tags */}
-          <div className="flex items-start overflow-auto gap-2 py-2 hide-scrollbar font-normal GTE_light ">
+          <div className="flex items-start overflow-auto gap-2 py-2 hide-scrollbar font-normal GTE_light pr-3">
             <div className="min-w-fit normal-case bg-[#ff621c] text-white text-xs rounded-full font-medium md:px-4 drop-shadow-[0_0_4px_#ff641c6a] px-2 py-2 flex items-center gap-x-1 ">
              <img src="https://www.shutterstock.com/image-vector/national-flag-islamic-united-arab-260nw-1487573891.jpg"className="rounded-full w-[18px] h-[18px] border-[3px] border-white" alt="" />
               <span className="font-normal">UAE</span>
             </div>
             
             <div className="min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ">
-             <img src="https://www.shutterstock.com/image-vector/national-flag-islamic-united-arab-260nw-1487573891.jpg"className="rounded-full w-[18px] h-[18px] border" alt="" />
+             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"className="rounded-full w-[18px] h-[18px] border" alt="" />
+              <span className="font-normal">India</span>
+            </div>
+            <div className="min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1WQB7W-1NcESGrv6W4scsrUIEQshpYjgFSRtXeZ5Q_A&s"className="rounded-full w-[18px] h-[18px] border" alt="" />
               <span className="font-normal">USA</span>
             </div>
             <div className="min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ">
-             <img src="https://www.shutterstock.com/image-vector/national-flag-islamic-united-arab-260nw-1487573891.jpg"className="rounded-full w-[18px] h-[18px] border" alt="" />
-              <span className="font-normal">USA</span>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5UtXUWyx70hJlROoadZjx_1kllitfgAV18v70xEHU8w&s"className="rounded-full w-[18px] h-[18px] border" alt="" />
+              <span className="font-normal">Qatar</span>
             </div>
             <div className="min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ">
-             <img src="https://www.shutterstock.com/image-vector/national-flag-islamic-united-arab-260nw-1487573891.jpg"className="rounded-full w-[18px] h-[18px] border" alt="" />
-              <span className="font-normal">USA</span>
+             <img src="https://cdn.britannica.com/25/4825-004-F1975B92/Flag-United-Kingdom.jpg"className="rounded-full w-[18px] h-[18px] border" alt="" />
+              <span className="font-normal">United Kingdom</span>
             </div>
             <div className="min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ">
-             <img src="https://www.shutterstock.com/image-vector/national-flag-islamic-united-arab-260nw-1487573891.jpg"className="rounded-full w-[18px] h-[18px] border" alt="" />
-              <span className="font-normal">USA</span>
-            </div>
-            <div className="min-w-fit w-fit px-3 py-2 text-[12px] md:text-sm hover:text-white hover:bg-[#ff621c] text-black rounded-full cursor-pointer transition-all border flex items-center gap-x-1 ">
-             <img src="https://www.shutterstock.com/image-vector/national-flag-islamic-united-arab-260nw-1487573891.jpg"className="rounded-full w-[18px] h-[18px] border" alt="" />
-              <span className="font-normal">USA</span>
+             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png"className="rounded-full w-[18px] h-[18px] border" alt="" />
+              <span className="font-normal">Russia</span>
             </div>
            
           </div>
