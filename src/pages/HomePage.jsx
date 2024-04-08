@@ -62,7 +62,7 @@ const HomePage = () => {
                 <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))_130px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 ">
                   <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1">
                     <div className="w-full md:w-full md:bg-transparent md:shadow-none">
-                      <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center  after:w-[34%] ">
+                      <h3 className="text-base md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center  after:w-[34%] ">
                         Destination
                         {/* <span>
                           <img src={locationIcon} alt="" className="w-[50px]" />
@@ -97,7 +97,7 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
                   </div>
                   <div className="flex md:pl-7 md:border-r md:border-[#08aca0]  pl-1">
                     <div className="w-full rounded-lg bg-white md:pl-0 md:bg-transparent md:shadow-none ">
-                      <h3 className="text-[13px] md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:w-[50%]  ">
+                      <h3 className="text-base md:text-sm font-medium text-[#2e3844] flex gap-x-2 items-center after:w-[50%]  ">
                         Type
                         {/* <span>
                           <img src={mapIcon} alt="" className="w-[40px]" />
