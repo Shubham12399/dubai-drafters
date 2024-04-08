@@ -22,10 +22,10 @@ const TourCard = ({ tourImg, tourTitle, tourDesc, tourPrice, starsCount }) => {
 
   return (
     <>
-      <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-md ">
+      <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sm ">
         <div className="w-full">
           <img
-            src={tourImg}
+            src={"https://media.istockphoto.com/id/898467608/photo/the-india-gate-in-delhi.jpg?s=612x612&w=0&k=20&c=gXUaUcAJf7TD8VZ1UvBfNGU0SNNzqg-xuIx_eXgL1OM="}
             alt=""
             loading="lazy"
             className="w-full h-[110px] sm:h-[110px] object-cover"
