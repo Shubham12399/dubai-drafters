@@ -73,7 +73,7 @@ const HeaderSection = () => {
                 </IconButton>
               )}
             >
-              <div className="w-full h-[200px] md:h-[500px] overflow-hidden">
+              <div className="w-full h-[170px] md:h-[500px] overflow-hidden">
                 <img
                   // src={collaborationBanner1}
                   src="https://res.cloudinary.com/dky0bhd07/image/upload/ar_16:9,c_fill,g_auto/c_scale,w_742/v1711025841/roverDrifters/d7gzw6rkhorfwsqh2aff.jpg"
@@ -81,14 +81,14 @@ const HeaderSection = () => {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="w-full h-[200px] md:h-[500px]">
+              <div className="w-full h-[170px] md:h-[500px]">
                 <img
                   src="https://res.cloudinary.com/dky0bhd07/image/upload/ar_16:9,c_fill,g_auto/c_scale,w_603/v1711187913/roverDrifters/yi3tyxq81uvlgya2jccr.png"
                   alt="image 2"
                   className="h-full w-full object-cover"
                 />{" "}
               </div>
-              <div className="w-full h-[200px] md:h-[500px] relative">
+              <div className="w-full h-[170px] md:h-[500px] relative">
                 <img
                   src="https://res.cloudinary.com/dky0bhd07/image/upload/ar_16:9,c_fill,g_auto/c_scale,w_742/v1711025841/roverDrifters/d7gzw6rkhorfwsqh2aff.jpg"
                   alt="image 3"
