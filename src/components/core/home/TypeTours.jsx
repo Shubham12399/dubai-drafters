@@ -9,13 +9,13 @@ import img2 from "../../../assets/images/IMG-20240205-WA0067.jpg";
 import img3 from "../../../assets/images/IMG-20240205-WA0065.jpg";
 import img4 from "../../../assets/images/IMG-20240205-WA0070.jpg";
 
-const TypeTours = () => {
+const TypeTours = ({title}) => {
   return (
     <>
      {/* our Adventures Tours  -------------------------------------------------------------------------------  */}
      <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-3 md:px-6">
-          <h1 className="text-lg md:text-2xl font-bold mt-6 md:top-0 flex justify-between items-baseline pr-2">
-            Adventure
+          <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">
+            {title}
             <Button className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 md:py-1 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case">
               See All
             </Button>

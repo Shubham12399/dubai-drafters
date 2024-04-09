@@ -10,7 +10,7 @@
   src: url("./assets/fonts/GTEestiProDisplay-Light.woff");
 }
 @font-face {
-  font-family: "geist-regular";
+  font-family: "gte-regular";
   src: url("./assets/fonts/GTEestiProDisplay-Regular.ttf");
 }
 @font-face {
@@ -36,14 +36,12 @@
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
 * {
-  font-family: geist-regular !important;
+  font-family: gte-regular !important;
   /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
   margin: 0;
   padding: 0;
 }
-h1 {
-  font-family: geist-variable !important;
-}
+
 .GTE_light {
   font-family: geist-light !important;
 }

@@ -3,7 +3,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
-
+import bannerImg1 from "../../../assets/images/banner-1.jpg"
 const HeaderSection = () => {
   // const { isPending, error, data } = useQuery({
   //   queryKey: ["repoData"],
@@ -36,41 +36,43 @@ const HeaderSection = () => {
               className="rounded-none relative"
               autoplay={true}
               transition={{ duration: 0.7 }}
-              navigation={({ setActiveIndex, activeIndex, length }) => (
-              //   <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-              //     {new Array(length).fill("").map((_, i) => (
-              //       <span
-              //         key={i}
-              //         className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-              //           activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-              //         }`}
-              //         onClick={() => setActiveIndex(i)}
-              //       />
-              //     ))}
-              //   </div>
-              <></>
-              )}
+              // navigation={({ setActiveIndex, activeIndex, length }) => (
+              // //   <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+              // //     {new Array(length).fill("").map((_, i) => (
+              // //       <span
+              // //         key={i}
+              // //         className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+              // //           activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+              // //         }`}
+              // //         onClick={() => setActiveIndex(i)}
+              // //       />
+              // //     ))}
+              // //   </div>
+              // <></>
+              // )}
               prevArrow={({ handlePrev, firstIndex }) => (
-                <IconButton
-                  variant="text"
-                  color="white"
-                  size="lg"
-                  onClick={handlePrev}
-                  className={`!absolute bottom-2 rounded-full text-black right-12 sm:right-14 !p-0 border before:!w-[100%] bg-white hover:text-white w-[25px] sm:w-[30px] sm:h-[30px] h-[25px] ${firstIndex && " text-richblack-50 border-richblack-25 bg-[rgba(299,299,299,0.3)] hover:bg-[rgba(299,299,299,0.3)]"}`}
-                >
-                  <GoChevronLeft className={`text-[1.15rem] sm:text-xl font-bold ${firstIndex && " text-[rgba(299,299,299,0.4)]"}`} />
-                </IconButton>
+                // <IconButton
+                //   variant="text"
+                //   color="white"
+                //   size="lg"
+                //   onClick={handlePrev}
+                //   className={`!absolute bottom-2 rounded-full text-black right-12 sm:right-14 !p-0 border before:!w-[100%] bg-white hover:text-white w-[25px] sm:w-[30px] sm:h-[30px] h-[25px] ${firstIndex && " text-richblack-50 border-richblack-25 bg-[rgba(299,299,299,0.3)] hover:bg-[rgba(299,299,299,0.3)]"}`}
+                // >
+                //   <GoChevronLeft className={`text-[1.15rem] sm:text-xl font-bold ${firstIndex && " text-[rgba(299,299,299,0.4)]"}`} />
+                // </IconButton>
+                <></>
               )}
               nextArrow={({ handleNext, lastIndex }) => (
-                <IconButton
-                  variant="text"
-                  color="white"
-                  size="lg"
-                  onClick={handleNext}
-                  className={`!absolute bottom-2 rounded-full text-black right-4 !p-0 border before:!w-[100%] bg-white hover:text-white w-[25px] sm:w-[30px] sm:h-[30px] h-[25px] ${lastIndex && " text-richblack-50 border-[rgba(299,299,299,0.2)]  hover:bg-[rgba(299,299,299,0.2)] bg-[rgba(299,299,299,0.2)]"}`}
-                >
-                  <GoChevronRight className={`text-[1.15rem] sm:text-xl font-bold ${lastIndex && " text-[rgba(299,299,299,0.4)]"}`} />
-                </IconButton>
+                // <IconButton
+                //   variant="text"
+                //   color="white"
+                //   size="lg"
+                //   onClick={handleNext}
+                //   className={`!absolute bottom-2 rounded-full text-black right-4 !p-0 border before:!w-[100%] bg-white hover:text-white w-[25px] sm:w-[30px] sm:h-[30px] h-[25px] ${lastIndex && " text-richblack-50 border-[rgba(299,299,299,0.2)]  hover:bg-[rgba(299,299,299,0.2)] bg-[rgba(299,299,299,0.2)]"}`}
+                // >
+                //   <GoChevronRight className={`text-[1.15rem] sm:text-xl font-bold ${lastIndex && " text-[rgba(299,299,299,0.4)]"}`} />
+                // </IconButton>
+                                <></>
               )}
             >
               <div className="w-full h-[170px] md:h-[500px] overflow-hidden">
@@ -90,7 +92,8 @@ const HeaderSection = () => {
               </div>
               <div className="w-full h-[170px] md:h-[500px] relative">
                 <img
-                  src="https://res.cloudinary.com/dky0bhd07/image/upload/ar_16:9,c_fill,g_auto/c_scale,w_742/v1711025841/roverDrifters/d7gzw6rkhorfwsqh2aff.jpg"
+                  // src="https://res.cloudinary.com/dky0bhd07/image/upload/ar_16:9,c_fill,g_auto/c_scale,w_742/v1711025841/roverDrifters/d7gzw6rkhorfwsqh2aff.jpg"
+                  src={bannerImg1}
                   alt="image 3"
                   className="h-full w-full object-cover"
                 />
