@@ -13,12 +13,12 @@ const TypeTours = ({title}) => {
   return (
     <>
      {/* our Adventures Tours  -------------------------------------------------------------------------------  */}
-     <div className="md:mt-12 mb-4 max-w-[970px] mx-auto pl-3 md:px-6">
-          <h1 className="text-lg md:text-2xl font-medium mt-6 md:top-0 flex justify-between items-baseline pr-2">
+     <div className="md:mt-12 max-w-[970px] mx-auto pl-3 md:px-6">
+          <h1 className="text-lg md:text-2xl font-medium md:top-0 flex justify-between items-baseline pr-2">
             {title}
-            <Button className="text-[10px] bg-transparent shadow-none md:text-xs font-normal rounded-lg cursor-pointer py-0 md:py-1 px-2 text-[#ff621c] border border-[#ff612c] hover:bg-[#ff7a4d] hover:text-white normal-case">
+            <button className="min-w-fit normal-case hover:bg-[#ff621c] hover:text-white text-[#ff621c] text-[10px] rounded-full font-medium md:px-4 drop-shadow-[0_0_4px_#ff641c6a] px-2">
               See All
-            </Button>
+            </button>
           </h1>
           <p className="text-xs md:text-sm mt-1 text-richblack-500 hidden md:block ">
             Experience the thrill of discovering off-the-beaten-path gems and
@@ -26,19 +26,19 @@ const TypeTours = ({title}) => {
             awaits!
           </p>
           <div className="mt-3 flex gap-x-2 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6 pr-3">
-            <TourCard
+            {/* <TourCard
               tourTitle={"India Gate Full Day Tour"}
               tourImg="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
               tourPrice={355.0}
               starsCount={4}
-            ></TourCard>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sm">
+            ></TourCard> */}
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sms">
               <div className="w-full">
                 <img
                   loading="lazy"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0inkbVcTRPSTPLwPJ8Q95UreE7VVW3BQbwK9jlQYgpA&s"
                   alt=""
-                  className="w-full h-[110px] sm:h-[110px] object-cover"
+                  className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
               <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
@@ -78,13 +78,13 @@ const TypeTours = ({title}) => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sm">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sms">
               <div className="w-full">
                 <img
                   loading="lazy"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYO0vp4oh2c7_tdTJz-pXjIEXQCveDjzxBBHjiNemrjg&s"
                   alt=""
-                  className="w-full h-[110px] sm:h-[110px] object-cover"
+                  className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
               <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
@@ -118,13 +118,13 @@ const TypeTours = ({title}) => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sm">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sms">
               <div className="w-full">
                 <img
                   loading="lazy"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQncMiGb3NbkfCH-w2OTk8UTJwgaCP9zJztyp8eQDipkQ&s"
                   alt=""
-                  className="w-full h-[110px] sm:h-[110px] object-cover"
+                  className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
               <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
@@ -158,13 +158,13 @@ const TypeTours = ({title}) => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sm">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sms">
               <div className="w-full">
                 <img
                   loading="lazy"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaPKuwHS1SlaIozbG9MtSq8nKN88GqIFntTsaeRql0Rw&s"
                   alt=""
-                  className="w-full h-[110px] sm:h-[110px] object-cover"
+                  className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
               <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
@@ -198,13 +198,13 @@ const TypeTours = ({title}) => {
                 </div>
               </div>
             </div>
-            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sm">
+            <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sms">
               <div className="w-full">
                 <img
                   loading="lazy"
                   src="https://www.avanse.com/blogs/images/blog-4-aug.jpg"
                   alt=""
-                  className="w-full h-[110px] sm:h-[110px] object-cover"
+                  className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
               <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">

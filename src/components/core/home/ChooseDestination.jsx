@@ -5,7 +5,7 @@ const ChooseDestination = () => {
   return (
     <>
         {/* Choose Destination  ------------------------------------------------------------------------------- */}
-        <div className="md:mt-12 max-w-maxWidthContent mx-auto -mt-2 pl-3 md:px-6">
+        <div className="md:mt-12 max-w-maxWidthContent mx-auto -mt-2 pl-3 md:px-6 mb-6">
           <h1 className="text-lg md:text-2xl font-medium">
             Choose Destination{" "}
           </h1>

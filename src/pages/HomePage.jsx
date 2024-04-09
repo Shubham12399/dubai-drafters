@@ -43,7 +43,7 @@ const HomePage = () => {
     <div className="relative">
       <div>
         <Navigation></Navigation>
-        <div className="w-full">
+        <div className="w-full pb-4">
           {/* ------------------------------Header section ----------------------------------------------------- */}
           <Suspense>
             <HeaderSection></HeaderSection>
