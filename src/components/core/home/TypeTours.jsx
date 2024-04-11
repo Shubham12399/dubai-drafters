@@ -44,7 +44,7 @@ const TypeTours = ({title}) => {
               </div>
               <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
-                  <h3 className="text-[13px] sm:text-sm font-medium line-clamp-1">
+                  <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
                   Evenning Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
@@ -90,7 +90,7 @@ const TypeTours = ({title}) => {
               </div>
               <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
-                  <h3 className="text-[13px] sm:text-sm font-medium line-clamp-1">
+                  <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
                   Evenning Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
@@ -136,7 +136,7 @@ const TypeTours = ({title}) => {
               </div>
                 <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
-                  <h3 className="text-[13px] sm:text-sm font-medium line-clamp-1">
+                  <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
                   Evenning Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
@@ -182,7 +182,7 @@ const TypeTours = ({title}) => {
               </div>
                 <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
-                  <h3 className="text-[13px] sm:text-sm font-medium line-clamp-1">
+                  <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
                   Evenning Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
@@ -228,7 +228,7 @@ const TypeTours = ({title}) => {
               </div>
                 <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
-                  <h3 className="text-[13px] sm:text-sm font-medium line-clamp-1">
+                  <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
                   Evenning Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
