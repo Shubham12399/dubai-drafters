@@ -41,10 +41,10 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-              <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
+              <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
-                  <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">
-                    Evening Desert S..{" "}
+                  <h3 className="text-[13px] sm:text-sm leading-tight font-medium line-clamp-2 mb-2">
+                    Evening Desert India Gate Full Day Tour.{" "}
                   </h3>
                 </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
@@ -87,10 +87,12 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-              <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">
-                  Evening Desert S...{" "}
-                </h3>
+              <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+                  <h3 className="text-[13px] sm:text-sm leading-tight font-medium line-clamp-2 mb-2">
+                    Evening Desert India Gate Full Day Tour.{" "}
+                  </h3>
+                </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
                   AED 135.00
                 </h3>
@@ -127,10 +129,12 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-              <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">
-                  Evening Desert S...{" "}
-                </h3>
+              <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+                  <h3 className="text-[13px] sm:text-sm leading-tight font-medium line-clamp-2 mb-2">
+                    Evening Desert India Gate Full Day Tour.{" "}
+                  </h3>
+                </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
                   AED 135.00
                 </h3>
@@ -167,10 +171,12 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-              <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">
-                  Evening Desert S...{" "}
-                </h3>
+              <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+                  <h3 className="text-[13px] sm:text-sm leading-tight font-medium line-clamp-2 mb-2">
+                    Evening Desert India Gate Full Day Tour.{" "}
+                  </h3>
+                </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
                   AED 135.00
                 </h3>
@@ -207,10 +213,12 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-              <div className="px-3 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <h3 className="text-[13px] sm:text-sm font-medium line-clamp-2">
-                  Evening Desert S...{" "}
-                </h3>
+              <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                 <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+                  <h3 className="text-[13px] sm:text-sm leading-tight font-medium line-clamp-2 mb-2">
+                    Evening Desert India Gate Full Day Tour.{" "}
+                  </h3>
+                </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
                   AED 135.00
                 </h3>
