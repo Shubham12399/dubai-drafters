@@ -26,12 +26,12 @@ const TypeTours = ({title}) => {
             awaits!
           </p>
           <div className="mt-3 flex gap-x-3 md:gap-x-4 md:mt-4 overflow-auto hide-scrollbar pb-6 pr-3">
-            <TourCard
+            {/* <TourCard
               tourTitle={"India Gate Full Day Tour"}
               tourImg="https://res.cloudinary.com/responsivebreakpoints/image/upload/c_scale,w_200/v1710420324/IMG-20240205-WA0063_v4wa9d.jpg"
               tourPrice={355.0}
               starsCount={4}
-            ></TourCard>
+            ></TourCard> */}
             <div className="min-w-[140px] w-[130px] sm:w-[160px] md:min-w-[170px] md:w-[170px] rounded-xl overflow-hidden relative bg-white shadow-sms">
               <div className="w-full">
                 <img
