@@ -42,10 +42,10 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-              <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+              <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                <Tooltip content={"Evening Desert Saudi Arabia, late Night"}>
                   <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
-                  Evenning Desert Saudi Arabia, late Night
+                  Evening Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
@@ -88,10 +88,10 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-              <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+              <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                <Tooltip content={"Evening Desert Saudi Arabia, late Night"}>
                   <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
-                  Evenning Desert Saudi Arabia, late Night
+                  Evening Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
@@ -134,10 +134,10 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-                <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+                <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                <Tooltip content={"Evening Desert Saudi Arabia, late Night"}>
                   <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
-                  Evenning Desert Saudi Arabia, late Night
+                  Evening Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
@@ -180,10 +180,10 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-                <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+                <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                <Tooltip content={"Evening Desert Saudi Arabia, late Night"}>
                   <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
-                  Evenning Desert Saudi Arabia, late Night
+                  Evening Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
@@ -226,10 +226,10 @@ const TypeTours = ({title}) => {
                   className="w-full h-[110px] sm:h-[110px] object-cover rounded-lg"
                 />
               </div>
-                <div className="pl-1 sm:px-4 my-2 mb-3 sm:my-4 ">
-                <Tooltip content={"Evenning Desert Saudi Arabia, late Night"}>
+                <div className="px-2 sm:px-4 my-2 mb-3 sm:my-4 ">
+                <Tooltip content={"Evening Desert Saudi Arabia, late Night"}>
                   <h3 className="text-[12px] sm:text-sm font-medium line-clamp-1">
-                  Evenning Desert Saudi Arabia, late Night
+                  Evening Desert Saudi Arabia, late Night
                   </h3>
                 </Tooltip>
                 <h3 className="text-xs font-medium text-richblack-900 mt-1">
