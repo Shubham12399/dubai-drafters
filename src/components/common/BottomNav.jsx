@@ -14,108 +14,205 @@ import { AnimatePresence, motion } from "framer-motion";
 import { GoX } from "react-icons/go";
 
 const BottomNav = () => {
-  const [openService, setOpenServices] = useState(false);
+  // const [openService, setOpenServices] = useState(false);
 
   return (
-    <div
-      className="md:hidden flex gap-x-0 items-center bg-white fixed bottom-0 z-[99999] shadow-md rounded-tl-md rounded-tr justify-center w-full "
-      style={{
-        boxShadow: "0 0 20px rgba(0,0,0,0.1)",
-      }}
-    >
-      <Link
-        to={"/"}
-        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
-      >
-        <GrHomeRounded className="text-[16px] my-1 group-hover:text-[#ff612c]"></GrHomeRounded>
-        <span className="text-xs">Home</span>
-      </Link>
-      <div
-        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
-        onClick={() => setOpenServices(prev=>!prev)}
-      >
-        <PiAirplaneTilt className="text-[16px] my-1 group-hover:text-[#ff612c] -rotate-90"></PiAirplaneTilt>
-        <span className="text-xs">Services</span>
-      </div>
-      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-        <FaCity className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaCity>
-        <span className="text-xs">Cites</span>{" "}
-      </div>
-      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-        <FaUser className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaUser>
-        <span className="text-xs">Profile</span>{" "}
-      </div>
+//    <div
+//      className="md:hidden flex gap-x-0 items-center bg-white fixed bottom-0 z-[99999] shadow-md rounded-tl-md rounded-tr justify-center w-full "
+//      style={{
+//        boxShadow: "0 0 20px rgba(0,0,0,0.1)",
+//      }}
+//    >
+//      <Link
+//        to={"/"}
+//        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
+//      >
+//        <GrHomeRounded className="text-[16px] my-1 group-hover:text-[#ff612c]"></GrHomeRounded>
+//        <span className="text-xs">Home</span>
+//      </Link>
+//      <div
+//        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
+//        // onClick={() => setOpenServices(prev=>!prev)}
+//      >
+//        <PiAirplaneTilt className="text-[16px] my-1 group-hover:text-[#ff612c] -rotate-90"></PiAirplaneTilt>
+//        <span className="text-xs">Services</span>
+//      </div>
+//      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+//        <FaCity className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaCity>
+//        <span className="text-xs">Cites</span>{" "}
+//      </div>
+//      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+//        <FaUser className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaUser>
+//        <span className="text-xs">Profile</span>{" "}
+//      </div>
 
-      {/*---------------------------------- Open Service Modal ---------------------------- */}
+//      {/*---------------------------------- Open Service Modal ---------------------------- */}
+// {/* 
+//      {openService && (
+//        <Modal
+//          title={
+//            <div className="flex items-center gap-x-2 GTE_light">
+//              {" "}
+//              Services{" "}
+//            </div>
+//          }
+//          setModal={setOpenServices}
+//        >
+//          <div className=" mx-auto">
+//            <div className="flex justify-between items-center flex-wrap px-1 gap-y-1 my-2">
+//              <Link
+//                to={"/tours"}
+//                className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursur-pointe7 borde group border-richblack-500"
+//              >
+//                <FaPlane className="group-hover:text-[#ff612c]"></FaPlane>
+//                <div className="text-center text-xs md:text-sm GTE_light">Tours</div>
+//              </Link>
+//              <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
+//                <FaCity className="group-hover:text-[#ff612c]"></FaCity>
+//                <div className="text-center text-xs md:text-sm GTE_light">Packages</div>
+//              </div>
+//              <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
+//                <FaHotel className="group-hover:text-[#ff612c]"></FaHotel>
+//                <div className="text-center text-xs md:text-sm GTE_light">Hotel</div>
+//              </div>
+//              <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
+//                <FaFileAlt className="group-hover:text-[#ff612c]"></FaFileAlt>
+//                <div className="text-center text-xs md:text-sm GTE_light">Planner</div>
+//              </div>
+//            </div>
+//          </div>
+//        </Modal>
+//      )} */}
 
-      {openService && (
-        <Modal
-          title={
-            <div className="flex items-center gap-x-2 GTE_light">
-              {" "}
-              Services{" "}
-            </div>
-          }
-          setModal={setOpenServices}
-        >
-          <div className=" mx-auto">
-            <div className="flex justify-between items-center flex-wrap px-1 gap-y-1 my-2">
-              <Link
-                to={"/tours"}
-                className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursur-pointe7 borde group border-richblack-500"
-              >
-                <FaPlane className="group-hover:text-[#ff612c]"></FaPlane>
-                <div className="text-center text-xs md:text-sm GTE_light">Tours</div>
-              </Link>
-              <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
-                <FaCity className="group-hover:text-[#ff612c]"></FaCity>
-                <div className="text-center text-xs md:text-sm GTE_light">Packages</div>
-              </div>
-              <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
-                <FaHotel className="group-hover:text-[#ff612c]"></FaHotel>
-                <div className="text-center text-xs md:text-sm GTE_light">Hotel</div>
-              </div>
-              <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
-                <FaFileAlt className="group-hover:text-[#ff612c]"></FaFileAlt>
-                <div className="text-center text-xs md:text-sm GTE_light">Planner</div>
-              </div>
-            </div>
-          </div>
-        </Modal>
-      )}
-
+   
+//      {/* <AnimatePresence>
+//        {openService && (
+//          <motion.div
+//            initial={{
+//              bottom: "-650px",
+//            }}
+//            animate={{
+//              bottom: "-300px",
+//            }}
+//            exit={{
+//              bottom: "-650px",
+//            }}
+//            className="fixed w-full mt-64 h-[600px] border bg-white shadow-xl rounded-2xl z-0 py-4 px-4"
+//          >
+//             <div className=" max-w-maxContentTab mx-auto ">
+//   <div className="flex justify-between px-2 items-center border-b">
+//     <div className="select-none text-sm">{"title"}</div>
+//     <div
+//          className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
+//          onClick={() => {
+//            setOpenServices(false);
+//          }}
+//        >
+//          <GoX className="text-lg text-richblack-900"></GoX>
+//        </div>
+//      </div>
+// </div>
+//          </motion.div>
+//        )}
+//      </AnimatePresence> */}
+//    </div>
+   <div
+     className="md:hidden flex gap-x-0 items-center bg-white fixed bottom-0 z-[99999] shadow-md rounded-tl-md rounded-tr justify-center w-full "
+     style={{
+       boxShadow: "0 0 20px rgba(0,0,0,0.1)",
+     }}
+   >
+     <Link
+       to={"/"}
+       className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
+     >
+       <GrHomeRounded className="text-[16px] my-1 group-hover:text-[#ff612c]"></GrHomeRounded>
+       <span className="text-xs">Home</span>
+     </Link>
     
-      {/* <AnimatePresence>
-        {openService && (
-          <motion.div
-            initial={{
-              bottom: "-650px",
-            }}
-            animate={{
-              bottom: "-300px",
-            }}
-            exit={{
-              bottom: "-650px",
-            }}
-            className="fixed w-full mt-64 h-[600px] border bg-white shadow-xl rounded-2xl z-0 py-4 px-4"
-          >
-             <div className=" max-w-maxContentTab mx-auto ">
-   <div className="flex justify-between px-2 items-center border-b">
-     <div className="select-none text-sm">{"title"}</div>
-     <div
-          className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
-          onClick={() => {
-            setOpenServices(false);
-          }}
-        >
-          <GoX className="text-lg text-richblack-900"></GoX>
-        </div>
-      </div>
- </div>
-          </motion.div>
-        )}
-      </AnimatePresence> */}
-    </div>
+     <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       <FaPlane className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaPlane>
+       <span className="text-xs">Tours</span>{" "}
+     </div>
+     <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       <FaCity className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaCity>
+       <span className="text-xs">Packages</span>{" "}
+     </div>
+     <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       <FaHotel className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaHotel>
+       <span className="text-xs">Hotels</span>{" "}
+     </div>
+
+     {/*---------------------------------- Open Service Modal ---------------------------- */}
+{/* 
+     {openService && (
+       <Modal
+         title={
+           <div className="flex items-center gap-x-2 GTE_light">
+             {" "}
+             Services{" "}
+           </div>
+         }
+         setModal={setOpenServices}
+       >
+         <div className=" mx-auto">
+           <div className="flex justify-between items-center flex-wrap px-1 gap-y-1 my-2">
+             <Link
+               to={"/tours"}
+               className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursur-pointe7 borde group border-richblack-500"
+             >
+               <FaPlane className="group-hover:text-[#ff612c]"></FaPlane>
+               <div className="text-center text-xs md:text-sm GTE_light">Tours</div>
+             </Link>
+             <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
+               <FaCity className="group-hover:text-[#ff612c]"></FaCity>
+               <div className="text-center text-xs md:text-sm GTE_light">Packages</div>
+             </div>
+             <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
+               <FaHotel className="group-hover:text-[#ff612c]"></FaHotel>
+               <div className="text-center text-xs md:text-sm GTE_light">Hotel</div>
+             </div>
+             <div className=" w-[70px] h-[70px] flex flex-col gap-y-1 justify-center items-center text-richblack-800 rounded-full cursor-pointer borde group border-richblack-500">
+               <FaFileAlt className="group-hover:text-[#ff612c]"></FaFileAlt>
+               <div className="text-center text-xs md:text-sm GTE_light">Planner</div>
+             </div>
+           </div>
+         </div>
+       </Modal>
+     )} */}
+
+   
+     {/* <AnimatePresence>
+       {openService && (
+         <motion.div
+           initial={{
+             bottom: "-650px",
+           }}
+           animate={{
+             bottom: "-300px",
+           }}
+           exit={{
+             bottom: "-650px",
+           }}
+           className="fixed w-full mt-64 h-[600px] border bg-white shadow-xl rounded-2xl z-0 py-4 px-4"
+         >
+            <div className=" max-w-maxContentTab mx-auto ">
+  <div className="flex justify-between px-2 items-center border-b">
+    <div className="select-none text-sm">{"title"}</div>
+    <div
+         className="relative before:w-full before:h-full before:rounded-full before:absolute before:top-0 before:left-0  before:hover:bg-[rgba(0,0,0,0.04)] rounded-full p-2 -mr-2 cursor-pointer"
+         onClick={() => {
+           setOpenServices(false);
+         }}
+       >
+         <GoX className="text-lg text-richblack-900"></GoX>
+       </div>
+     </div>
+</div>
+         </motion.div>
+       )}
+     </AnimatePresence> */}
+   </div>
   );
 };
 

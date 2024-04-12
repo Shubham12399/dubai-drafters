@@ -11,6 +11,7 @@ import bgWaterMark from "../assets/images/bg-watermark.jpg";
 import Icon1 from "../assets/images/buildings-animation.gif";
 import Icon2 from "../assets/images/ezgif.com-animated-gif-maker 5.gif";
 import Icon3 from "../assets/images/sun-safari.png";
+
 const HeaderSection = React.lazy(() => import("../components/core/home/HeaderSection"));
 const ChooseDestination = React.lazy(() => import("../components/core/home/ChooseDestination"));
 const TypeTours = React.lazy(() => import("../components/core/home/TypeTours"));

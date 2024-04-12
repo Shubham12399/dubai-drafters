@@ -28,7 +28,7 @@ const HeaderSection = () => {
   //   if (error) return 'An error has occurred: ' + error.message
 
   return (
-    <div className="w-full h-full max-w-maxContent mx-auto ">
+    <div className="w-full h-full max-w-maxContent mx-auto px-2">
       <div className="px-1 pb-0 pt-1">
         <div className="rounded-xl overflow-hidden ">
           {
