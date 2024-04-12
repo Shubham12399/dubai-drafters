@@ -59,7 +59,7 @@ const HomePage = () => {
               Let&apos;s checkout the latest Tourism Places. To book a ticket fill
               some boxes{" "}
             </p>
-            <div className="mt-2 relative">
+            <div className="mt-4 relative">
               {/* <img src={bgWaterMark} alt="" className="opacity-10 h-full absolute z-0 object-cover overflow-hidden w-full" /> */}
               {/* <div className="flex justify-between items-center -mb-2"> */}
               <div className="grid grid-cols-[repeat(13,1fr)] -mb-2">
