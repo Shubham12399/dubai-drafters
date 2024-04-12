@@ -60,13 +60,13 @@ const HomePage = () => {
             </p>
             <div className="mt-2 relative">
               {/* <img src={bgWaterMark} alt="" className="opacity-10 h-full absolute z-0 object-cover overflow-hidden w-full" /> */}
-              <div className="flex justify-between items-center ">
+              <div className="flex justify-between items-center -mb-2">
 
-              <img src={Icon2} alt="" className="block relative z-0 w-[180px] -ml-4 select-none cursor-auto" />
-              <img src={Icon1} alt="" className="block relative z-0 w-[150px] -ml-8 -mb-4 select-none cursor-auto" />
+              <img src={Icon2} alt="" className="block relative z-0 w-[150px] -ml-4 select-none cursor-auto" />
+              <img src={Icon1} alt="" className="block relative z-0 w-[150px] -ml-8 select-none cursor-auto" />
               </div>
               
-              <div className="relative z-40 py-4 mt-2 md:py-6 mb-4 px-2 pl-4 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border-[#ff621c] md:border-none rounded-xl md:bg-transparent before:block before:w-[200px] before:bg-white before:h-[17px] before:absolute before:top-0 before:right-0 before:z-[999] before:blur-sm">
+              <div className="relative z-40 py-4 md:py-6 mb-4 px-2 pl-4 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border-[#ff621c] md:border-none rounded-xl md:bg-transparent before:block before:w-full before:bg-white before:h-[17px] before:absolute before:top-0 before:right-0 before:z-[999] before:blur-sm">
                 <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))_130px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 ">
                   <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1">
                     <div className="w-full md:w-full md:bg-transparent md:shadow-none">
