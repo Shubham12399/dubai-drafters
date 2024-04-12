@@ -10,6 +10,7 @@ import bgWaterMark from "../assets/images/bg-watermark.jpg";
 // import mapIcon from "../assets/images/icons8-map-marker.gif";
 import Icon1 from "../assets/images/buildings-animation.gif";
 import Icon2 from "../assets/images/ezgif.com-animated-gif-maker 5.gif";
+import Icon3 from "../assets/images/sun-safari.jpeg";
 const HeaderSection = React.lazy(() => import("../components/core/home/HeaderSection"));
 const ChooseDestination = React.lazy(() => import("../components/core/home/ChooseDestination"));
 const TypeTours = React.lazy(() => import("../components/core/home/TypeTours"));
@@ -60,12 +61,22 @@ const HomePage = () => {
             </p>
             <div className="mt-2 relative">
               {/* <img src={bgWaterMark} alt="" className="opacity-10 h-full absolute z-0 object-cover overflow-hidden w-full" /> */}
-              <div className="flex justify-between items-center -mb-2">
-
-              <img src={Icon2} alt="" className="block relative z-0 w-[150px] -ml-4 select-none cursor-auto" />
+              {/* <div className="flex justify-between items-center -mb-2"> */}
+              <div className="grid grid-cols-[repeat(13,1fr)] -mb-2">
+                <div className="col-span-5">
+                  <img src={Icon2} alt="" className="block w-full relative z-0 !h-full select-none cursor-auto" />
+                </div>
+                <div className="col-span-4">
+                  <img src={Icon1} alt="" className="block w-full relative z-0 !h-full select-none cursor-auto" />
+                </div>
+                <div className="col-span-3">
+                  <img src={Icon3} alt="" className="block w-full relative z-0 !h-full select-none cursor-auto" />
+                </div>
+                {/* <img src={Icon2} alt="" className="block relative z-0 w-[150px] select-none cursor-auto" />
               <img src={Icon1} alt="" className="block relative z-0 w-[150px] -ml-8 select-none cursor-auto" />
+              <img src={Icon3} alt="" className="block relative z-0 w-[150px] -ml-8 select-none cursor-auto" /> */}
               </div>
-              
+
               <div className="relative z-40 py-4 md:py-6 mb-4 px-2 pl-4 md:pl-2 max-w-maxContent mx-1 md:m-0 md:pb-9 sm:!mx-auto md:rounded-none md:shadow-none border-[#ff621c] md:border-none rounded-xl md:bg-transparent before:block before:w-full before:bg-white before:h-[17px] before:absolute before:top-0 before:right-0 before:z-[999] before:blur-sm">
                 <div className="max-w-[850px] mx-auto lg:mt-6 grid grid-cols-[40%_30%_30%] md:grid-cols-[repeat(3,_minmax(0,_1fr))_130px_130px] md:border border-[#08aca0] md:px-6 md:rounded-full md:py-7 md:!pr-0 gap-y-2 md:gap-x-0 md:!gap-0 ">
                   <div className="flex sm:pl-2 md:border-r border-[#08aca0] mr-1">
@@ -211,13 +222,13 @@ after:h-[3px] after:bg-[#ff621c] after:rounded-lg md:after:hidden */}
           </div>
           <Suspense>
             <TypeTours title={"Adventure"}></TypeTours>
-            </Suspense>
+          </Suspense>
           <Suspense>
             <TypeTours title={"Luxury"}></TypeTours>
-            </Suspense>
+          </Suspense>
           <Suspense>
             <TypeTours title={"Water"}></TypeTours>
-            </Suspense>
+          </Suspense>
         </div>
         {/* ----------------------------------Bottom Nav ---------------------------------------- */}
         <BottomNav></BottomNav>
