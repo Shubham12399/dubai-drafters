@@ -62,7 +62,7 @@ const HomePage = () => {
               {/* <img src={bgWaterMark} alt="" className="opacity-10 h-full absolute z-0 object-cover overflow-hidden w-full" /> */}
               <div className="flex justify-between items-center ">
 
-              <img src={Icon2} alt="" className="block relative z-0 w-[180px] -ml-8 select-none cursor-auto" />
+              <img src={Icon2} alt="" className="block relative z-0 w-[180px] -ml-4 select-none cursor-auto" />
               <img src={Icon1} alt="" className="block relative z-0 w-[150px] -ml-8 -mb-4 select-none cursor-auto" />
               </div>
               
