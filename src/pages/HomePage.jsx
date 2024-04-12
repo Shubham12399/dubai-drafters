@@ -47,9 +47,9 @@ const HomePage = () => {
         <Navigation></Navigation>
         <div className="w-full pb-4">
           {/* ------------------------------Header section ----------------------------------------------------- */}
-          {/* <Suspense>
+          <Suspense>
             <HeaderSection></HeaderSection>
-          </Suspense> */}
+          </Suspense>
           {/*--------------------------------------------------- action center ------------------------------------- */}
           <div>
             <h1 className="text-center text-lg md:text-2xl font-medium pt-4 md:pt-10 hidden md:block ">
@@ -63,10 +63,10 @@ const HomePage = () => {
               {/* <img src={bgWaterMark} alt="" className="opacity-10 h-full absolute z-0 object-cover overflow-hidden w-full" /> */}
               {/* <div className="flex justify-between items-center -mb-2"> */}
               <div className="grid grid-cols-[repeat(13,1fr)] -mb-2">
-                <div className="col-span-5">
+                <div className="col-span-5 -ml-3">
                   <img src={Icon2} alt="" className="block w-full relative z-0 !h-full select-none cursor-auto" />
                 </div>
-                <div className="col-span-4">
+                <div className="col-span-4 -ml-2">
                   <img src={Icon1} alt="" className="block w-full relative z-0 !h-full select-none cursor-auto" />
                 </div>
                 <div className="col-span-4">
