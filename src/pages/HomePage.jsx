@@ -47,9 +47,9 @@ const HomePage = () => {
         <Navigation></Navigation>
         <div className="w-full pb-4">
           {/* ------------------------------Header section ----------------------------------------------------- */}
-          <Suspense>
+          {/* <Suspense>
             <HeaderSection></HeaderSection>
-          </Suspense>
+          </Suspense> */}
           {/*--------------------------------------------------- action center ------------------------------------- */}
           <div>
             <h1 className="text-center text-lg md:text-2xl font-medium pt-4 md:pt-10 hidden md:block ">
