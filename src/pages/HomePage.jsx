@@ -9,7 +9,7 @@ import bgWaterMark from "../assets/images/bg-watermark.jpg";
 // import locationIcon from "../assets/images/icons8-location.gif";
 // import mapIcon from "../assets/images/icons8-map-marker.gif";
 import Icon1 from "../assets/images/buildings-animation.gif";
-import Icon2 from "../assets/images/flight-icon.png";
+import Icon2 from "../assets/images/ezgif.com-animated-gif-maker 5.gif";
 const HeaderSection = React.lazy(() => import("../components/core/home/HeaderSection"));
 const ChooseDestination = React.lazy(() => import("../components/core/home/ChooseDestination"));
 const TypeTours = React.lazy(() => import("../components/core/home/TypeTours"));
