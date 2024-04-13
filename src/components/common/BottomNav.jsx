@@ -12,7 +12,8 @@ import Modal from "../Modal";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { GoX } from "react-icons/go";
-
+import planer1 from "../../assets/icons/planner2.jpg";
+import hotelIcon from "../../assets/icons/hotel.jpg";
 const BottomNav = () => {
   // const [openService, setOpenServices] = useState(false);
 
@@ -142,8 +143,14 @@ const BottomNav = () => {
      </Link>
      <Link
        to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-       <FaHotel className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaHotel>
+       {/* <FaHotel className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaHotel> */}
+       <img src={hotelIcon} className="w-[16px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Hotels</span>{" "}
+     </Link>
+     <Link
+       to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       <img src={planer1} className="w-[16px] my-1 group-hover:text-[#ff612c]"></img>
+       <span className="text-xs">Planner</span>{" "}
      </Link>
 
      {/*---------------------------------- Open Service Modal ---------------------------- */}
