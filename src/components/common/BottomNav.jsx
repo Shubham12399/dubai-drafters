@@ -130,18 +130,21 @@ const BottomNav = () => {
        <span className="text-xs">Home</span>
      </Link>
     
-     <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+     <Link
+       to={"/tours"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <FaPlane className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaPlane>
        <span className="text-xs">Tours</span>{" "}
-     </div>
-     <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+     </Link>
+     <Link
+       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <FaCity className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaCity>
        <span className="text-xs">Packages</span>{" "}
-     </div>
-     <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+     </Link>
+     <Link
+       to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <FaHotel className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaHotel>
        <span className="text-xs">Hotels</span>{" "}
-     </div>
+     </Link>
 
      {/*---------------------------------- Open Service Modal ---------------------------- */}
 {/* 
