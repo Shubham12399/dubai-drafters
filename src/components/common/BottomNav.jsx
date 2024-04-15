@@ -153,7 +153,7 @@ const BottomNav = () => {
      </Link>
      <Link
        to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-       <img src={PacakgesIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
+       <img src={CalenderIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Planner</span>{" "}
      </Link>
      {/* <Link
