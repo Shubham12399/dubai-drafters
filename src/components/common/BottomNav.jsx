@@ -6,14 +6,19 @@ import {
   FaPlane,
   FaUser,
 } from "react-icons/fa";
-import { GrHomeRounded } from "react-icons/gr";
-import { PiAirplaneTilt } from "react-icons/pi";
-import Modal from "../Modal";
+// import { GrHomeRounded } from "react-icons/gr";
+// import { PiAirplaneTilt } from "react-icons/pi";
+// import Modal from "../Modal";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
-import { GoX } from "react-icons/go";
-import planer1 from "../../assets/icons/planner2.jpg";
-import hotelIcon from "../../assets/icons/hotel.jpg";
+// import { AnimatePresence, motion } from "framer-motion";
+// import { GoX } from "react-icons/go";
+// import planer1 from "../../assets/icons/planner2.jpg";
+// import hotelIcon from "../../assets/icons/hotel.jpg";
+import Home from "../../assets/icons/home-5-line.svg";
+import TourIcon from "../../assets/icons/plane-line.svg";
+import HotelsIcon from "../../assets/icons/hotel-line.svg";
+import PacakgesIcon from "../../assets/icons/building-line.svg";
+import CalenderIcon from "../../assets/icons/calendar-line.svg";
 const BottomNav = () => {
   // const [openService, setOpenServices] = useState(false);
 
@@ -28,7 +33,7 @@ const BottomNav = () => {
 //        to={"/"}
 //        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
 //      >
-//        <GrHomeRounded className="text-[16px] my-1 group-hover:text-[#ff612c]"></GrHomeRounded>
+//        <GrHomeRounded className="w-[20px] my-1 group-hover:text-[#ff612c]"></GrHomeRounded>
 //        <span className="text-xs">Home</span>
 //      </Link>
 //      <div
@@ -127,31 +132,40 @@ const BottomNav = () => {
        to={"/"}
        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
      >
-       <GrHomeRounded className="text-[16px] my-1 group-hover:text-[#ff612c]"></GrHomeRounded>
+       <img src={Home} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Home</span>
      </Link>
     
      <Link
        to={"/tours"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-       <FaPlane className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaPlane>
+       <img src={TourIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Tours</span>{" "}
      </Link>
      <Link
        to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-       <FaCity className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaCity>
+       <img src={PacakgesIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Packages</span>{" "}
      </Link>
      <Link
+       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       <img src={HotelsIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
+       <span className="text-xs">Hotels</span>{" "}
+     </Link>
+     <Link
+       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       <img src={PacakgesIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
+       <span className="text-xs">Planner</span>{" "}
+     </Link>
+     {/* <Link
        to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-       {/* <FaHotel className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaHotel> */}
-       <img src={hotelIcon} className="w-[16px] my-1 group-hover:text-[#ff612c]"></img>
+       <img src={HotelsIcon} className="w-[16px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Hotels</span>{" "}
      </Link>
      <Link
        to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-       <img src={planer1} className="w-[16px] my-1 group-hover:text-[#ff612c]"></img>
+       <img src={CalenderIcon} className="w-[16px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Planner</span>{" "}
-     </Link>
+     </Link> */}
 
      {/*---------------------------------- Open Service Modal ---------------------------- */}
 {/* 
