@@ -18,7 +18,7 @@ import Home from "../../assets/icons/home.svg";
 import TourIcon from "../../assets/icons/plane-line.svg";
 import HotelsIcon from "../../assets/icons/hotel-line.svg";
 import PacakgesIcon from "../../assets/icons/package.svg";
-import CalenderIcon from "../../assets/icons/calendar-line.svg";
+import CalenderIcon from "../../assets/icons/planner.svg";
 const BottomNav = () => {
   // const [openService, setOpenServices] = useState(false);
 
@@ -31,23 +31,23 @@ const BottomNav = () => {
 //    >
 //      <Link
 //        to={"/"}
-//        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50"
+//        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
 //      >
 //        <GrHomeRounded className="w-[20px] my-1 group-hover:text-[#ff612c]"></GrHomeRounded>
 //        <span className="text-xs">Home</span>
 //      </Link>
 //      <div
-//        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50"
+//        className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
 //        // onClick={() => setOpenServices(prev=>!prev)}
 //      >
 //        <PiAirplaneTilt className="text-[16px] my-1 group-hover:text-[#ff612c] -rotate-90"></PiAirplaneTilt>
 //        <span className="text-xs">Services</span>
 //      </div>
-//      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50">
+//      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
 //        <FaCity className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaCity>
 //        <span className="text-xs">Cites</span>{" "}
 //      </div>
-//      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50">
+//      <div className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
 //        <FaUser className="text-[16px] my-1 group-hover:text-[#ff612c]"></FaUser>
 //        <span className="text-xs">Profile</span>{" "}
 //      </div>
@@ -130,39 +130,39 @@ const BottomNav = () => {
    >
      <Link
        to={"/"}
-       className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50"
+       className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50"
      >
        <img src={Home} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Home</span>
      </Link>
     
      <Link
-       to={"/tours"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50">
+       to={"/tours"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <img src={TourIcon} className="w-[24px] pt-1 my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs mt-[1px]">Tours</span>{" "}
      </Link>
      <Link
-       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50">
+       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <img src={PacakgesIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Packages</span>{" "}
      </Link>
      <Link
-       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50">
+       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <img src={HotelsIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Hotels</span>{" "}
      </Link>
      <Link
-       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50">
-       <img src={CalenderIcon} className="w-[18px] my-1 group-hover:text-[#ff612c]"></img>
+       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       <img src={CalenderIcon} className="w-[18px] text-[#717171] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Planner</span>{" "}
      </Link>
      {/* <Link
-       to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50">
+       to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <img src={HotelsIcon} className="w-[16px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Hotels</span>{" "}
      </Link>
      <Link
-       to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group border hover:border-t-2 border-t-[#ff621c] relative z-50">
+       to={"/hotels"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <img src={CalenderIcon} className="w-[16px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Planner</span>{" "}
      </Link> */}
