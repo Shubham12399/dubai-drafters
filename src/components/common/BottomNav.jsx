@@ -16,9 +16,9 @@ import { Link } from "react-router-dom";
 // import hotelIcon from "../../assets/icons/hotel.jpg";
 import Home from "../../assets/icons/home.svg";
 import TourIcon from "../../assets/icons/plane-line.svg";
-import HotelsIcon from "../../assets/icons/hotel-line.svg";
+import HotelsIcon from "../../assets/icons/hotel.svg";
 import PacakgesIcon from "../../assets/icons/package.svg";
-import CalenderIcon from "../../assets/icons/planner.svg";
+import CalenderIcon from "../../assets/icons/calendar-line.svg";
 const BottomNav = () => {
   // const [openService, setOpenServices] = useState(false);
 
@@ -153,7 +153,7 @@ const BottomNav = () => {
      </Link>
      <Link
        to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-       <img src={CalenderIcon} className="w-[18px] text-[#717171] my-1 group-hover:text-[#ff612c]"></img>
+       <img src={CalenderIcon} className="w-[18px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Planner</span>{" "}
      </Link>
      {/* <Link
