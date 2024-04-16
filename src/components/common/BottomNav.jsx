@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 // import { GoX } from "react-icons/go";
 // import planer1 from "../../assets/icons/planner2.jpg";
 // import hotelIcon from "../../assets/icons/hotel.jpg";
-import Home from "../../assets/icons/home-5-line.svg";
+import Home from "../../assets/icons/home.svg";
 import TourIcon from "../../assets/icons/plane-line.svg";
 import HotelsIcon from "../../assets/icons/hotel-line.svg";
 import PacakgesIcon from "../../assets/icons/package.svg";
@@ -137,17 +137,17 @@ const BottomNav = () => {
      </Link>
     
      <Link
-       to={"/tours"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
-       <img src={TourIcon} className="w-[26px] my-1 group-hover:text-[#ff612c]"></img>
-       <span className="text-xs">Tours</span>{" "}
+       to={"/tours"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       <img src={TourIcon} className="w-[24px] pt-1 my-1 group-hover:text-[#ff612c]"></img>
+       <span className="text-xs mt-[1px]">Tours</span>{" "}
      </Link>
      <Link
-       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <img src={PacakgesIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Packages</span>{" "}
      </Link>
      <Link
-       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex justify-center items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
+       to={"/"} className="normal-case text-[10px] bg-white text-richblack-700 cursor-pointer flex items-center flex-col px-3 w-1/4 select-none py-1 transition-all group hover:border-t-2 border-t-[#ff621c] relative z-50">
        <img src={HotelsIcon} className="w-[20px] my-1 group-hover:text-[#ff612c]"></img>
        <span className="text-xs">Hotels</span>{" "}
      </Link>
